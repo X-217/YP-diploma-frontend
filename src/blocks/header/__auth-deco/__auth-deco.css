@@ -1,0 +1,36 @@
+.header__auth-deco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 32px;
+
+  width: 176px;
+  height: 40px;
+  border-color: ghostwhite;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+}
+
+
+@media (max-width: 420px) {
+  .header__auth-deco{
+    margin-left: 16px;
+  }
+  /* переходим на бутерброд !!!!!!!!!!!!*/
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .header__auth-deco {
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .header__auth-deco {
+    margin-left: calc(16px + (100vw - 769px) *  (32 - 16)  /  (1440 - 769));
+
+  }
+}
+
+

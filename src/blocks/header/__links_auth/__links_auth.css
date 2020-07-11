@@ -1,0 +1,10 @@
+.header__links_auth {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header__links_auth:hover {
+  opacity: 0.7;
+}
+
+

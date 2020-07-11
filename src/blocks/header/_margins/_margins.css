@@ -1,0 +1,14 @@
+.header_margins{
+    margin: 30px auto 48px;  /* 768 и выше*/
+}
+@media (max-width: 425px) {
+    .header_margins{
+        margin-top: 16px ;
+    }
+}
+@media (min-width: 425px) and (max-width: 767px) {
+    .header_margins {
+        margin-top: calc(16px + (100vw - 425px) *  (30 - 16)  /  (767 - 425));
+    }
+
+}
