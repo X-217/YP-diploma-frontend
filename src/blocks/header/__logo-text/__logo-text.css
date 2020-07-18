@@ -1,12 +1,9 @@
 .header__logo-text {
-  align-items: center;
-/*  color: white;*/
-  display: flex;
+
   font-family: Roboto Slab, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: bold;
-  justify-content: center;
   line-height: 24px;
   margin-left: 104px;
   margin-top: 30px;

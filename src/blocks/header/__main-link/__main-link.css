@@ -1,7 +1,35 @@
 .header__main-link {
-/*  color: #ffffff;*/
+  margin-left: 32px;
+  font-family: Roboto Roboto Regular, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  white-space: nowrap;
+
+
   text-decoration: none;
 }
+
+@media (max-width: 420px) {
+  .header__main-link{
+    margin-left: 16px;
+  }
+  /* переходим на бутерброд !!!!!!!!!!!!*/
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .header__main-link {
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .header__main-link {
+    margin-left: calc(16px + (100vw - 769px) *  (32 - 16)  /  (1440 - 769));
+  }
+}
+
 
 .header__main-link:hover {
   opacity: 0.7;

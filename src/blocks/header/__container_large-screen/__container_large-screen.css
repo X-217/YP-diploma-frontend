@@ -1,0 +1,10 @@
+.header__container_large-screen {
+
+}
+
+@media (max-width: 767px) {
+  .header__container_large-screen {
+/*    display: none;*/
+    flex-direction: column;
+  }
+}

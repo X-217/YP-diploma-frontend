@@ -3,11 +3,11 @@
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/__logo.css);
 @import url(../blocks/header/__logo-text/__logo-text.css);
-@import url(../blocks/header/__auth-deco/__auth-deco.css);
+
 @import url(../blocks/header/__links/__links.css);
 @import url(../blocks/header/__main/__main.css);
 @import url(../blocks/header/__main-link/__main-link.css);
-@import url(../blocks/header/__links_auth/__links_auth.css);
+/*@import url(../blocks/header/__links_auth/__links_auth.css);*/
 @import url(../blocks/header/__underline-deco/__underline-deco.css);
 @import url(../blocks/header/__font-color_black/__font-color_black.css);
 

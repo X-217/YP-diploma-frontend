@@ -10,18 +10,22 @@
 <body>
 
   <header class="header">
-    <div class = "header__logo">
-      <div class="header__logo-text header__font-color_white">NewsExplorer</div>
-    </div>
-    <div class="header__links">
-      <div class="header__underline-deco">
-        <div class="header__main">
-          <a class="header__main-link header__font-color_white" href="#">Главная</a>
+    <div class="header__container">
+        <div class="header__logo header__font-color_white">NewsExplorer</div>
+      <div class="header__links">
+        <div class="header__underline-deco">
+          <div class="header__main">
+            <a class="header__main-link header__font-color_white header__underlined-item" href="#">Главная</a>
+          </div>
         </div>
+        <div class="header__main">
+          <a class="header__main-link header__font-color_white" href="#">Сохраненные статьи</a>
+        </div>
+        <button name="auth-button" class="header__auth-button header__auth-button_login">Авторизоваться</button>
       </div>
-      <div class="header__auth-deco">
-        <a class="header__links_auth header__font-color_white" href="#">Авторизоваться</a>
-      </div>
+
+
+
     </div>
   </header>
 

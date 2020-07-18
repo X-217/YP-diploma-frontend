@@ -16,6 +16,7 @@
   .header__links {
     font-size: 16px;
     margin-right: 16px;
+    flex-direction: column;
   }
 }
 
@@ -23,6 +24,7 @@
   .header__links {
     font-size: 16px;
     margin-right: calc(16px + (100vw - 321px) *  (40 - 16)  /  (768 - 321));
+    flex-direction: column;
   }
 }
 
