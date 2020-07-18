@@ -1,0 +1,19 @@
+.results__title {
+  width: 100%;
+  font-family: Roboto Slab, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  /* identical to box height, or 115% */
+
+
+  /* main/primary */
+
+  color: #1A1B22;
+
+  border-color: rgb(177, 65, 149);
+  border-style: solid;
+  border-width: thin;
+
+}

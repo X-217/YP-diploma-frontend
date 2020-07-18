@@ -1,0 +1,18 @@
+.results__button {
+  width: 288px;
+  height: 64px;
+  border-radius: 32px;
+  font-family: Roboto Regular, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+
+  text-align: center;
+
+  /* main/primary */
+
+  color: #1A1B22;
+}

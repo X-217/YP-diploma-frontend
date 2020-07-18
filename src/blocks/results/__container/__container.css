@@ -1,0 +1,15 @@
+.results__container {
+  width: 100%;
+  max-width: 1440px;
+margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 80px 104px;
+
+  border-color: rgb(65, 177, 79);
+  border-style: solid;
+  border-width: thin;
+
+}

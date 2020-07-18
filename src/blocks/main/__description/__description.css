@@ -1,0 +1,13 @@
+.main__description {
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Roboto, sans-serif;
+  line-height: 133%;
+  margin: 0;
+
+  width: 545px;
+  border-color: rgb(65, 106, 177);
+  border-style: solid;
+  border-width: thin;
+}

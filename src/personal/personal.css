@@ -1,4 +1,3 @@
-@import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 
 @import url(../blocks/header/header.css);
@@ -10,8 +9,9 @@
 @import url(../blocks/header/__main-link/__main-link.css);
 @import url(../blocks/header/__links_auth/__links_auth.css);
 @import url(../blocks/header/__underline-deco/__underline-deco.css);
+@import url(../blocks/header/__font-color_black/__font-color_black.css);
 
-@import url(../blocks/search-section/search-section.css);
+@import url(../blocks/main/main.css);
 
 
 

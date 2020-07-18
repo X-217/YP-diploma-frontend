@@ -1,0 +1,20 @@
+.results__result-cards {
+  width: 100%;
+  display: grid;
+
+
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+/*  grid-template-columns: 1fr 1fr 1fr 1fr;*/
+/*  grid-gap: 18px 18px;
+  justify-content: center;*/
+
+/*  grid-template-columns: repeat(3, );*/
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  /*   justify-items: stretch;
+  justify-content: center;
+    align-content: center;
+   background-color: #2A2C2F;*/
+
+}

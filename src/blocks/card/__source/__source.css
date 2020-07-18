@@ -1,0 +1,17 @@
+.card__source {
+  margin-top: 10px;
+
+  font-family: Roboto Slab, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  /* identical to box height, or 125% */
+
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  /* simulator/gray/text */
+
+  color: #B6BCBF;
+}

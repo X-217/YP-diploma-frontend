@@ -1,0 +1,9 @@
+.main__container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin:160px auto auto;
+  height: 336px;
+  width: 608px;
+}

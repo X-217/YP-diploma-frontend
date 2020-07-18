@@ -1,0 +1,10 @@
+.card {
+  min-width: 224px;
+  max-width: 400px;
+  height: 576px;
+/*  background-image: url( ../../images/search-section/search-section_background.jpg) ;*/
+  border-color: rgb(65, 106, 177);
+  border-style: solid;
+  border-width: thin;
+  background-color: white;
+}
