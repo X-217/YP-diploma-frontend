@@ -1,4 +1,4 @@
-.header__main-link{
+.header__saved-link {
   font-family: Roboto Roboto Regular, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -6,21 +6,20 @@
   line-height: 133%;
   text-decoration: none;
   white-space: nowrap;
-  }
-
+}
 @media (min-width: 768px) and (max-width: 1440px) {
-  .header__main-link {
+  .header__saved-link {
     font-size: calc(16px + (100vw - 768px) *  (18 - 16)  /  (1440 - 768));
   }
 }
 
 @media (max-width: 767px) {
-  .header__main-link {
+  .header__saved-link {
     font-size: 18px;
-    padding-top: 48px;
+    padding-bottom: 16px;
   }
 }
 
-.header__main-link:hover {
+.header__saved-link:hover {
   opacity: 0.7;
 }

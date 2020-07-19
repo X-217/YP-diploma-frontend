@@ -1,6 +1,7 @@
 .main{
   align-items: flex-start;
   background-image: url(../../images/search-section/search-section_background.jpg);
+
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

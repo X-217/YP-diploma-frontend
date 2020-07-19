@@ -4,27 +4,20 @@
   width: 100%;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
   z-index: 10;
-
   }
 
-@media (max-width: 320px) {
+/*для планшета и больше, горизонтальное меню*/
+@media (min-width: 768px) and (max-width: 1440px) {
   .header {
-    height: auto;
-
-    box-shadow: none;
+    height: calc(66px + (100vw - 768px) * (80 - 66) / (1440 - 768));
   }
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
+/*для смартфона, переходим на вертикальное меню*/
+@media (max-width: 767px) {
   .header {
-    height: auto;
+    height: 0;
     box-shadow: none;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1440px) {
-  .header {
-    height: calc(66px + (100vw - 769px) * (80 - 66) / (1440 - 769));
   }
 }
 

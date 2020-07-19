@@ -1,51 +1,34 @@
 .header__logo {
-  font-family: Roboto Slab, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 24px;
-  margin-left: 104px;
-  margin-top: 30px;
-  margin-right: 16px;
-
-  background-color: #B6BCBF;
-
-  border-color: rgb(19, 18, 18);
+  grid-area: header__logo;
+  padding-left: 104px;
+  padding-top: 30px;
+/********************************************/
+/*  border-color: rgb(19, 18, 18);
   border-style: solid;
-  border-width: thin;
+  border-width: thin;*/
+/********************************************/
 }
 
-
-@media (max-width: 320px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   .header__logo {
-    font-size: 16px;
-    margin-top: 16px;
-    margin-left: 16px;
-
-    height: 24px;
+    padding-left: calc(40px + (100vw - 768px) *  (104 - 40)  /  (1440 - 768));
+    padding-top: calc(22px + (100vw - 768px) *  (30 - 22)  /  (1440 - 768));
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .header__logo {
+    padding-left: calc(16px + (100vw - 320px) *  (40 - 16)  /  (767 - 320));
+    padding-top: calc(16px + (100vw - 320px) *  (22 - 16)  /  (767 - 320));
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+    height: calc(56px + (100vw - 320px) *  (66 - 56)  /  (767 - 320) - (16px + (100vw - 320px) *  (22 - 16)  /  (767 - 320)));
   }
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
+@media (max-width: 319px) {
   .header__logo {
-    font-size: calc(16px + (100vw - 321px) * (20 - 16) / (768 - 321));
-
-    margin-left: calc(16px + (100vw - 321px) *  (40 - 16)  /  (768 - 321));
-
-/*    height: calc((56px + (100vw - 321px) * (66 - 56) / (768 - 321)) - (16px + (100vw - 321px) * (23 - 16) / (768 - 321)));*/
-
-    margin-top: calc(16px + (100vw - 321px) * (23 - 16) / (768 - 321));
-    height: calc(40px + (100vw - 321px) * 3 / (768 - 321));
+    padding-left: 16px;
+    padding-top: 16px;
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1440px) {
-  .header__logo {
-    margin-top: calc(23px + (100vw - 769px) * (30 - 23) / (1440 - 769));
-    margin-left: calc(40px + (100vw - 769px) *  (104 - 40)  /  (1440 - 769));
-
+    height: 40px;
   }
 }
