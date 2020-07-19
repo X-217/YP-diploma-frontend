@@ -22,22 +22,32 @@
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 320px) {
   .header__auth-button{
-    margin-left: 16px;
+    margin-left: 0;
+    height: 16px;
   }
   /* переходим на бутерброд !!!!!!!!!!!!*/
 }
 
-@media (min-width: 421px) and (max-width: 768px) {
+@media (min-width: 321px) and (max-width: 768px) {
   .header__auth-button {
-    margin-left: 16px;
+    margin-left: 0;
+/*    height: calc(16px + (100vw - 320px) *  (40 - 16)  /  (768 - 320));*/
+    height: 56px;
+    width: 288px;
+    margin-top: 22px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
   .header__auth-button {
     margin-left: calc(16px + (100vw - 769px) *  (32 - 16)  /  (1440 - 769));
+    height: 56px;
+    width: 288px;
+/*    margin-top: 22px;*/
+/*    height: calc(40px + (100vw - 768px) *  (48 - 40)  /  (1440 - 768));*/
+
   }
 }
 

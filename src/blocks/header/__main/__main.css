@@ -16,7 +16,7 @@
 
 @media (min-width: 769px) and (max-width: 1440px) {
   .header__main{
-    margin-top: calc(23px + (100vw - 769px) * (30 - 23) / (1440 - 769));
+/*    margin-top: calc(23px + (100vw - 769px) * (30 - 23) / (1440 - 769));*/
   }
 }
 

@@ -4,7 +4,6 @@
 @import url(../blocks/header/__container/__container.css);
 
 @import url(../blocks/header/__logo/__logo.css);
-@import url(../blocks/header/__logo-text/__logo-text.css);
 @import url(../blocks/header/__links/__links.css);
 @import url(../blocks/header/__main/__main.css);
 @import url(../blocks/header/__main-link/__main-link.css);
@@ -13,6 +12,9 @@
 @import url(../blocks/header/__underline-deco/__underline-deco.css);
 @import url(../blocks/header/__underlined-item/__underlined-item.css);
 @import url(../blocks/header/__font-color_white/__font-color_white.css);
+@import url(../blocks/header/__auth/__auth.css);
+
+
 @import url(../blocks/main/main.css);
 @import url(../blocks/main/__container/__container.css);
 @import url(../blocks/main/__title/__title.css);
