@@ -17,15 +17,13 @@
 @import url(../blocks/header/__mobile-control/__mobile-control.css);
 
 
-
-
-@import url(../blocks/main/main.css);
-@import url(../blocks/main/__container/__container.css);
-@import url(../blocks/main/__title/__title.css);
-@import url(../blocks/main/__description/__description.css);
-@import url(../blocks/main/__search/__search.css);
-@import url(../blocks/main/__search-input/__search-input.css);
-@import url(../blocks/main/__search-submit/__search-submit.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/search/__container/__container.css);
+@import url(../blocks/search/__title/__title.css);
+@import url(../blocks/search/__description/__description.css);
+@import url(../blocks/search/__form/__form.css);
+@import url(../blocks/search/__input/__input.css);
+@import url(../blocks/search/__submit/__submit.css);
 
 @import url(../blocks/card/card.css);
 @import url(../blocks/card/__title/__title.css);

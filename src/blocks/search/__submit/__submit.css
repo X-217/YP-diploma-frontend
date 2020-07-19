@@ -1,4 +1,4 @@
-.main__search-submit {
+.search__submit {
   width: 168px;
   border-radius: 32px;
   background-color: #2F71E5;
@@ -24,7 +24,7 @@
   outline-style: none;
 }
 
-.main__search-submit:focus {
+.search__submit:focus {
 
   border-color: #367fff;
 
