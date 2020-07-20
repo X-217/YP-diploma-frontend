@@ -3,7 +3,33 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  margin:160px auto auto;
+  margin:160px auto 80px;
   height: 336px;
   width: 608px;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .search__container {
+    width: calc(448px + (100% - 768px) *  (608 - 448)  /  (1440 - 768));
+    height: calc(248px + (100vw - 768px) *  (336 - 248)  /  (1440 - 768));
+    margin-top: calc(104px + (100vw - 768px) *  (160 - 104)  /  (1440 - 768));
+    margin-bottom: calc(48px + (100vw - 768px) *  (80 - 48)  /  (1440 - 768));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .search__container {
+    height: calc(360px + (100vw - 320px) *  (330 - 360)  /  (767 - 320));
+    width: calc(285px + (100% - 320px) *  (448 - 285)  /  (767 - 320));
+    margin-top: calc(146px + (100% - 320px) *  (114 - 92)  /  (767 - 320));
+    margin-bottom: calc(32px + (100vw - 320px) *  (48 - 32)  /  (767 - 320));
+  }
+}
+
+@media (max-width: 319px) {
+  .search__container {
+    margin-top:146px;
+    height: 360px;
+    width: 90vw;
+  }
 }

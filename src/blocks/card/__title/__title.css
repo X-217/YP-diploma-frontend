@@ -1,10 +1,15 @@
 .card__title {
+  width: 100%;
   font-family: Roboto Slab, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;
   line-height: 115%;
   /* or 115% */
+  word-wrap: break-word;
+/*  overflow-wrap: break-word;*/
+
+
 
 
   /* main/primary */

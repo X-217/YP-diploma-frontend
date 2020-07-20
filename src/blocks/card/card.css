@@ -1,10 +1,31 @@
 .card {
-  min-width: 224px;
-  max-width: 400px;
+  width: 400px;
   height: 576px;
-/*  background-image: url( ../../images/search-section/search-section_background.jpg) ;*/
-  border-color: rgb(65, 106, 177);
-  border-style: solid;
-  border-width: thin;
   background-color: white;
+  border-radius: 10px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .card {
+   width: calc(((663px + (100vw - 780px ) * (1232 - 710) / (1440 - 768)) / 3) );
+  }
+}
+
+@media (min-width: 536px) and (max-width: 767px) {
+  .card {
+    width: calc(224px + (100vw - 536px) *  (330 - 218)  /  (767 - 536));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 536px) {
+  .card {
+  width: 89vw;
+  }
+}
+
+@media (max-width: 319px) {
+  .card{
+    width: 89vw;
+  }
 }

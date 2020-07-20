@@ -1,47 +1,37 @@
 .search{
-  position: relative;
-
+    position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-
   width: 100%;
-  height: 40vw;
-  max-height: 576px;
-  min-height: 400px;
-
+  height: 576px;
   margin: -80px auto auto;
-
-  background-image: url(../../images/search-section/search-section_background.jpg);
+  background-image: url(../../images/search/background_large.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
   z-index: 1;
 }
-/*
-src/images/search-section/search-section_background.jpg
 
-<img src="../<%=require('./images/test.jpg').default%>">*/
-@media (max-width: 320px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   .search {
-    width: auto;
-    height: 536px;
-    margin-top: -56px;
+    height: calc(400px + (100vw - 768px) *  (576 - 400)  /  (1440 - 768));
+    margin-top: calc(-66px - (100vw - 769px) * (80 - 66) / (1440 - 769));
   }
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .search {
-
-    min-height: 536px;
+    height: 536px;
     margin-top: calc(-56px - (100vw - 321px) * (66 - 56) / (768 - 321));
   }
 }
 
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (max-width: 319px) {
   .search {
-
-    margin-top: calc(-66px - (100vw - 769px) * (80 - 66) / (1440 - 769));
+    width: auto;
+    height: 536px;
+    margin-top: -56px;
+    background-image: url(../../images/search/background_small.png);
   }
 }

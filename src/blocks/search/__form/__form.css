@@ -1,9 +1,10 @@
 .search__form{
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  height: 64px;
-/*  border-color: rgb(177, 149, 65);
-  border-style: solid;
-  border-width: thin;*/
+}
+
+@media (max-width: 767px) {
+  .search__form {
+    flex-direction: column;
+  }
 }
