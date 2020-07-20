@@ -5,27 +5,33 @@
   border-radius: 10px;
 }
 
-
 @media (min-width: 768px) and (max-width: 1440px) {
   .card {
    width: calc(((663px + (100vw - 780px ) * (1232 - 710) / (1440 - 768)) / 3) );
+    height: calc(420px + (100vw - 768px) *  (576 - 420)  /  (1440 - 768));
   }
 }
 
 @media (min-width: 536px) and (max-width: 767px) {
   .card {
     width: calc(224px + (100vw - 536px) *  (330 - 218)  /  (767 - 536));
+    height: calc(440px + (100vw - 536px) *  (420 - 440)  /  (767 - 536));
+
   }
 }
 
 @media (min-width: 320px) and (max-width: 536px) {
   .card {
-  width: 89vw;
+    width: calc(288px + (100vw - 320px) *  (400 - 288)  /  (536 - 320));
+    height: calc(440px + (100vw - 320px) *  (576 - 440)  /  (536 - 320));
+
+
   }
 }
 
 @media (max-width: 319px) {
   .card{
-    width: 89vw;
+    width: 90vw;
+    height: 440px;
   }
 }

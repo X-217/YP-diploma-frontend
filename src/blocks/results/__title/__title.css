@@ -1,30 +1,32 @@
 .results__title {
+  margin: 0 0 64px 0;
+  padding: 0;
   font-family: Roboto Slab, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
   line-height: 46px;
   color: #1A1B22;
-width: 100%;
-
-
+  align-self: start;
 }
+
 @media (min-width: 768px) and (max-width: 1440px) {
   .results__title {
     font-size: calc(30px + (100vw - 768px) *  (40 - 30)  /  (1440 - 768));
-    margin-left: calc(40px + (100vw - 768px) *  (104 - 40)  /  (1440 - 768));
-
+    margin-bottom: calc(32px + (100vw - 768px) *  (64 - 32)  /  (1440 - 768));
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .results__title {
 font-size: 30px;
+    margin-bottom: calc(24px + (100vw - 320px) *  (32 - 24)  /  (767 - 320));
   }
 }
 
 @media (max-width: 319px) {
   .results__title {
 font-size: 30px;
+    margin-bottom: 24px;
   }
 }
