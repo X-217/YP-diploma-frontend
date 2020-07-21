@@ -1,0 +1,15 @@
+.card__save {
+  height: 40px;
+  width: 40px;
+  margin: 24px 24px 0 5px;
+  border-radius: 10px;
+  background-image: url(../../../images/card/normal.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: white;
+  border-style: none;
+  justify-self: end;
+
+  outline-style: none;
+  background-color: white;
+}

@@ -1,4 +1,43 @@
 .card__container {
+  display: grid;
+  grid-template-rows: 24px auto 1fr 30px;
   width: auto;
-  margin: 20px;
+  height: 260px;
+  margin: 20px 24px 24px 24px;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .card__container {
+    height: calc(238px + (100vw - 768px) *  (260 - 238)  /  (1440 - 768));
+    margin-top: calc(16px + (100vw - 768px) *  (20 - 16)  /  (1440 - 768));
+    margin-left: calc(16px + (100vw - 768px) *  (24 - 16)  /  (1440 - 768));
+    margin-right: calc(16px + (100vw - 768px) *  (24 - 16)  /  (1440 - 768));
+    margin-bottom: calc(16px + (100vw - 768px) *  (24 - 16)  /  (1440 - 768));
+  }
+}
+
+@media (min-width: 536px) and (max-width: 767px) {
+  .card__container {
+    height: calc(238px + (100vw - 535px) *  (260 - 238)  /  (768 - 535));
+    margin-top: calc(16px + (100vw - 535px) *  (20 - 16)  /  (767 - 535));
+    margin-left: calc(16px + (100vw - 535px) *  (24 - 16)  /  (767 - 535));
+    margin-right: calc(16px + (100vw - 535px) *  (24 - 16)  /  (767 - 535));
+    margin-bottom: calc(16px + (100vw - 535px) *  (24 - 16)  /  (767 - 535));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 535px) {
+  .card__container {
+    height: calc(218px + (100vw - 320px) *  (260 - 218)  /  (535 - 320));
+    margin-top: calc(16px + (100vw - 320px) *  (20 - 16)  /  (535 - 320));
+    margin-left: calc(16px + (100vw - 320px) *  (24 - 16)  /  (535 - 320));
+    margin-right: calc(16px + (100vw - 320px) *  (24 - 16)  /  (535 - 320));
+    margin-bottom: calc(16px + (100vw - 320px) *  (24 - 16)  /  (535 - 320));
+  }
+}
+
+@media (max-width: 319px) {
+  .card__container {
+margin: 16px;
+  height: 218px;
+  }
 }

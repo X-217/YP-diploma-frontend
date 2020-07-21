@@ -21,3 +21,8 @@
 
   }
 }
+
+
+  border-color: #ff00b7;
+  border-style: solid;
+  border-width: thin;

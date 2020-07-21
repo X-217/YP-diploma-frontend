@@ -1,19 +1,11 @@
 .card__text {
-  display: block;
+
   font-family: Roboto Roboto Regular, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 137%;
-  /* or 137% */
   width: auto;
-
   overflow: hidden;
-
-
-
-
-  /* main/primary */
-
   color: #1A1B22;
 }

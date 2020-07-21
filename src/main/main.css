@@ -29,10 +29,16 @@
 @import url(../blocks/card/card.css);
 @import url(../blocks/card/__title/__title.css);
 @import url(../blocks/card/__container/__container.css);
+@import url(../blocks/card/__figure/__figure.css);
 @import url(../blocks/card/__date/__date.css);
 @import url(../blocks/card/__text/__text.css);
 @import url(../blocks/card/__source/__source.css);
 @import url(../blocks/card/__image/__image.css);
+@import url(../blocks/card/__login/__login.css);
+@import url(../blocks/card/__save/__save.css);
+@import url(../blocks/card/__save_hover/__save_hover.css);
+@import url(../blocks/card/__save_saved/__save_saved.css);
+
 
 @import url(../blocks/results/results.css);
 @import url(../blocks/results/__container/__container.css);
