@@ -1,0 +1,7 @@
+.footer__facebook-link {
+width: 20px;
+  height: 20px;
+  background-image: url(../../../images/social/fb.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}

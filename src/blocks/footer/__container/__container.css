@@ -1,0 +1,30 @@
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+}
+
+@media (min-width: 768px) {
+  .footer__container {
+    grid-template-areas: "footer__сopyright footer__item_main footer__item_ypraktikum  footer__item_social-links";
+  }
+}
+
+
+@media (max-width: 767px) {
+  .footer__container {
+    grid-template-areas:  "footer__item_main           footer__item_social-links"
+                          "footer__item_ypraktikum     footer__item_social-links"
+                          "footer__сopyright           footer__сopyright";
+  }
+}
+
+
+
+
+
+

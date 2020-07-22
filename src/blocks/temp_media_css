@@ -23,6 +23,22 @@
 }
 
 
+
+
+@media (min-width: 536px) and (max-width: 767px) {
+  . {
+
+  }
+}
+
+@media (min-width: 320px) and (max-width: 535px) {
+  . {
+
+  }
+}
+
+
+
   border-color: #ff00b7;
   border-style: solid;
   border-width: thin;

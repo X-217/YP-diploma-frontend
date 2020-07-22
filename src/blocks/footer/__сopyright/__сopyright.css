@@ -1,0 +1,29 @@
+.footer__сopyright {
+  grid-area: footer__сopyright;
+  padding-left: 104px;
+  padding-top: 30px;
+  background-color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .footer__сopyright {
+    padding-left: calc(40px + (100vw - 768px) *  (104 - 40)  /  (1440 - 768));
+    padding-top: calc(22px + (100vw - 768px) *  (30 - 22)  /  (1440 - 768));
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer__сopyright {
+    padding-left: calc(16px + (100vw - 320px) *  (40 - 16)  /  (767 - 320));
+/*    padding-top: calc(16px + (100vw - 320px) *  (22 - 16)  /  (767 - 320));*/
+    padding-top: 38px;
+    height: calc(40px + (100vw - 320px) *  (66 - 62)  /  (767 - 320) );
+  }
+}
+
+@media (max-width: 319px) {
+  .footer__сopyright {
+    padding-left: 16px;
+    padding-top: 16px;
+    height: 40px;
+  }
+}

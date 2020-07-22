@@ -1,6 +1,7 @@
 .card__login {
   height: 40px;
   width: 182px;
+
   justify-self: end;
   margin: 24px 0;
   border-radius: 10px;
@@ -16,4 +17,11 @@
 
   outline-style: none;
   background-color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .card__login {
+    width: calc(146px + (100vw - 768px) *  (182 - 146)  /  (1000 - 768));
+
+  }
 }

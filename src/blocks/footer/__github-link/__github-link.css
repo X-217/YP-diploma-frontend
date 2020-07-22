@@ -1,0 +1,7 @@
+.footer__github-link {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../../images/social/github.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}

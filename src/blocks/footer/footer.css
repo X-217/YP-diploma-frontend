@@ -1,0 +1,23 @@
+.footer{
+  position: relative;
+  height: 80px;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+  }
+
+/*для планшета и больше, горизонтальное меню*/
+@media (min-width: 768px) and (max-width: 1440px) {
+  .footer {
+    height: calc(64px + (100vw - 768px) * (80 - 64) / (1440 - 768));
+  }
+}
+
+/*для смартфона, переходим на вертикальное меню*/
+@media (max-width: 767px) {
+  .footer {
+    height: 0;
+    border-color: transparent;
+  }
+}
+

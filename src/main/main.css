@@ -2,7 +2,6 @@
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__container/__container.css);
-
 @import url(../blocks/header/__logo/__logo.css);
 @import url(../blocks/header/__logo-link/__logo-link.css);
 @import url(../blocks/header/__item/__item.css);
@@ -27,6 +26,7 @@
 @import url(../blocks/search/__input/__input.css);
 @import url(../blocks/search/__submit/__submit.css);
 
+
 @import url(../blocks/card/card.css);
 @import url(../blocks/card/__title/__title.css);
 @import url(../blocks/card/__container/__container.css);
@@ -46,6 +46,34 @@
 @import url(../blocks/results/__title/__title.css);
 @import url(../blocks/results/__button/__button.css);
 @import url(../blocks/results/__output/__output.css);
+
+
+@import url(../blocks/about/about.css);
+@import url(../blocks/about/__container/__container.css);
+@import url(../blocks/about/__picture/__picture.css);
+@import url(../blocks/about/__image/__image.css);
+@import url(../blocks/about/__info/__info.css);
+@import url(../blocks/about/__text/__text.css);
+@import url(../blocks/about/__title/__title.css);
+
+
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__container/__container.css);
+@import url(../blocks/footer/__сopyright/__сopyright.css);
+@import url(../blocks/footer/__сopyright-link/__сopyright-link.css);
+@import url(../blocks/footer/__item/__item.css);
+@import url(../blocks/footer/__item_main/__item_main.css);
+@import url(../blocks/footer/__item_ypraktikum/__item_ypraktikum.css);
+@import url(../blocks/footer/__main-link/__main-link.css);
+@import url(../blocks/footer/__ypraktikum-link/__ypraktikum-link.css);
+@import url(../blocks/footer/__item_social-links/__item_social-links.css);
+@import url(../blocks/footer/__github-link/__github-link.css);
+@import url(../blocks/footer/__facebook-link/__facebook-link.css);
+
+
+
+
 
 /*
 

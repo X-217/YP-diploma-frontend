@@ -1,0 +1,29 @@
+.about__info {
+  margin: 51px 216px auto 56px;
+
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .about__info {
+    margin-top: calc(0px + (100vw - 768px) *  (51 - 0)  /  (1440 - 768));
+    margin-left: calc(32px + (100vw - 768px) *  (56 - 32)  /  (1440 - 768));
+    margin-right: calc(40px + (100vw - 768px) *  (216 - 40)  /  (1440 - 768));
+
+
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .about__info {
+    margin-left: calc(10px + (100vw - 320px) *  (32 - 10)  /  (535 - 320));
+    margin-right: calc(10px + (100vw - 320px) *  (32 - 10)  /  (535 - 320));
+
+
+
+  }
+}
+
+@media (max-width: 319px) {
+  .about__info {
+
+  }
+}

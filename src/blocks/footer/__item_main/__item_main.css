@@ -1,0 +1,4 @@
+.footer__item_main {
+  grid-area: footer__item_main;
+  background-color: white;
+}
