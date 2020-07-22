@@ -13,13 +13,16 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .header__item {
     padding-top: 32px;
-    margin-left: calc(16px + (100vw - 320px) *  (40 - 16)  /  (767 - 320));
+    padding-left: calc(16px + (100vw - 320px) *  (40 - 16)  /  (767 - 320));
+    margin-left: 0;
+
   }
 }
 
 @media (max-width: 319px) {
   .header__item {
     padding-top: 32px;
-    margin-left: 16px;
+    padding-left: 16px;
+    margin-left: 0;
   }
 }

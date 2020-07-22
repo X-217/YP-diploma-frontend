@@ -1,20 +1,16 @@
 .header__auth-button {
   grid-area: header__auth-button;
 
-  margin-left: 32px;
-  margin-top: 20px;
-  margin-right: 104px;
-
-  /* маржины касаютя отступов от контура*/
   width: auto;
   max-width: 240px;
+
+  margin-right: 104px;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: 12px;
   /* при наличии значка выхода +24px
     padding-right: 40px;
   */
 
-  /* паддинги касаются надписи внутри и относительно border*/
   height: 48px;
   border-radius: 24px;
 
@@ -23,7 +19,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 133%;
-/*  background: none;*/
 
   border-color: white;
   border-style: solid;
@@ -42,9 +37,7 @@
 }
 @media (min-width: 768px) and (max-width: 1440px) {
   .header__auth-button {
-    margin-left: calc(16px + (100vw - 768px) *  (32 - 16)  /  (1440 - 768));
     margin-right: calc(40px + (100vw - 768px) *  (104 - 40)  /  (1440 - 768));
-    margin-top: calc(14px + (100vw - 768px) *  (20 - 14)  /  (1440 - 768));
     padding-left: calc(12px + (100vw - 768px) *  (16 - 12)  /  (1440 - 768));
     padding-right: calc(12px + (100vw - 768px) *  (16 - 12)  /  (1440 - 768));
     /* при наличии значка выхода +24px
@@ -59,15 +52,12 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
   .header__auth-button {
-    margin-left: calc(16px + (100vw - 320px) * (40 - 16) / (767 - 320));
     margin-right: calc(16px + (100vw - 320px) * (40 - 16) / (767 - 320));
     margin-top: 30px;
-
-    min-width: 288px;
+    min-width: 278px;
     height: 56px;
     border-radius: 28px;
     font-size: 18px;
-
   }
 }
 
@@ -76,7 +66,7 @@
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 30px;
-    min-width: 90vw;
+    width: 50vw;
     height: 56px;
     border-radius: 28px;
     font-size: 18px;

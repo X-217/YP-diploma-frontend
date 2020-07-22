@@ -10,6 +10,7 @@
 @import url(../blocks/header/__item_saved/__item_saved.css);
 @import url(../blocks/header/__main-link/__main-link.css);
 @import url(../blocks/header/__saved-link/__saved-link.css);
+@import url(../blocks/header/__item_auth/__item_auth.css);
 @import url(../blocks/header/__auth-button/__auth-button.css);
 @import url(../blocks/header/__auth-button_login/__auth-button_login.css);
 @import url(../blocks/header/__item_underline/__item_underline.css);

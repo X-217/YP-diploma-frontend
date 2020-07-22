@@ -3,10 +3,12 @@
   padding-left: 104px;
   padding-top: 30px;
 /********************************************/
-/*  border-color: rgb(19, 18, 18);
+  border-color: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
-  border-width: thin;*/
+  border-width: thin;
 /********************************************/
+
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
@@ -19,7 +21,10 @@
   .header__logo {
     padding-left: calc(16px + (100vw - 320px) *  (40 - 16)  /  (767 - 320));
     padding-top: calc(16px + (100vw - 320px) *  (22 - 16)  /  (767 - 320));
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+    border-color: transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: thin;
     height: calc(40px + (100vw - 320px) *  (66 - 62)  /  (767 - 320) );
   }
 }
@@ -28,7 +33,10 @@
   .header__logo {
     padding-left: 16px;
     padding-top: 16px;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
     height: 40px;
+    border-color: transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: thin;
   }
 }
