@@ -1,0 +1,29 @@
+.popup {
+/*  display: none;*/
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 100;
+}
+@media (max-width: 450px) {
+  .popup {
+/*    background-image: url(../../images/main-page/main-page-mobile-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;*/
+  }
+}
+
+@media (max-width: 536px) {
+  .popup {
+    top: calc(56px + (100vw - 320px) *  (88 - 76)  /  (767 - 320));
+align-items: start;
+  }
+}

@@ -1,0 +1,20 @@
+.popup__message {
+display: none;
+
+
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #FF0000;
+margin-top: 3px;
+  padding-bottom: 10px;
+
+
+/*    position: relative;
+    height: 0;
+    top: 3px;*/
+
+}

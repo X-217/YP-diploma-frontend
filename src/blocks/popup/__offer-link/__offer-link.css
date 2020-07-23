@@ -1,0 +1,14 @@
+.popup__offer-link {
+  font-family: Inter sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+
+  color: #2F71E5;
+}
+
+.popup__offer-link :hover {
+  opacity: 0.7;
+}

@@ -9,6 +9,57 @@
 </head>
 <body class="body">
 
+
+<!--
+
+<div class="popup popup_login">
+  <div class="popup__content">
+    <img alt="Close" class="popup__close popup__close_form" src="<%=require('.././images/header/menu-close_white.svg').default%>">
+    <h3 class="popup__title">Вход</h3>
+    <form class="popup__form" novalidate>
+      <input class="popup__input popup__input_firstInput" type="text" required minlength="2" maxlength="30">
+      <div class="popup__input-error">ошибка1</div>
+      <input class="popup__input popup__input_secondInput" type="text" required>
+      <div class="popup__input-error">Ошибка2</div>
+      <button id="submitButton" class="button popup__button" type="submit">Войти</button>
+    </form>
+  </div>
+</div>
+
+-->
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<div class="popup popup_success">
+  <div class="popup__content">
+    <img alt="Close" class="popup__close popup__close_form" src="<%=require('.././images/header/menu-close_white.svg').default%>">
+    <h3 class="popup__title">Вход</h3>
+    <form class="popup__form" novalidate>
+      <input class="popup__input popup__input_firstInput" type="text" required minlength="2" maxlength="30">
+      <div class="popup__input-error">ошибка1</div>
+      <input class="popup__input popup__input_secondInput" type="text" required>
+      <div class="popup__input-error">Ошибка2</div>
+      <button id="submitButton" class="button popup__button" type="submit">Войти</button>
+    </form>
+  </div>
+</div>
+
+-->
+
+
+
+
+
+
   <header class="header">
     <nav class="header__container">
       <div class="header__logo">
@@ -32,8 +83,6 @@
     </nav>
   </header>
 
-
-
   <section class="search">
     <div class="search__container">
       <div class="search__text-content">
@@ -47,7 +96,6 @@
       </form>
     </div>
   </section>
-
 
  <section class="results">
       <div class="results__container">
@@ -125,7 +173,6 @@
       </div>
     </section>
 
-
 <section class="about">
   <div class="about__container">
     <picture class="about__picture">
@@ -148,8 +195,6 @@
 
 
 </section>
-
-
 
   <footer class="footer">
     <nav class="footer__container">
@@ -184,6 +229,45 @@
     </nav>
   </footer>
 
+<div class="popup">
+
+  <div class="popup__content">
+    <img alt="Close" class="popup__close" src="<%=require('.././images/header/menu-close_white.svg').default%>">
+    <h3 class="popup__title">Регистрация</h3>
+    <form class="popup__form">
+
+
+
+      <div class="popup__item">
+        <div class="popup__item-name">Email</div>
+        <input placeholder="Введите почту" class="popup__input popup__input_email" type="text" required minlength="2" maxlength="30">
+        <div class="popup__message popup__message_email-not-valid">Неправильный формат email</div>
+
+      </div>
+      <div class="popup__item">
+        <div class="popup__item-name">Пароль</div>
+        <input placeholder="Введите пароль" class="popup__input popup__input_password" type="password" required minlength="2" maxlength="30">
+        <div class="popup__message popup__message_password-not-valid">Длина пароля должна быть не менее 8 символов</div>
+
+      </div>
+
+      <div class="popup__item">
+        <div class="popup__item-name">Имя</div>
+        <input placeholder="Введите свое имя" class="popup__input popup__input_username" type="text" required minlength="2" maxlength="30">
+        <div class="popup__message popup__message_name-not-valid">Имя не может начинаться с пробела</div>
+
+      </div>
+      <div class="popup__message popup__message_user-exist">Такой пользователь уже есть</div>
+
+      <button id="submitButton" class="popup__button popup__button_activate" type="submit">Зарегистрироваться</button>
+      <div class="popup__offer">
+        <span class="popup__offer-text">или&nbsp</span>
+        <a class="popup__offer-link" href="#" > Войти</a>
+      </div>
+
+    </form>
+  </div>
+</div>
 
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 
