@@ -16,10 +16,10 @@
 
 @media (max-width: 767px)  {
   .header__container {
-    grid-template-areas:  "header__logo        header__logo      header__mobile-control"
-                          "header__item_main header__item_main        header__item_main"
-                          "header__item_saved  header__item_saved       header__item_saved"
-                          "header__item_auth  header__item_auth     header__item_auth";
+    grid-template-areas:  "header__logo         header__logo          header__mobile-control"
+                          "header__item_main    header__item_main     header__item_main"
+                          "header__item_saved   header__item_saved    header__item_saved"
+                          "header__item_auth    header__item_auth     header__item_auth";
   }
 }
 

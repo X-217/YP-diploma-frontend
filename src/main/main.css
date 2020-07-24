@@ -15,6 +15,8 @@
 @import url(../blocks/header/__item_underline/__item_underline.css);
 @import url(../blocks/header/__font-color_white/__font-color_white.css);
 @import url(../blocks/header/__mobile-control/__mobile-control.css);
+@import url(../blocks/header/__menu-button/__menu-button.css);
+@import url(../blocks/header/__mobile-menu/__mobile-menu.css);
 
 
 @import url(../blocks/search/search.css);

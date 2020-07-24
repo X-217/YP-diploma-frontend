@@ -1,86 +1,29 @@
 .header__mobile-control {
   grid-area: header__mobile-control;
 
-  background-image: url(../../../images/header/menu_white.svg);
-  /* если меню развернуто, показываем крестик
-    background-image: url(../../../images/header/menu-close_white.svg);
-  */
-  background-color: #1A1B22;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 24px;
+  display: flex;
+
+  width: 60px;
   border-color: transparent;
   border-bottom-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: thin;
-
-
-
-/*  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);*/
-
-
-  /* маржины касаютя отступов от контура*/
-  width: 60px;
-  height: 60px;
-
-
-
-
-
-
-
-
-  outline-style: none;
 }
 
 @media (min-width: 768px) {
   .header__mobile-control{
- display: none;
+    display: none;
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .header__mobile-control {
-/*    display: none;*/
-    /* при показе попапа*/
-    height: calc(57px + (100vw - 320px) *  (66 - 56)  /  (767 - 320) );
+    height: calc(56px + (100vw - 320px) *  (66 - 56)  /  (767 - 320) );
   }
 }
-
-/* демо */
-@media (min-width: 700px) and (max-width: 767px) {
-  .header__logo {
-background-color: #1A1B22;
-  }
-  .header__item {
-    background-color: #1A1B22;
-  }
-  .header__auth-button {
-    background-color: #1A1B22;
-  }
-}
-
-/*
-@media (min-width: 320px) and (max-width: 767px) {
-  .header__mobile-control {
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-    height: calc(57px + (100vw - 320px) *  (66 - 56)  /  (767 - 320) );
-  }
-}
-*/
-
-/* демо */
 
 @media (max-width: 319px) {
   .header__mobile-control {
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-    height: 57px;
+    height: 56px;
   }
 }
-
-
-.header__mobile-control:hover {
-  opacity: 0.7;
-}
-
-/*src/images/header/menu-close_white.svg*/

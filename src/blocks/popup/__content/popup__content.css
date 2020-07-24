@@ -38,7 +38,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .header__mobile-control {
+  .header__menu-button {
     /*   display: none;
 при показе попапа*/
 

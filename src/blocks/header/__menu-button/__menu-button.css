@@ -1,0 +1,19 @@
+.header__menu-button {
+
+margin: auto;
+  border-color: transparent;
+  background-image: url(../../../images/header/menu_white.svg);
+  /* если меню развернуто, показываем крестик
+    background-image: url(../../../images/header/menu-close_white.svg);
+  */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  outline-style: none;
+}
+
+.header__menu-button:hover {
+  opacity: 0.7;
+}
+
