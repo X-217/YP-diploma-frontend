@@ -35,7 +35,7 @@
 @import url(../blocks/card/__text/__text.css);
 @import url(../blocks/card/__source/__source.css);
 @import url(../blocks/card/__image/__image.css);
-@import url(../blocks/card/__login/__login.css);
+@import url(../blocks/card/__offer-login/__offer-login.css);
 @import url(../blocks/card/__save/__save.css);
 @import url(../blocks/card/__save_hover/__save_hover.css);
 @import url(../blocks/card/__save_saved/__save_saved.css);
@@ -94,7 +94,7 @@
 @import url(../blocks/popup/__message_user-exist/__message_user-exist.css);
 @import url(../blocks/popup/__offer/__offer.css);
 @import url(../blocks/popup/__offer-link/__offer-link.css);
-@import url(../blocks/popup/__offer-text/__offer-text.css);
+
 
 
 

@@ -16,13 +16,13 @@
   }
 }
 
-@media (min-width: 536px) and (max-width: 767px) {
+@media (min-width: 537px) and (max-width: 767px) {
   .card__figure {
     height: calc(150px + (100vw - 536px) * (272 - 150) / (767 - 536));
   }
 }
 
-@media (min-width: 320px) and (max-width: 535px) {
+@media (min-width: 320px) and (max-width: 536px) {
   .card__figure {
     height: calc(196px + (100vw - 320px) * (272 - 196) / (535 - 320));
   }
