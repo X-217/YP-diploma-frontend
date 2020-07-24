@@ -7,6 +7,6 @@ export default class SignupPopup extends Popup {
     };
     open() {
       this.setEventListeners(this);
-      this.container.classList.add('popup_is-opened');
+      this.container.classList.add('item_is-visible');
     };
 }

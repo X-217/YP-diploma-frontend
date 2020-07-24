@@ -1,6 +1,6 @@
 .popup__content {
   width: 430px;
-  height: 458px;
+/*  height: 458px;*/
   /*
 
   max-width: 80vw;
@@ -11,7 +11,7 @@
   border-radius: 16px;
   position: relative;
   box-sizing: border-box;
-  padding: 34px 36px;
+  padding: 34px 36px 28px;
   /*display: none;*/
 }
 
@@ -42,5 +42,11 @@
     /*   display: none;
 при показе попапа*/
 
+  }
+}
+
+@media (max-width: 319px) {
+  .popup__content {
+    width: 319px;
   }
 }

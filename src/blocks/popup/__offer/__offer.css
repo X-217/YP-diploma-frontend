@@ -3,9 +3,14 @@
   justify-content: center;
 
   height: 20px;
-margin-top: 16px;
+margin-top: 14px;
 
 
 
 
+}
+@media (max-width: 319px) {
+  .popup__offer {
+
+  }
 }

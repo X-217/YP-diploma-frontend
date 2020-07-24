@@ -5,6 +5,7 @@
 border-style: none;
 
   margin-top: 20px;
+
   background-color: #E6E8EB;
 
 
@@ -17,4 +18,9 @@ border-style: none;
   font-size: 18px;
   line-height: 133%;
 
+}
+@media (max-width: 319px) {
+  .popup__button  {
+    width: 248pxpx;
+  }
 }

@@ -24,7 +24,16 @@
 
 @media (max-width: 536px) {
   .popup {
-    top: calc(56px + (100vw - 320px) *  (88 - 76)  /  (767 - 320));
+    padding-top: calc(56px + (100vw - 320px) *  (88 - 76)  /  (767 - 320));
 align-items: start;
+  }
+}
+
+@media (max-width: 319px) {
+  .popup {
+    position: relative;
+    padding-top: 56px;
+    width: 319px;
+    justify-content: left;
   }
 }

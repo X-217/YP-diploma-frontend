@@ -16,7 +16,9 @@
 @import url(../blocks/header/__font-color_white/__font-color_white.css);
 @import url(../blocks/header/__mobile-control/__mobile-control.css);
 @import url(../blocks/header/__menu-button/__menu-button.css);
+@import url(../blocks/header/__menu-button_close/__menu-button_close.css);
 @import url(../blocks/header/__mobile-menu/__mobile-menu.css);
+@import url(../blocks/header/__blur/__blur.css);
 
 
 @import url(../blocks/search/search.css);
@@ -80,10 +82,11 @@
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__item/__item.css);
 @import url(../blocks/popup/__item-name/__item-name.css);
+@import url(../blocks/popup/__item_username/__item_username.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__button/popup__button.css);
 @import url(../blocks/popup/__button_activate/popup__button_activate.css);
-@import url(../blocks/popup/_is-opened/popup_is-opened.css);
+@import url(../blocks/popup/_is-visible/_is-visible.css);
 @import url(../blocks/popup/__button_save/popup__button_save.css);
 @import url(../blocks/popup/__image-viewer/popup__image-viewer.css);
 @import url(../blocks/popup/__image-conteiner/popup__image-conteiner.css);
@@ -96,6 +99,7 @@
 @import url(../blocks/popup/__message_user-exist/__message_user-exist.css);
 @import url(../blocks/popup/__offer/__offer.css);
 @import url(../blocks/popup/__offer-link/__offer-link.css);
+@import url(../blocks/popup/__offer-text/__offer-text.css);
 
 
 

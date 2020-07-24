@@ -1,0 +1,9 @@
+.header__menu-button_close {
+  background-image: url(../../../images/header/menu-close_white.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  outline-style: none;
+/*  background-image: url(../../../images/header/menu_white.svg);*/
+}

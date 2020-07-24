@@ -54,7 +54,7 @@
   .header__auth-button {
     margin-right: calc(16px + (100vw - 320px) * (40 - 16) / (767 - 320));
     margin-top: 30px;
-    min-width: 278px;
+    width: 288px;
     height: 56px;
     border-radius: 28px;
     font-size: 18px;
@@ -63,14 +63,12 @@
 
 @media (max-width: 319px) {
   .header__auth-button {
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-right: 16px;
     margin-top: 30px;
-    width: 50vw;
+    width: 288px;
     height: 56px;
     border-radius: 28px;
     font-size: 18px;
-
   }
 }
 
@@ -79,6 +77,7 @@
 }
 
 /* демо */
+/*
 
 @media (min-width: 900px) and (max-width: 1100px) {
   .header__auth-button {
@@ -89,3 +88,4 @@
     padding-right: calc(24px + 12px + (100vw - 768px) *  (16 - 12)  /  (1440 - 768));
   }
 }
+*/

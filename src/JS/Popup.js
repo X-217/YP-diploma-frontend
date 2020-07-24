@@ -12,7 +12,7 @@ export default class Popup {
         this.closeButton = document.querySelector(".popup__close_form");
     };
     close() {
-        this.container.classList.remove('popup_is-opened');
+        this.container.classList.remove('item_is-visible');
     };
 };
 

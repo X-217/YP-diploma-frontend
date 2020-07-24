@@ -1,6 +1,7 @@
 .header__menu-button {
-
 margin: auto;
+width: 24px;
+  height: 24px;
   border-color: transparent;
   background-image: url(../../../images/header/menu_white.svg);
   /* если меню развернуто, показываем крестик
@@ -9,6 +10,7 @@ margin: auto;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
+
   background-size: 24px;
   outline-style: none;
 }

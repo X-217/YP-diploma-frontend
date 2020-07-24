@@ -1,26 +1,25 @@
 .header {
-  position: relative;
-  height: 80px;
-  width: 100%;
+  position: absolute;
+  width: 100vw;
   border-color: transparent;
   border-bottom-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: thin;
+  height: 82px;
   z-index: 10;
-  }
+}
 
-/*для планшета и больше, горизонтальное меню*/
 @media (min-width: 768px) and (max-width: 1440px) {
   .header {
     height: calc(66px + (100vw - 768px) * (80 - 66) / (1440 - 768));
   }
 }
 
-/*для смартфона, переходим на вертикальное меню*/
 @media (max-width: 767px) {
   .header {
-    height: 0;
-    border-color: transparent;
+
+    padding-bottom: 400px;
+    border: none;
   }
 }
 

@@ -1,5 +1,14 @@
 .body {
+  position: absolute;
   margin: 0;
   padding:0;
-  background-color: #504848;
+  background-color: #B6BCBF;
+/*  overflow:  hidden;*/
+
 }
+@media (max-width: 319px) {
+  .body{
+    overflow-x: scroll;
+  }
+}
+

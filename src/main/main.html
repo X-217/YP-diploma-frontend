@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <meta name="author" content="Алексей Сидоров">
   <title>News Explorer</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('.././images/favicon.png').default%>" />
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body class="body">
@@ -13,15 +15,15 @@
   <header class="header">
     <nav class="header__container">
       <div class="header__logo header__menu-item">
-        <a class="header__logo-link header__font-color_white" href="https://yandex.ru/">
+        <a class="header__logo-link header__font-color_white" href="./index.html">
           NewsExplorer
         </a>
       </div>
       <div class="header__item header__item_underline header__item_main header__menu-item">
-        <a class=" header__main-link header__font-color_white " href="#">Главная</a>
+        <a class=" header__main-link header__font-color_white " href="./index.html">Главная</a>
       </div>
       <div class="header__item header__item_saved header__menu-item">
-        <a class="header__saved-link header__font-color_white" href="#">Сохраненные статьи</a>
+        <a class="header__saved-link header__font-color_white" href="./personal/index.html">Сохраненные статьи</a>
       </div>
       <div class="header__item header__item_auth header__menu-item">
         <button name="auth-button"
@@ -32,160 +34,161 @@
       <div class="header__mobile-control header__menu-item">
         <button name="menu-button" class="header__menu-button"></button>
       </div>
-
     </nav>
   </header>
 
 
-
-
-  <section class="search">
-    <div class="search__container">
-      <div class="search__text-content">
-        <h1 class="search__title"> Что в мире творится?</h1>
-        <p class="search__description">Находите самые свежие статьи на любую тему и сохраняйте в своём личном
-          кабинете.</p>
-      </div>
-      <form class="search__form">
-        <input type="search" name="search" required class="search__input" placeholder="Введите тему новости">
-        <input type="submit" value="Искать" class="search__submit">
-      </form>
-    </div>
-  </section>
 <!--
- <section class="results">
-      <div class="results__container">
-        <h3 class="results__title">Результаты поиска</h3>
-       <div class="results__output">
-          <div class="card">
-            <div class="card__figure">
-              <button class="card__save"></button>
-            </div>
-            <div class="card__container">
-              <div class="card__date">2 августа, 2019</div>
-              <h3 class="card__title">Оченьоченьдлинноедлинноедлинноедлинноедлинное название карточки </h3>
-              <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-                система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-                система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
-              <div class="card__source">YANDEX.RU</div>
-            </div>
-          </div>
-         <div class="card">
-           <div class="card__figure">
-             <div class="card__offer-login">Войдите, чтобы сохранять статьи</div>
-             <button class="card__save card__save_hover"></button>
-           </div>
-           <div class="card__container">
-             <div class="card__date">2 августа, 2019</div>
-             <h3 class="card__title">Национальное достояние – парки</h3>
-             <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-               система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-               система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
-             <div class="card__source">ЛЕНТА.РУ</div>
-           </div>
-         </div>
-         <div class="card">
-           <div class="card__figure">
-             <button class="card__save card__save_saved"></button>
-           </div>
-           <div class="card__container">
-             <div class="card__date">2 августа, 2019</div>
-             <h3 class="card__title">Статья</h3>
-             <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-               система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-               система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
-             <div class="card__source">ЛЕНТА.РУ</div>
-           </div>
-         </div>
-         <div class="card">
-           <div class="card__figure">
-             <button class="card__save"></button>
-           </div>
-           <div class="card__container">
-             <div class="card__date">2 августа, 2019</div>
-             <h3 class="card__title">Национальное достояние – парки</h3>
-             <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-               система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-               система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
-             <div class="card__source">ЛЕНТА.РУ</div>
-           </div>
-         </div>
-         <div class="card">
-           <div class="card__figure">
-             <button class="card__save"></button>
-           </div>
-           <div class="card__container">
-             <div class="card__date">2 августа, 2019</div>
-             <h3 class="card__title">Национальное достояние – парки</h3>
-             <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-               система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-               система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
-             <div class="card__source">ЛЕНТА.РУ</div>
-           </div>
-         </div>
 
+    <section class="search">
+      <div class="search__container">
+        <div class="search__text-content">
+          <h1 class="search__title"> Что в мире творится?</h1>
+          <p class="search__description">Находите самые свежие статьи на любую тему и сохраняйте в своём личном
+            кабинете.</p>
         </div>
-        <button class="results__button">Показать еще</button>
-      </div>
-    </section>
-
-<section class="about">
-  <div class="about__container">
-    <picture class="about__picture">
-      <img src="https://avatars.mds.yandex.net/get-yapic/68143/enc-443e28737fe92d72d489f8b4303f1c76c979d34bfbe5b8c1cbe8ffc8fd982004/islands-300" class="about__image">
-    </picture>
-    <div class="about__info">
-      <h2 class="about__title">
-        Об авторе
-      </h2>
-      <p class="about__text">Это блок с описанием автора проекта.
-        Здесь следует указать, как вас зовут, чем вы занимаетесь,
-        Здесь следует указать, как вас зовут, чем вы занимаетесь,
-        Здесь следует указать, как вас зовут, чем вы занимаетесь,
-        какими технологиями разработки владеете.</p>
-      <p class="about__text">Также можно рассказать о процессе обучения в Практикуме,
-        чему вы тут научились,
-        и чем можете помочь потенциальным заказчикам.</p>
-    </div>
+        <form class="search__form">
+          <input type="search" name="search" required class="search__input" placeholder="Введите тему новости">
+          <input type="submit" value="Искать" class="search__submit">
+        </form>
   </div>
+    </section>-->
 
 
-</section>
+  <!--
+   <section class="results">
+        <div class="results__container">
+          <h3 class="results__title">Результаты поиска</h3>
+         <div class="results__output">
+            <div class="card">
+              <div class="card__figure">
+                <button class="card__save"></button>
+              </div>
+              <div class="card__container">
+                <div class="card__date">2 августа, 2019</div>
+                <h3 class="card__title">Оченьоченьдлинноедлинноедлинноедлинноедлинное название карточки </h3>
+                <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                  система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                  система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
+                <div class="card__source">YANDEX.RU</div>
+              </div>
+            </div>
+           <div class="card">
+             <div class="card__figure">
+               <div class="card__offer-login">Войдите, чтобы сохранять статьи</div>
+               <button class="card__save card__save_hover"></button>
+             </div>
+             <div class="card__container">
+               <div class="card__date">2 августа, 2019</div>
+               <h3 class="card__title">Национальное достояние – парки</h3>
+               <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
+               <div class="card__source">ЛЕНТА.РУ</div>
+             </div>
+           </div>
+           <div class="card">
+             <div class="card__figure">
+               <button class="card__save card__save_saved"></button>
+             </div>
+             <div class="card__container">
+               <div class="card__date">2 августа, 2019</div>
+               <h3 class="card__title">Статья</h3>
+               <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
+               <div class="card__source">ЛЕНТА.РУ</div>
+             </div>
+           </div>
+           <div class="card">
+             <div class="card__figure">
+               <button class="card__save"></button>
+             </div>
+             <div class="card__container">
+               <div class="card__date">2 августа, 2019</div>
+               <h3 class="card__title">Национальное достояние – парки</h3>
+               <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
+               <div class="card__source">ЛЕНТА.РУ</div>
+             </div>
+           </div>
+           <div class="card">
+             <div class="card__figure">
+               <button class="card__save"></button>
+             </div>
+             <div class="card__container">
+               <div class="card__date">2 августа, 2019</div>
+               <h3 class="card__title">Национальное достояние – парки</h3>
+               <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе</div>
+               <div class="card__source">ЛЕНТА.РУ</div>
+             </div>
+           </div>
 
-  <footer class="footer">
-    <nav class="footer__container">
-      <div class="footer__сopyright">
-        <a class="footer__сopyright-link"
-           href="https://yandex.ru/">
-          © 2020 Supersite, Powered by News API
-        </a>
-      </div>
-      <div class="footer__item footer__item_main">
-        <a class=" footer__main-link"
-           href="#">
-          Главная
-        </a>
-      </div>
-      <div class="footer__item footer__item_ypraktikum">
-        <a class="footer__ypraktikum-link"
-           href="#">
-          Яндекс.Практикум
-        </a>
-      </div>
-      <div class="footer__item footer__item_social-links">
-        <a class="footer__github-link"
-           href="#">
-          .
-        </a>
-        <a class="footer__facebook-link"
-           href="#">
-          .
-        </a>
-      </div>
-    </nav>
-  </footer>
+          </div>
+          <button class="results__button">Показать еще</button>
+        </div>
+      </section>
 
--->
+  <section class="about">
+    <div class="about__container">
+      <picture class="about__picture">
+        <img src="https://avatars.mds.yandex.net/get-yapic/68143/enc-443e28737fe92d72d489f8b4303f1c76c979d34bfbe5b8c1cbe8ffc8fd982004/islands-300" class="about__image">
+      </picture>
+      <div class="about__info">
+        <h2 class="about__title">
+          Об авторе
+        </h2>
+        <p class="about__text">Это блок с описанием автора проекта.
+          Здесь следует указать, как вас зовут, чем вы занимаетесь,
+          Здесь следует указать, как вас зовут, чем вы занимаетесь,
+          Здесь следует указать, как вас зовут, чем вы занимаетесь,
+          какими технологиями разработки владеете.</p>
+        <p class="about__text">Также можно рассказать о процессе обучения в Практикуме,
+          чему вы тут научились,
+          и чем можете помочь потенциальным заказчикам.</p>
+      </div>
+    </div>
+
+
+  </section>
+
+    <footer class="footer">
+      <nav class="footer__container">
+        <div class="footer__сopyright">
+          <a class="footer__сopyright-link"
+             href="https://yandex.ru/">
+            © 2020 Supersite, Powered by News API
+          </a>
+        </div>
+        <div class="footer__item footer__item_main">
+          <a class=" footer__main-link"
+             href="#">
+            Главная
+          </a>
+        </div>
+        <div class="footer__item footer__item_ypraktikum">
+          <a class="footer__ypraktikum-link"
+             href="#">
+            Яндекс.Практикум
+          </a>
+        </div>
+        <div class="footer__item footer__item_social-links">
+          <a class="footer__github-link"
+             href="#">
+            .
+          </a>
+          <a class="footer__facebook-link"
+             href="#">
+            .
+          </a>
+        </div>
+      </nav>
+    </footer>
+
+  -->
 
 <div class="popup">
 
@@ -193,7 +196,7 @@
 
     <img alt="Close" class="popup__close" src="<%=require('.././images/header/menu-close_white.svg').default%>">
     <button name="popup-close" class="popup__close popup__close_form"></button>
-    <h3 class="popup__title"></h3> <!--Регистрация Вход Пользователь успешно зарегистрирован-->
+    <h3 class="popup__title">Регистрация</h3> <!--Регистрация Вход Пользователь успешно зарегистрирован-->
     <form class="popup__form">
 
       <div class="popup__item popup__item_email">
