@@ -1,4 +1,5 @@
 .popup__button {
+  display: none;
   width: 100%;
   height: 64px;
   border-radius: 32px;

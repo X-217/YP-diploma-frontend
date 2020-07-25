@@ -8,11 +8,6 @@ export default class LoginPopup extends Popup {
       submitButtonText: "Войти",
       offerButtonText: "Зарегистрироваться",
     };
-    this.errorMessages = {
-      valueMissing: "Это обязательное поле",
-      validationLength: "Должно быть от 2 до 30 символов",
-      isNotMail: "Неправильный формат email",
-    };
     this.formValidator = formValidator;
   };
     setEventListeners() {
@@ -27,8 +22,6 @@ export default class LoginPopup extends Popup {
     this.title.textContent = this.text.title;
     this.submitButton.textContent = this.text.submitButtonText;
     this.offerButton.textContent=this.text.offerButtonText;
-    this.email.classList.add("item_is-visible");
-    this.password.classList.add("item_is-visible");
 
     this.setEventListeners(this);
     this.formValidator.setEventListeners(this);

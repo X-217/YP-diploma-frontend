@@ -2,6 +2,10 @@
 position: relative;
 top: -1px;
 border: none;
+
+
+
+
   background-color: transparent;
 
   font-family: Inter, sans-serif;
@@ -12,6 +16,11 @@ border: none;
 outline-style: none;
 
   color: #2F71E5;
+}
+@media (max-width: 536px) {
+  .popup__offer-button {
+    padding-top: 40px;
+  }
 }
 
 
