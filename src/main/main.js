@@ -1,33 +1,32 @@
 import './main.css';
 
-import SignupPopup from "../JS/SignupPopup";
+
+import LoginPopup from "../JS/LoginPopup";
 import FormValidator from "../JS/FormValidator";
 
-const signupPopup = new SignupPopup();
-const formValidator = new FormValidator();
+
+
 const menuItems= document.querySelectorAll('.header__menu-item');
 const header=document.querySelector('.header');
 const menuIcon=document.querySelector('.header__menu-button');
-const menuCloseIcon=document.querySelector('.header__menu-button_close');
-const menuLogo= document.querySelector('.header__logo');
-const menuMobile= document.querySelector('.header__mobile-control');
+const popupUsername=document.querySelector('.popup__item_username');
+const popupEmail= document.querySelector('.popup__item_email');
+const popupPassword= document.querySelector('.popup__item_password');
+const popupTitle= document.querySelector('.popup__title');
+const popupButton= document.querySelector('.popup__button');
+const popupRedirection= document.querySelector('.popup__offer-link');
 
 
-document.querySelector('.header__auth-button').addEventListener('click', mainPopupShow);
+const formValidator = new FormValidator();
+const loginPopup = new LoginPopup(formValidator);
+
+document.querySelector('.header__auth-button').addEventListener('click', loginPopupShow);
 document.querySelector('.header__menu-button').addEventListener('click', menuToggle);
 
 
-/*document.querySelector('.header__mobile-control').addEventListener('click', changeIcon);*/
 
-
-function mainPopupShow(event) {
-
-  signupPopup.open();
-  document.addEventListener('keydown', function (e) {
-    if(e.key === 'Escape') {
-      signupPopup.close();
-          }
-  });
+function loginPopupShow(event) {
+  loginPopup.open();
 }
 
 function menuToggle() {

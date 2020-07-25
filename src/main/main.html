@@ -196,18 +196,19 @@
 
     <img alt="Close" class="popup__close" src="<%=require('.././images/header/menu-close_white.svg').default%>">
     <button name="popup-close" class="popup__close popup__close_form"></button>
+
     <h3 class="popup__title">Регистрация</h3> <!--Регистрация Вход Пользователь успешно зарегистрирован-->
-    <form class="popup__form">
+    <form class="popup__form" novalidate>
 
       <div class="popup__item popup__item_email">
         <div class="popup__item-name">Email</div>
-        <input placeholder="Введите почту" class="popup__input popup__input_email" type="text" required minlength="2" maxlength="30">
+        <input placeholder="Введите почту" class="popup__input popup__input_email" type="email" required>
         <div class="popup__message popup__message_email-not-valid">Неправильный формат email</div>
 
       </div>
       <div class="popup__item popup__item_password">
         <div class="popup__item-name">Пароль</div>
-        <input placeholder="Введите пароль" class="popup__input popup__input_password" type="password" required minlength="2" maxlength="30">
+        <input placeholder="Введите пароль" class="popup__input popup__input_password" type="password" required minlength="8" maxlength="30">
         <div class="popup__message popup__message_password-not-valid">Длина пароля должна быть не менее 8 символов</div>
 
       </div>
@@ -220,10 +221,10 @@
       </div>
       <div class="popup__message popup__message_user-exist">Такой пользователь уже есть</div>
 
-      <button id="submitButton" class="popup__button popup__button_activate" type="submit">Зарегистрироваться</button>
+      <button type="submit" name="submitButton" class="popup__button" disabled></button><!--popup__button_activate-->
       <div class="popup__offer">
-        <span class="popup__offer-text">или&nbsp</span>
-        <a class="popup__offer-link" href="#" > Войти</a>
+        <span class="popup__offer-text">или</span>
+        <button type="button" class="popup__offer-button"></button>
       </div>
 
     </form>

@@ -21,6 +21,6 @@ border-style: none;
 }
 @media (max-width: 319px) {
   .popup__button  {
-    width: 248pxpx;
+    width: 248px;
   }
 }
