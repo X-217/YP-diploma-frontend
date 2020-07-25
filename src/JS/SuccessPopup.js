@@ -23,6 +23,8 @@ export default class SuccessPopup extends Popup {
     this.title.textContent = this.text.title;
     this.offerButton.textContent=this.text.offerButtonText;
     this.setEventListeners(this);
-    this.container.classList.add('item_is-visible');
+    this.submitButton.classList.add("popup__button_success");
+    this.container.classList.add("item_is-visible");
     };
 }
+
