@@ -5,7 +5,7 @@ export default class LoginPopup extends Popup {
     super();
     this.text = {
       title: "Вход",
-      submitButtonText: "Сохранить",
+      submitButtonText: "Войти",
       offerButtonText: "Зарегистрироваться",
     };
     this.errorMessages = {

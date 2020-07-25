@@ -1,12 +1,12 @@
 'use strict';
 import Popup from "./Popup.js";
-export default class LoginPopup extends Popup {
+export default class SignupPopup extends Popup {
   constructor(formValidator) {
     super();
     this.text = {
-      title: "Вход",
-      submitButtonText: "Сохранить",
-      offerButtonText: "Зарегистрироваться",
+      title: "Регистрация",
+      submitButtonText: "Зарегистрироваться",
+      offerButtonText: "Войти",
     };
     this.errorMessages = {
       valueMissing: "Это обязательное поле",
@@ -29,6 +29,7 @@ export default class LoginPopup extends Popup {
     this.offerButton.textContent=this.text.offerButtonText;
     this.email.classList.add("item_is-visible");
     this.password.classList.add("item_is-visible");
+    this.name.classList.add("item_is-visible");
 
     this.setEventListeners(this);
     this.formValidator.setEventListeners(this);

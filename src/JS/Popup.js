@@ -12,7 +12,7 @@ export default class Popup {
             this.emailInput = document.querySelector(".popup__input_email");
           this.password = document.querySelector(".popup__item_password");
             this.passwordInput = document.querySelector(".popup__input_password");
-          this.name = document.querySelector(".popup__item_name");
+          this.name = document.querySelector(".popup__item_username");
       this.nameInput = document.querySelector(".popup__input_username");
         this.submitButton = document.querySelector(".popup__button");
         this.offerButton = document.querySelector(".popup__offer-button");
