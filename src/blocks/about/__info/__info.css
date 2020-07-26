@@ -24,6 +24,8 @@
 
 @media (max-width: 319px) {
   .about__info {
+    margin: 0 10px;
+    width: 290px;
 
   }
 }

@@ -1,6 +1,6 @@
 .header {
   position: absolute;
-  width: 100vw;
+  width: calc(100vw - 2px);
   border-color: transparent;
   border-bottom-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
@@ -17,8 +17,6 @@
 
 @media (max-width: 767px) {
   .header {
-
-    padding-bottom: 400px;
     border: none;
   }
 }

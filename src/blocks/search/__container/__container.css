@@ -29,7 +29,8 @@
 @media (max-width: 319px) {
   .search__container {
     margin-top:146px;
+    margin-bottom: 32px;
     height: 360px;
-    width: 90vw;
+    width: 285px;
   }
 }

@@ -42,3 +42,8 @@
   border-color: #ff00b7;
   border-style: solid;
   border-width: thin;
+
+
+.:hover {
+  opacity: 0.7;
+}

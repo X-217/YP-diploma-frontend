@@ -41,36 +41,3 @@ margin-right: 16px;
     margin-top: 16px;
   }
 }
-
-
-/*
-
-
-
-@media (min-width: 320px) and (max-width: 767px) {
-  . {
-
-  }
-}
-
-@media (max-width: 319px) {
-  .{
-
-  }
-}
-
-
-
-
-@media (min-width: 536px) and (max-width: 767px) {
-  . {
-
-  }
-}
-
-@media (min-width: 320px) and (max-width: 535px) {
-  . {
-
-  }
-}
-*/

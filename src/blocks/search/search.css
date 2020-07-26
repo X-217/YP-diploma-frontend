@@ -1,5 +1,5 @@
 .search{
-    position: relative;
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -29,9 +29,9 @@
 
 @media (max-width: 319px) {
   .search {
-    width: auto;
+    width: 320px;
     height: 536px;
-    margin-top: -56px;
-    background-image: url(../../images/search/background_small.png);
+    margin: 0;
+/*    background-image: url(../../images/search/background_small.png);*/
   }
 }

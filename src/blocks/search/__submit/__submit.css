@@ -41,6 +41,7 @@
   }
 }
 
-.search__submit:focus {
+.search__submit:hover {
   border-color: #367fff;
 }
+

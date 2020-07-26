@@ -1,9 +1,9 @@
 .footer__item_social-links{
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
   grid-area: footer__item_social-links;
   width: 68px;
-margin-left: 60px;
+  margin-left: 60px;
   margin-right: 104px;
   padding-top: 32px;
   background-color: white;
@@ -29,6 +29,10 @@ margin-left: 60px;
 
 @media (max-width: 319px) {
   .footer__item_social-links {
-    margin-right: 5vw;
+    margin-left: 30px;
+    margin-right: 16px;
+    padding-top: 32px;
+    padding-bottom: 24px;
   }
 }
+

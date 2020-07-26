@@ -2,9 +2,7 @@
   position: absolute;
   margin: 0;
   padding:0;
-  background-color: #B6BCBF;
-/*  overflow:  hidden;*/
-
+  background-color: white;
 }
 @media (max-width: 319px) {
   .body{

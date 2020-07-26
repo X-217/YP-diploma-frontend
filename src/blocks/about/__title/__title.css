@@ -30,6 +30,8 @@
 @media (max-width: 319px) {
   .about__title  {
     font-size: 30px;
+    width: 300px;
+    margin-top: 90px;
 
   }
 }

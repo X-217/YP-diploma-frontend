@@ -28,3 +28,11 @@
   }
 }
 
+@media (max-width: 320px) {
+  .results__output {
+    grid-template-columns: 288px;
+    grid-row-gap: 8px;
+    width: 288px ;
+    margin: 0 16px;
+  }
+}
