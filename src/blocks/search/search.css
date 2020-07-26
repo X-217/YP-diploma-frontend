@@ -1,3 +1,11 @@
+@import url(./__container/__container.css);
+@import url(./__text-content/__text-content.css);
+@import url(./__title/__title.css);
+@import url(./__description/__description.css);
+@import url(./__form/__form.css);
+@import url(./__input/__input.css);
+@import url(./__submit/__submit.css);
+
 .search{
   position: relative;
   display: flex;
@@ -16,14 +24,12 @@
 @media (min-width: 768px) and (max-width: 1440px) {
   .search {
     height: calc(400px + (100vw - 768px) *  (576 - 400)  /  (1440 - 768));
-/*    margin-top: calc(-66px - (100vw - 769px) * (80 - 66) / (1440 - 769));*/
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .search {
     height: 536px;
-/*    margin-top: calc(-56px - (100vw - 321px) * (66 - 56) / (768 - 321));*/
   }
 }
 
@@ -32,6 +38,5 @@
     width: 320px;
     height: 536px;
     margin: 0;
-/*    background-image: url(../../images/search/background_small.png);*/
   }
 }

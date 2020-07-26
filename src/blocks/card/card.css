@@ -1,3 +1,15 @@
+@import url(./__title/__title.css);
+@import url(./__container/__container.css);
+@import url(./__figure/__figure.css);
+@import url(./__date/__date.css);
+@import url(./__text/__text.css);
+@import url(./__source/__source.css);
+@import url(./__image/__image.css);
+@import url(./__offer-login/__offer-login.css);
+@import url(./__save/__save.css);
+@import url(./__save_hover/__save_hover.css);
+@import url(./__save_saved/__save_saved.css);
+
 .card {
   display: grid;
   grid-template-rows: auto auto;

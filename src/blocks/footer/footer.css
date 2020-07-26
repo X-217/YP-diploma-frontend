@@ -1,3 +1,15 @@
+@import url(./__container/__container.css);
+@import url(./__сopyright/__сopyright.css);
+@import url(./__сopyright-link/__сopyright-link.css);
+@import url(./__item/__item.css);
+@import url(./__item_main/__item_main.css);
+@import url(./__item_ypraktikum/__item_ypraktikum.css);
+@import url(./__main-link/__main-link.css);
+@import url(./__ypraktikum-link/__ypraktikum-link.css);
+@import url(./__item_social-links/__item_social-links.css);
+@import url(./__github-link/__github-link.css);
+@import url(./__facebook-link/__facebook-link.css);
+
 .footer{
   position: relative;
   height: 80px;
@@ -6,14 +18,12 @@
   background-color: white;
   }
 
-/*для планшета и больше, горизонтальное меню*/
 @media (min-width: 768px) and (max-width: 1440px) {
   .footer {
     height: calc(64px + (100vw - 768px) * (80 - 64) / (1440 - 768));
   }
 }
 
-/*для смартфона, переходим на вертикальное меню*/
 @media (max-width: 767px) {
   .footer {
     height: 0;

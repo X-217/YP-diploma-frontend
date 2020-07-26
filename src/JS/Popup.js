@@ -16,9 +16,7 @@ export default class Popup {
       this.offer = document.querySelector(".popup__offer");
       this.offerText = document.querySelector(".popup__offer-text");
       this.offerButton = document.querySelector(".popup__offer-button");
-
       this.closeButton = document.querySelector(".popup__close_form");
-/*      this.saved=saved;*/
       this.formValidator = formValidator;
     };
 
