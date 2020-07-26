@@ -9,7 +9,7 @@ export default class SuccessPopup extends Popup {
     };
   };
     setEventListeners() {
-      this.offerButton .addEventListener('click', this.sendForm.bind(this), {once: true}); /**/
+      this.offerButton.addEventListener('click', this.sendForm.bind(this), {once: true}); /**/
       this.closeButton.addEventListener('click', this.close.bind(this), {once: true});
     };
   sendForm(event) {

@@ -1,40 +1,21 @@
 import './main.css';
 
-
-import LoginPopup from "../JS/LoginPopup";
-import SignupPopup from "../JS/SignupPopup";
-import SuccessPopup from "../JS/SuccessPopup";
+import Popup from "../JS/Popup";
 import FormValidator from "../JS/FormValidator";
-
-
 
 const menuItems= document.querySelectorAll('.header__menu-item');
 const header=document.querySelector('.header');
 const menuIcon=document.querySelector('.header__menu-button');
-
-
-
+/*const saved=document.querySelector('.header__item_saved');*/
 const formValidator = new FormValidator();
-const loginPopup = new LoginPopup(formValidator);
-const signupPopup = new SignupPopup(formValidator);
-const successPopup = new SuccessPopup();
 
-/*document.querySelector('.header__auth-button').addEventListener('click', signupPopupShow);*/
-/*document.querySelector('.header__auth-button').addEventListener('click', loginPopupShow);*/
-document.querySelector('.header__auth-button').addEventListener('click', successPopupShow);
+const popup = new Popup(formValidator);
+
+document.querySelector('.header__auth-button').addEventListener('click', popupShow);
 document.querySelector('.header__menu-button').addEventListener('click', menuToggle);
 
-
-
-function loginPopupShow(event) {
-  loginPopup.open();
-}
-function signupPopupShow(event) {
-  signupPopup.open();
-}
-
-function successPopupShow(event) {
-  successPopup.open();
+function popupShow(event) {
+  popup.checkoutLogin();
 }
 
 function menuToggle() {

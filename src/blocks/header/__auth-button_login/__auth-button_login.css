@@ -1,3 +1,15 @@
 .header__auth-button_login {
+    padding-right: 40px;
+  background-image: url(../../../images/header/logout_white.svg);
+  background-repeat: no-repeat;
+  background-position: 93%;
+  background-size: 16px;
+
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .header__auth-button_login{
+    padding-right: calc(24px + 12px + (100vw - 768px) *  (16 - 12)  /  (1440 - 768));
+  }
 
 }
