@@ -51,6 +51,14 @@
 @import url(../blocks/results/__title/__title.css);
 @import url(../blocks/results/__button/__button.css);
 @import url(../blocks/results/__output/__output.css);
+@import url(../blocks/results/__notfound/__notfound.css);
+@import url(../blocks/results/__notfound-image/__notfound-image.css);
+@import url(../blocks/results/__notfound-container/__notfound-container.css);
+@import url(../blocks/results/__notfound-title/__notfound-title.css);
+@import url(../blocks/results/__notfound-text/__notfound-text.css);
+@import url(../blocks/results/__preloader/__preloader.css);
+@import url(../blocks/results/__circle-preloader/__circle-preloader.css);
+@import url(../blocks/results/__preloader-text/__preloader-text.css);
 
 
 @import url(../blocks/about/about.css);
