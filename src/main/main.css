@@ -2,6 +2,7 @@
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__container/__container.css);
+@import url(../blocks/header/__container_logged/__container_logged.css);
 @import url(../blocks/header/__logo/__logo.css);
 @import url(../blocks/header/__logo-link/__logo-link.css);
 @import url(../blocks/header/__item/__item.css);
@@ -11,7 +12,7 @@
 @import url(../blocks/header/__saved-link/__saved-link.css);
 @import url(../blocks/header/__item_auth/__item_auth.css);
 @import url(../blocks/header/__auth-button/__auth-button.css);
-@import url(../blocks/header/__auth-button_login/__auth-button_login.css);
+@import url(../blocks/header/__auth-button_logged/__auth-button_logged.css);
 @import url(../blocks/header/__item_underline/__item_underline.css);
 @import url(../blocks/header/__font-color_white/__font-color_white.css);
 @import url(../blocks/header/__mobile-control/__mobile-control.css);

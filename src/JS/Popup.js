@@ -76,9 +76,12 @@ export default class Popup {
     /*                                          */
     /*        осуществляем авторизацию          */
     /*                                          */
-    document.querySelector('.header__item_saved').classList.add("item_is-visible");
-    document.querySelector('.header__auth-button').classList.add("header__auth-button_login");
-    document.querySelector('.header__auth-button').textContent="Пользователь";
+    if ('success') {
+      document.querySelector('.header__container').classList.add("header__container_logged");
+      document.querySelector('.header__auth-button').classList.add("header__auth-button_logged");
+      document.querySelector('.header__auth-button').textContent = "Пользователь";
+      document.querySelector('.header__saved-link').textContent = "Сохраненные статьи";
+    }
     this.close();
   };
 
