@@ -1,8 +1,6 @@
 .header__mobile-control {
   grid-area: header__mobile-control;
-
   display: flex;
-
   width: 58px;
   border-color: transparent;
   border-bottom-color: rgba(255, 255, 255, 0.2);

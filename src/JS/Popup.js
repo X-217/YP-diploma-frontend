@@ -32,12 +32,12 @@ export default class Popup {
   };
 
   setSignupEventListeners() {
-    this.form.addEventListener('submit', this.doSignup.bind(this), {once: true});
+    this.submitButton.addEventListener('click', this.doSignup.bind(this), {once: true});
     this.closeButton.addEventListener('click', this.close.bind(this), {once: true});
     this.offerButton.addEventListener('click', this.doLogin.bind(this), {once: true});
   };
   removeSignupEventListeners() {
-    this.form.removeEventListener('submit', this.doSignup.bind(this), {once: true});
+    this.submitButton.removeEventListener('click', this.doSignup.bind(this), {once: true});
     this.closeButton.removeEventListener('click', this.close.bind(this), {once: true});
     this.offerButton.removeEventListener('click', this.checkoutLogin.bind(this), {once: true});
   };
@@ -58,12 +58,12 @@ export default class Popup {
       submitButtonText: "Войти",
       offerButtonText: "Зарегистрироваться",
     };
-    this.offerButton.textContent=this.text.offerButtonText;
+    this.offerButton.textContent = this.text.offerButtonText;
     this.submitButton.textContent = this.text.submitButtonText;
     this.title.textContent = this.text.title;
-    this.container.classList.add('item_is-visible');
-    this.email.classList.add("item_is-visible");
-    this.password.classList.add("item_is-visible");
+    this.container.classList.add('popup__item-is-visible');
+    this.email.classList.add("popup__item-is-visible");
+    this.password.classList.add("popup__item-is-visible");
     this.setLoginEventListeners(this);
     this.formValidator.setEventListeners(this);
     this.formValidator.setSubmitButtonState(this);
@@ -77,47 +77,55 @@ export default class Popup {
     if ('success') {
       document.querySelector('.header__container').classList.add("header__container_logged");
       document.querySelector('.header__auth-button').classList.add("header__auth-button_logged");
-      document.querySelector('.header__auth-button').textContent = "Пользователь";
-      document.querySelector('.header__saved-link').textContent = "Сохраненные статьи";
+      document.querySelector('.header__auth-button').textContent = "Грета";
+      document.querySelector('.header__item_saved').classList.toggle("header__item_hidden");
+      document.querySelector('.header__saved-link').classList.toggle("header__saved-link_hidden");
+      document.querySelector('.header__saved-link').classList.add("header__saved-link_active");
     }
     this.close();
   };
 
-  checkoutSignup() {
+  checkoutSignup(event) {
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
     this.removeLoginEventListeners(this);
     this.text = {
       title: "Регистрация",
       submitButtonText: "Зарегистрироваться",
       offerButtonText: "Войти",
     };
-    this.offerButton.textContent=this.text.offerButtonText;
+    this.offerButton.textContent = this.text.offerButtonText;
     this.submitButton.textContent = this.text.submitButtonText;
     this.title.textContent = this.text.title;
-    this.name.classList.add("item_is-visible");
+    this.name.classList.add("popup__item-is-visible");
     this.setSignupEventListeners(this);
     this.formValidator.setEventListeners(this);
     this.formValidator.setSubmitButtonState(this);
 
   };
-  doSignup(event) {
 
+  doSignup(event) {
     event.preventDefault();
     event.stopImmediatePropagation();
     /*                                          */
     /*        создаем нового пользователя       */
     /*                                          */
-    this.email.classList.remove("item_is-visible");
-    this.name.classList.remove("item_is-visible");
-    this.password.classList.remove("item_is-visible");
+
+    this.email.classList.remove("popup__item-is-visible");
+    this.name.classList.remove("popup__item-is-visible");
+    this.password.classList.remove("popup__item-is-visible");
     this.removeSignupEventListeners(this);
     this.checkoutSuccess();
-
-  };
+  }
 
   doLogin() {
-    this.email.classList.remove("item_is-visible");
-    this.name.classList.remove("item_is-visible");
-    this.password.classList.remove("item_is-visible");
+    this.emailInput.value = "";
+    this.passwordInput.value = "";
+    this.nameInput.value = "";
+    this.email.classList.remove("popup__item-is-visible");
+    this.name.classList.remove("popup__item-is-visible");
+    this.password.classList.remove("popup__item-is-visible");
     this.removeSignupEventListeners(this);
     this.checkoutLogin();
   };
@@ -129,8 +137,8 @@ export default class Popup {
       offerButtonText: "Выполнить вход",
     };
     this.title.textContent = this.text.title;
-    this.offerButton.textContent=this.text.offerButtonText;
-    this.container.classList.add("item_is-visible");
+    this.offerButton.textContent = this.text.offerButtonText;
+    this.container.classList.add("popup__item-is-visible");
     this.offer.classList.add("popup__offer-success");
     this.offerText.classList.add("popup__offer-text_success");
     this.submitButton.classList.add("popup__button_success");
@@ -149,8 +157,8 @@ doSuccess() {
     close() {
       this.emailInput.value="";
       this.passwordInput.value="";
-      this.nameInput.value="";
-      this.container.classList.remove('item_is-visible');
+      this.nameInput.value = "";
+      this.container.classList.remove('popup__item-is-visible');
     };
 };
 

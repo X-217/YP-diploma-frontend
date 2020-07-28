@@ -22,8 +22,8 @@
       <div class="header__item header__item_underline header__item_main header__menu-item">
         <a class=" header__main-link header__font-color_white " href="./index.html">Главная</a>
       </div>
-      <div class="header__item header__item_saved header__menu-item">
-        <a class="header__saved-link header__font-color_white" href="./personal/index.html"></a>
+      <div class="header__item header__item_saved header__menu-item header__item_hidden">
+        <a class="header__saved-link header__saved-link_hidden" href="./personal/index.html">Cохраненные статьи</a>
       </div>
       <div class="header__item header__item_auth header__menu-item">
         <button name="auth-button"
@@ -70,7 +70,7 @@
       <div class="results__output">
         <div class="card">
           <div class="card__figure">
-            <button class="card__save"></button>
+            <button class="card__action card__action_save"></button>
           </div>
           <div class="card__container">
             <div class="card__date">2 августа, 2019</div>
@@ -85,8 +85,8 @@
         </div>
         <div class="card">
           <div class="card__figure">
-            <div class="card__offer-login">Войдите, чтобы сохранять статьи</div>
-            <button class="card__save card__save_hover"></button>
+            <div class="card__offer-text">Войдите, чтобы сохранять статьи</div>
+            <button class="card__action card__action_hover"></button>
           </div>
           <div class="card__container">
             <div class="card__date">2 августа, 2019</div>
@@ -101,7 +101,7 @@
         </div>
         <div class="card">
           <div class="card__figure">
-            <button class="card__save card__save_saved"></button>
+            <button class="card__action card__action_saved"></button>
           </div>
           <div class="card__container">
             <div class="card__date">2 августа, 2019</div>
@@ -116,7 +116,7 @@
         </div>
         <div class="card">
           <div class="card__figure">
-            <button class="card__save"></button>
+            <button class="card__action card__action_save"></button>
           </div>
           <div class="card__container">
             <div class="card__date">2 августа, 2019</div>
@@ -131,7 +131,7 @@
         </div>
         <div class="card">
           <div class="card__figure">
-            <button class="card__save"></button>
+            <button class="card__action card__action_save"></button>
           </div>
           <div class="card__container">
             <div class="card__date">2 августа, 2019</div>
@@ -203,7 +203,7 @@
       <img alt="Close" class="popup__close" src="<%=require('.././images/header/menu-close_white.svg').default%>">
       <button name="popup-close" class="popup__close popup__close_form"></button>
 
-      <h3 class="popup__title">Регистрация</h3> <!--Регистрация Вход Пользователь успешно зарегистрирован-->
+      <h3 class="popup__title">Регистрация</h3>
     <form class="popup__form" novalidate>
 
       <div class="popup__item popup__item_email">
@@ -222,12 +222,12 @@
       <div class="popup__item popup__item_username">
         <div class="popup__item-name">Имя</div>
         <input placeholder="Введите свое имя" class="popup__input popup__input_username" type="text" required minlength="2" maxlength="30">
-        <div class="popup__message popup__message_name-not-valid">Это  обязательное поле</div>
+        <div class="popup__message popup__message_name-not-valid">Это обязательное поле</div>
 
       </div>
       <div class="popup__message popup__message_user-exist">Такой пользователь уже есть</div>
 
-      <button type="submit" name="submitButton" class="popup__button" disabled></button><!--popup__button_activate-->
+      <button type="submit" name="submitButton" class="popup__button" disabled></button>
       <div class="popup__offer">
         <span class="popup__offer-text">или</span>
         <button type="button" class="popup__offer-button"></button>
@@ -236,8 +236,6 @@
     </form>
   </div>
 </div>
-
-
 
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 

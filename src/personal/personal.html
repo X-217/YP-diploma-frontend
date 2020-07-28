@@ -4,42 +4,165 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <meta name="author" content="Алексей Сидоров">
   <title>News Explorer</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('.././images/favicon.png').default%>" />
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
+
 <body>
 
-  <header class="header">
-    <div class = "header__logo">
-      <div class="header__logo-text header__font-color_black">Personal</div>
-    </div>
-    <div class="header__menu">
-      <div class="header__main">
-        <a class="header__item header__font-color_black" href="#">Главная</a>
-      </div>
-      <div class = "header__item_underline">
-        <div class="header__main">
-          <a class="header__item header__font-color_black" href="#">Сохраненные статьи</a>
-        </div>
-      </div>
-      <div class = "header__auth-deco">
-        <a class="header__links_auth" href="#">Грета</a>
-      </div>
-    </div>
-  </header>
 
-<!--<section class="search-section">
-<div class = "">-->
+<header class="header header_personal">
+  <nav class="header__container header__container_personal">
+    <div class="header__logo header__menu-item header__logo_personal">
+      <a class="header__logo-link header__font-color_black" href="../index.html">
+        NewsExplorer
+      </a>
+    </div>
+    <div class="header__item header__item_main header__menu-item">
+      <a class=" header__main-link header__font-color_black " href="../index.html">Главная</a>
+    </div>
+    <div class="header__item header__item_saved header__menu-item  header__item_underline header__item_underline-personal">
+      <a class="header__saved-link header__saved-link_active header__font-color_black" href="./index.html">Сохраненные статьи</a>
+    </div>
+    <div class="header__item header__item_auth header__menu-item">
+      <button name="auth-button"
+              class="header__auth-button header__auth-button_personal header__auth-button_logged header__auth-button_logged-personal header__font-color_black">
+        Грета
+      </button>
+    </div>
+    <div class="header__mobile-control header__menu-item header__mobile-control_personal">
+      <button name="menu-button" class="header__menu-button header__menu-button-personal"></button>
+    </div>
+  </nav>
+</header>
 
+
+<div class="statistics">
+  <h6 class="statistics__title">Сохранённые статьи</h6>
+  <h2 class="statistics__saved">Грета, у вас 5 сохранённых статей</h2>
+  <p class="statistics__keywords">По ключевым словам:
+    <span class="statistics__words statistics__bold">Природа, Тайга</span>
+    и
+    <span class="statistics__further statistics__bold">2&#160;другим </span>
+  </p>
 </div>
 
+
+<section class="results">
+  <div class="results__container">
+    <div class="results__output">
+      <div class="card">
+        <div class="card__figure">
+          <div class="card__keyword">Тайга</div>
+          <button class="card__action card__action_delete"></button>
+        </div>
+        <div class="card__container">
+          <div class="card__date">2 августа, 2019</div>
+          <h3 class="card__title">Оченьоченьдлинноедлинноедлинноедлинноедлинное название карточки </h3>
+          <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В
+            2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе
+          </div>
+          <div class="card__source">YANDEX.RU</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__figure card__figure_personal">
+          <div class="card__keyword">Природа</div>
+          <div class="card__offer-text card__offer-text_saved">Убрать из сохраненных</div>
+          <button class="card__action card__action_delete-hover"></button>
+        </div>
+        <div class="card__container">
+          <div class="card__date">2 августа, 2019</div>
+          <h3 class="card__title">Национальное достояние – парки</h3>
+          <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В
+            2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе
+          </div>
+          <div class="card__source">ЛЕНТА.РУ</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__figure">
+          <div class="card__keyword">Парки</div>
+          <button class="card__action card__action_delete"></button>
+        </div>
+        <div class="card__container">
+          <div class="card__date">2 августа, 2019</div>
+          <h3 class="card__title">Статья</h3>
+          <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В
+            2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе
+          </div>
+          <div class="card__source">ЛЕНТА.РУ</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__figure">
+          <div class="card__keyword">Природа</div>
+          <button class="card__action card__action_delete"></button>
+        </div>
+        <div class="card__container">
+          <div class="card__date">2 августа, 2019</div>
+          <h3 class="card__title">Национальное достояние – парки</h3>
+          <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В
+            2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе
+          </div>
+          <div class="card__source">ЛЕНТА.РУ</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__figure">
+          <div class="card__keyword">Фотография</div>
+          <button class="card__action card__action_delete"></button>
+        </div>
+        <div class="card__container">
+          <div class="card__date">2 августа, 2019</div>
+          <h3 class="card__title">Национальное достояние – парки</h3>
+          <div class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. В
+            2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+            система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе
+          </div>
+          <div class="card__source">ЛЕНТА.РУ</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 
+<footer class="footer">
+  <nav class="footer__container">
+    <div class="footer__сopyright">
+      <a class="footer__сopyright-link" href="https://newsapi.org/" target="_blank">© 2020 Supersite, Powered by News API</a>
+    </div>
+    <div class="footer__item footer__item_main">
+      <a class=" footer__main-link" href="../index.html">Главная</a>
+    </div>
+    <div class="footer__item footer__item_ypraktikum">
+      <a class="footer__ypraktikum-link"
+         href="https://praktikum.yandex.ru" target="_blank">Яндекс.Практикум</a>
+    </div>
+    <div class="footer__item footer__item_social-links">
+      <a class="footer__github-link" href="https://github.com" target="_blank"></a>
+      <a class="footer__facebook-link" href="https://www.facebook.com/" target="_blank"></a>
+    </div>
+  </nav>
+</footer>
 
-<!--  <img src="../<%=require('./images/test.jpg').default%>">-->
 
-  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+
+<script src="<%= htmlWebpackPlugin.files.js %>"></script>
 
 </body>
 </html>

@@ -1,0 +1,9 @@
+.header__item_hidden {
+}
+
+@media (min-width: 768px) {
+  .header__item_hidden {
+    margin-left: 0;
+    width: 0;
+  }
+}

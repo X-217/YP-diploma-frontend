@@ -1,16 +1,6 @@
 .popup__offer {
   display: flex;
   justify-content: center;
-
   height: 20px;
-margin-top: 14px;
-
-
-
-
-}
-@media (max-width: 319px) {
-  .popup__offer {
-
-  }
+  margin-top: 14px;
 }

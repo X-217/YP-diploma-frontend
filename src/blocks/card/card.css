@@ -5,10 +5,16 @@
 @import url(./__text/__text.css);
 @import url(./__source/__source.css);
 @import url(./__image/__image.css);
-@import url(./__offer-login/__offer-login.css);
-@import url(./__save/__save.css);
-@import url(./__save_hover/__save_hover.css);
-@import url(./__save_saved/__save_saved.css);
+@import url(./__offer-text/__offer-text.css);
+@import url(./__offer-text_saved/__offer-text_saved.css);
+@import url(./__action/__action.css);
+@import url(./__action_save/__action_save.css);
+@import url(./__action_hover/__action_hover.css);
+@import url(./__action_saved/__action_saved.css);
+@import url(./__action_delete/__action_delete.css);
+@import url(./__action_delete-hover/__action_delete-hover.css);
+@import url(./__keyword/__keyword.css);
+@import url(./__figure_personal/__figure_personal.css);
 
 .card {
   display: grid;

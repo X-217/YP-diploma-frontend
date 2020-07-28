@@ -1,0 +1,10 @@
+.header__auth-button_personal {
+  margin-right: 124px;
+  border-color: black;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .header__auth-button {
+    margin-right: calc(60px + (100vw - 768px) * (104 - 40) / (1440 - 768));
+  }
+}

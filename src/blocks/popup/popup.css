@@ -24,7 +24,6 @@
 @import url(./__offer/__offer.css);
 @import url(./__title/__title.css);
 @import url(./__title_success/__title_success.css);
-@import url(./_is-visible/_is-visible.css);
 
 .popup {
   display: none;
@@ -48,14 +47,13 @@
 
 @media (max-width: 319px) {
   .popup {
-    position: relative;
     padding-top: 56px;
     width: 319px;
     justify-content: left;
   }
 }
 
-.item_is-visible {
+.popup__item-is-visible {
   display: flex;
   flex-direction: column;
 }

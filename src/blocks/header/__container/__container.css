@@ -4,7 +4,6 @@
   grid-template-columns: 1fr auto;
   width: 100%;
   max-width: 1440px;
-  /* opacity: 1; */
 }
 
 @media (min-width: 1441px) {
@@ -17,33 +16,16 @@
 @media (min-width: 768px) {
   .header__container {
     grid-template-areas: "header__logo header__item_main header__item_auth"
-/*    grid-template-areas: "header__logo header__item_main header__item_saved  header__item_auth";*/
   }
 }
 
 @media (max-width: 767px) {
   .header__container {
-
-    grid-template-rows: auto 72px auto;
-    grid-template-areas:  "header__logo           header__mobile-control"
-                          "header__item_main      header__item_saved"
-
-                          "header__item_auth      header__item_auth";
-
-
-
-/*    grid-template-rows: auto 72px 72px auto;
+    grid-template-rows: auto 72px 72px auto;
     grid-template-areas:  "header__logo           header__mobile-control"
                           "header__item_main      header__item_main"
                           "header__item_saved     header__item_saved"
-                          "header__item_auth      header__item_auth";*/
-
-    /*
-        grid-template-areas:  "header__logo         header__logo          header__mobile-control"
-                          "header__item_main    header__item_main     header__item_main"
-                          "header__item_saved   header__item_saved    header__item_saved"
-                          "header__item_auth    header__item_auth     header__item_auth";
-    */
+                          "header__item_auth      header__item_auth";
   }
 }
 

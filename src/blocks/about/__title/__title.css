@@ -5,25 +5,20 @@
   font-size: 40px;
   line-height: 115%;
   color: #1A1B22;
-
   margin-top: 0;
   margin-bottom: 24px;
-
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
   .about__title  {
     font-size: calc(30px + (100vw - 768px) *  (40 - 30)  /  (1440 - 768));
     margin-bottom: calc(16px + (100vw - 768px) *  (24 - 16)  /  (1440 - 768));
-
-
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .about__title  {
     font-size: 30px;
-
   }
 }
 
@@ -32,6 +27,5 @@
     font-size: 30px;
     width: 300px;
     margin-top: 90px;
-
   }
 }

@@ -1,9 +1,9 @@
-.card__save {
+.card__action {
   height: 40px;
   width: 40px;
   margin: 24px 24px 0 5px;
   border-radius: 10px;
-  background-image: url(../../../images/card/normal.svg);
+
   background-position: center;
   background-repeat: no-repeat;
   border-color: white;
@@ -12,31 +12,33 @@
 
   outline-style: none;
   background-color: white;
+
+  cursor: url(../../../images/card/pointer.svg), pointer;
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
-  .card__save {
+  .card__action {
     margin-top: calc(8px + (100vw - 768px) *  (24 - 8)  /  (1440 - 768));
     margin-right: calc(8px + (100vw - 768px) *  (24 - 8)  /  (1440 - 768));
   }
 }
 
 @media (min-width: 536px) and (max-width: 767px) {
-  .card__save {
+  .card__action {
     margin-top: calc(8px + (100vw - 536px) *  (24 - 8)  /  (767 - 536));
     margin-right: calc(8px + (100vw - 536px) *  (24 - 8)  /  (767 - 536));
   }
 }
 
 @media (min-width: 320px) and (max-width: 536px) {
-  .card__save {
+  .card__action {
     margin-top: calc(16px + (100vw - 320px) *  (24 - 16)  /  (536 - 320));
     margin-right: calc(16px + (100vw - 320px) *  (24 - 16)  /  (536 - 320));
   }
 }
 
 @media (max-width: 319px) {
-  .card__save{
+  .card__action{
 margin-right: 16px;
     margin-top: 16px;
   }

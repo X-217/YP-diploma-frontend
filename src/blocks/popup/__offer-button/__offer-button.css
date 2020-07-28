@@ -1,28 +1,16 @@
 .popup__offer-button {
-position: relative;
-top: -1px;
-border: none;
-
-
-
-
+  position: relative;
+  top: -1px;
+  border: none;
   background-color: transparent;
-
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-outline-style: none;
-
+  outline-style: none;
   color: #2F71E5;
 }
-@media (max-width: 536px) {
-  .popup__offer-button {
-    padding-top: 40px;
-  }
-}
-
 
 .popup__offer-button:hover {
   opacity: 0.7;

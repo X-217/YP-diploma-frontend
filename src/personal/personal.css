@@ -1,21 +1,9 @@
 @import url(../vendor/fonts.css);
-
+@import url(../blocks/about/about.css);
+@import url(../blocks/body/body.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/footer/footer.css);
 @import url(../blocks/header/header.css);
-@import url(../blocks/header/__logo/__logo.css);
-
-
-
-@import url(../blocks/header/__item/__item.css);
-/*@import url(../blocks/header/__links_auth/__links_auth.css);*/
-@import url(../blocks/header/__item_underline/__item_underline.css);
-@import url(../blocks/header/__font-color_black/__font-color_black.css);
-
-@import url(../blocks/search/search.css);
-
-
-
-/*
-body {
-  background-color: rgba(0, 0, 0, 0.24);
-}
-*/
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/results/results.css);
+@import url(../blocks/statistics/statistics.css);

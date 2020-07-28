@@ -3,17 +3,13 @@
   max-height: 86px;
   padding: 0;
   margin: 12px 0 16px;
-
   font-size: 26px;
   line-height: 115%;
   font-family: Roboto Slab, sans-serif;
   font-style: normal;
   font-weight: normal;
-
   overflow-wrap: break-word;
   overflow: hidden;
-
-
   color: #1A1B22;
 }
 @media (min-width: 768px) and (max-width: 1440px) {

@@ -1,0 +1,8 @@
+.header__mobile-control_personal {
+}
+
+@media (max-width: 767px) {
+  .header__mobile-control_personal {
+    border-bottom-color: rgba(69, 69, 69, 0.5);
+  }
+}

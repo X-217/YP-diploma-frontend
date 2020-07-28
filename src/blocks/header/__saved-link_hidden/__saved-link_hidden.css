@@ -1,0 +1,9 @@
+.header__saved-link_hidden {
+}
+
+@media (min-width: 768px) {
+  .header__saved-link_hidden {
+    color: transparent;
+  }
+}
+

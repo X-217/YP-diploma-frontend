@@ -1,0 +1,9 @@
+.header__item_underline-personal{
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 255  );
+}
+
+@media (max-width: 767px) {
+  .header__item_underline{
+    box-shadow: none;
+  }
+}

@@ -1,47 +1,28 @@
 .header__auth-button {
   grid-area: header__auth-button;
-
   width: auto;
   max-width: 240px;
-
   margin-right: 104px;
   padding-left: 16px;
   padding-right: 12px;
-
-
   height: 48px;
   border-radius: 24px;
-
   font-family: Roboto Roboto Regular, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 133%;
-
   border-color: white;
   border-style: solid;
   border-width: thin;
-
   outline-style: none;
   background-color: transparent;
-
-/* значок выхода для зпрегистрированного пользователя
-  background-image: url(../../../images/header/logout_white.svg);
-  background-repeat: no-repeat;
-  background-position: 93%;
-  background-size: 16px;
-  */
-
 }
 @media (min-width: 768px) and (max-width: 1440px) {
   .header__auth-button {
     margin-right: calc(40px + (100vw - 768px) *  (104 - 40)  /  (1440 - 768));
     padding-left: calc(12px + (100vw - 768px) *  (16 - 12)  /  (1440 - 768));
     padding-right: calc(12px + (100vw - 768px) *  (16 - 12)  /  (1440 - 768));
-    /* при наличии значка выхода +24px
-    padding-right: calc(24px + 12px + (100vw - 768px) *  (16 - 12)  /  (1440 - 768));
-    */
-
     height: calc(40px + (100vw - 768px) *  (48 - 40)  /  (1440 - 768));
     border-radius: calc((40px + (100vw - 768px) *  (48 - 40)  /  (1440 - 768))/2);
     font-size: calc(16px + (100vw - 768px) *  (18 - 16)  /  (1440 - 768));
@@ -73,17 +54,3 @@
 .header__auth-button:hover {
   opacity: 0.7;
 }
-
-/* демо */
-/*
-
-@media (min-width: 900px) and (max-width: 1100px) {
-  .header__auth-button {
-    background-image: url(../../../images/header/logout_white.svg);
-    background-repeat: no-repeat;
-    background-position: 93%;
-    background-size: 16px;
-    padding-right: calc(24px + 12px + (100vw - 768px) *  (16 - 12)  /  (1440 - 768));
-  }
-}
-*/

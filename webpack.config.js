@@ -14,18 +14,14 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: {
     main: `./src/main/main.js`,
-    // точка входа главной страницы
     personal: `./src/personal/personal`,
-    //точка входа страницы с сохраненными статьями
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    // сборка будет осуществляться в папке dist
     filename:
       isDev
         ?  '[name]/[name].[chunkhash].js'
         :  '[name]/[name].js',
-    // выходной js файл будет располагаться в папке с тем же названием, что и точка входа, и будет называться так же как  имя точки входа //////////////
   },
   module: {
     rules: [
@@ -33,8 +29,6 @@ module.exports = {
         test: /\.js$/,
         use: { loader: 'babel-loader' },
         exclude: /node_modules/,
-        // все js файлы, за исключением находящихся в node modules обрабатываются бабелем
-        // настройки см в babel.config
       },
       {
         test: /\.css$/i,
@@ -45,12 +39,6 @@ module.exports = {
           'css-loader',
           'postcss-loader',
         ],
-        // все css файлы обрабатываются:
-        //    1)  postcss-loader : предварительная обработка CSS, настраивается в postcss.config
-        //    2)  css-loader : обрабатывает импорты, достаточно настроек по умолчанию
-        //    3a) при сборке MiniCssExtractPlugin :  создает файл CSS для каждого файла JS, который содержит CSS
-        //                                           согласно настройкам плагина
-        //    3b) при запуске dev сервера используем style-loader для работы со стилями
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
@@ -64,10 +52,8 @@ module.exports = {
                   :  './images/[name].[ext]',
             }
           },
-          // добавляем изображения в папку images
           {
             loader: 'image-webpack-loader',
-            // и оптимизируем их
             options: {
               mozjpeg: {
                 progressive: true,
@@ -93,7 +79,6 @@ module.exports = {
         options: {
           name: './vendor/fonts/[name].[ext]',
         }
-              // добавляем шрифты
       },
     ],
   },
@@ -103,10 +88,8 @@ module.exports = {
         isDev
           ?  '[name]/[name].[contenthash].css'
           :  '[name]/[name].css',
-      // задаем именование выходных css файлов
     }),
     new OptimizeCssAssetsPlugin({
-      // оптимизация и минификация css
       assetNameRegExp: /\.css$/g,
       cssProcessor: cssnano,
       cssProcessorPluginOptions: {
@@ -116,13 +99,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject :false,
-      // отключаем автоматическую вставку ресурсов
       template: './src/main/main.html',
-      // обрабатываемый файл
       filename: 'index.html',
-      // имя сгенерированного файла
       chunks: ['main']
-      // собираем main
     }),
     new HtmlWebpackPlugin({
       inject :false,
@@ -131,10 +110,8 @@ module.exports = {
       chunks: ['personal']
     }),
     new WebpackMd5Hash(),
-    // создаем хэши
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      // работаем  с глобальными переменными
     }),
   ],
 };

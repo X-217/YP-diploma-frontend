@@ -1,0 +1,13 @@
+.header__mobile-menu_personal{
+}
+
+@media (max-width: 767px) {
+  .header__mobile-menu_personal {
+    display: flex;
+    background-color: #FFFFFF;
+    border-color: transparent;
+    border-bottom-color: rgba(69, 69, 69, 0.5);
+    border-style: solid;
+    border-width: thin;
+  }
+}
