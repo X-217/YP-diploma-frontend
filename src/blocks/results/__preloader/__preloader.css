@@ -1,0 +1,11 @@
+.results__preloader {
+  width: 100vw;
+  height: 180px;
+  background-color: #F5F6F7;
+}
+
+@media (max-width: 319px) {
+  .results__preloader {
+    width: 320px;
+  }
+}

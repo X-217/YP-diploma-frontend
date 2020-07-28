@@ -1,0 +1,13 @@
+.body {
+  position: absolute;
+  margin: 0;
+  padding:0;
+  background-color: white;
+  width: 100vw;
+}
+@media (max-width: 319px) {
+  .body{
+    overflow-x: scroll;
+  }
+}
+

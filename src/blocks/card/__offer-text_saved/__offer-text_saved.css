@@ -1,0 +1,11 @@
+.card__offer-text_saved {
+  width: 159px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@media (max-width: 999px) {
+  .card__offer-text_saved {
+    display: none;
+  }
+}

@@ -1,0 +1,6 @@
+@media (max-width: 767px) {
+  .header__mobile-menu{
+    display: flex;
+    background-color: #1A1B22;
+  }
+}

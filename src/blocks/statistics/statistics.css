@@ -1,0 +1,48 @@
+@import url(./__title/__title.css);
+@import url(./__keywords/__keywords.css);
+@import url(./__saved/__saved.css);
+@import url(./__bold/__bold.css);
+
+.statistics {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 1232px;
+  margin: 0 auto;
+  padding-top: 80px;
+  z-index: 5;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .statistics{
+    width: calc(660px + (100vw - 768px) *  (1232 - 660)  /  (1440 - 768));
+    padding-top: calc(66px + (100vw - 768px) * (80 - 66) / (1440 - 768));
+  }
+}
+
+@media (min-width: 537px) and (max-width: 767px) {
+  .statistics {
+    width: calc(462px + (100vw - 537px) *  (660 - 462)  /  (767 - 537));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 536px) {
+  .statistics {
+    width: calc(288px + (100vw - 320px) *  (400 - 288)  /  (536 - 320));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .results__container {
+    padding-top: calc(32px + (100vw - 320px) *  (40 - 32)  /  (767 - 320));
+  }
+}
+
+@media (max-width: 319px) {
+  .statistics {
+    width: 288px;
+    padding-bottom: 32px;
+
+  }
+}

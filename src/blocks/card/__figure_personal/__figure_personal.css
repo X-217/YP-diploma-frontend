@@ -1,0 +1,8 @@
+.card__figure_personal {
+}
+
+@media (min-width: 1000px) {
+  .card__figure_personal {
+    grid-template-columns: 100px 1fr auto;
+  }
+}

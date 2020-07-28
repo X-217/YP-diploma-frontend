@@ -1,0 +1,13 @@
+.popup__message_user-exist {
+  display: none;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  height: 0;
+  padding-bottom: 0;
+}
+@media (max-width: 536px) {
+  .popup__message_user-exist {
+  height: auto;
+  }
+}

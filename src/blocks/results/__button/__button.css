@@ -1,0 +1,50 @@
+.results__button {
+  width: 288px;
+  height: 64px;
+  margin: 64px 0 80px 0;
+  border-radius: 32px;
+  font-family: Roboto Regular, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  text-align: center;
+  background-color: #FFFFFF;
+  border: none #FFFFFF;
+  color: #1A1B22;
+  outline-style: none;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .results__button {
+    width: calc(240px + (100% - 768px) * (288 - 240) / (1440 - 768));
+    height: calc(56px + (100vw - 768px) * (64 - 56) / (1440 - 768));
+    border-radius: calc((56px + (100vw - 768px) * (64 - 56) / (1440 - 768)) / 2);
+    margin-top: calc(22px + (100vw - 768px) * (64 - 22) / (1440 - 768));
+    margin-bottom: calc(40px + (100vw - 768px) * (80 - 40) / (1440 - 768));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .results__button {
+    width: calc(288px + (100% - 320px) * (240 - 288) / (767 - 320));
+    height: 56px;
+    border-radius: 28px;
+    margin-top: calc(15px + (100vw - 320px) * (22 - 15) / (767 - 320));
+    margin-bottom: calc(32px + (100vw - 320px) * (40 - 32) / (767 - 320));
+  }
+}
+
+@media (max-width: 319px) {
+  .results__button {
+    height: 56px;
+    border-radius: 28px;
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 32px;
+  }
+}
+
+.results__button:hover {
+  opacity: 0.7;
+}

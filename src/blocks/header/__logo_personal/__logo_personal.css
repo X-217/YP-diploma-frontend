@@ -1,0 +1,8 @@
+.header__logo_personal {
+}
+
+@media (max-width: 767px) {
+  .header__logo_personal {
+    border-bottom-color: rgba(69, 69, 69, 0.5);
+  }
+}

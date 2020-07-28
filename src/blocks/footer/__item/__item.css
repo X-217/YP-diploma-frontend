@@ -1,0 +1,27 @@
+.footer__item {
+  padding-top: 32px;
+  margin-left: 32px;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .footer__item {
+    padding-top: calc(22px + (100vw - 768px) *  (32 - 22)  /  (1440 - 768));
+    margin-left: calc(16px + (100vw - 768px) *  (32 - 16)  /  (1440 - 768));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer__item {
+    padding-top: 32px;
+    padding-left: calc(16px + (100vw - 320px) *  (40 - 16)  /  (767 - 320));
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 319px) {
+  .footer__item {
+    padding-top: 32px;
+    padding-left: 16px;
+    margin-left: 0;
+  }
+}

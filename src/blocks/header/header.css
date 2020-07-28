@@ -1,0 +1,60 @@
+@import url(./__container/__container.css);
+@import url(./__container_logged/__container_logged.css);
+@import url(./__logo/__logo.css);
+@import url(./__logo-link/__logo-link.css);
+@import url(./__item/__item.css);
+@import url(./__item_main/__item_main.css);
+@import url(./__item_saved/__item_saved.css);
+@import url(./__main-link/__main-link.css);
+@import url(./__saved-link/__saved-link.css);
+@import url(./__saved-link_active/__saved-link_active.css);
+@import url(./__item_auth/__item_auth.css);
+@import url(./__auth-button/__auth-button.css);
+@import url(./__auth-button_logged/__auth-button_logged.css);
+@import url(./__item_underline/__item_underline.css);
+@import url(./__font-color_white/__font-color_white.css);
+@import url(./__font-color_black/__font-color_black.css);
+@import url(./__mobile-control/__mobile-control.css);
+@import url(./__menu-button/__menu-button.css);
+@import url(./__menu-button_close/__menu-button_close.css);
+@import url(./__mobile-menu/__mobile-menu.css);
+@import url(./__blur/__blur.css);
+@import url(./__container_personal/__container_personal.css);
+@import url(./__item_underline-personal/__item_underline-personal.css);
+@import url(./__menu-button-personal/__menu-button-personal.css);
+@import url(./__mobile-menu_personal/__mobile-menu_personal.css);
+@import url(./__menu-button_close-personal/__menu-button_close-personal.css);
+@import url(./__auth-button_personal/__auth-button_personal.css);
+@import url(./__auth-button_logged-personal/__auth-button_logged-personal.css);
+@import url(./__item_hidden/__item_hidden.css);
+@import url(./__saved-link_hidden/__saved-link_hidden.css);
+@import url(./__logo_personal/__logo_personal.css);
+@import url(./__mobile-menu_personal/__mobile-menu_personal.css);
+@import url(./__mobile-control_personal/__mobile-control_personal.css);
+
+.header {
+  position: absolute;
+  width: calc(100vw - 2px);
+  border-color: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: thin;
+  height: 82px;
+  z-index: 10;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .header {
+    height: calc(66px + (100vw - 768px) * (80 - 66) / (1440 - 768));
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    border: none;
+  }
+}
+
+.header_personal {
+  border-bottom-color: rgba(69, 69, 69, 0.5);
+}

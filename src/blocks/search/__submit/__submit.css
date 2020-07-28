@@ -1,0 +1,47 @@
+.search__submit {
+  width: 168px;
+  border-radius: 32px;
+  background-color: #2F71E5;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  border-style: solid;
+  font-family: Roboto Regular, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  text-align: center;
+  color: #FFFFFF;
+  outline-style: none;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .search__submit {
+    height: calc(56px + (100vw - 768px) *  (64 - 56)  /  (1440 - 768));
+    width: calc(160px + (100% - 768px) *  (168 - 160)  /  (1440 - 768));
+    border-radius:  calc(28px + (100vw - 768px) *  (32 - 28)  /  (1440 - 768));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .search__submit {
+    margin-top: 16px;
+    height: 56px;
+    border-radius: 28px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 319px) {
+  .search__submit {
+    margin-top: 16px;
+    height: 56px;
+    border-radius: 28px;
+    width: 100%;
+  }
+}
+
+.search__submit:hover {
+  border-color: #367fff;
+}
+

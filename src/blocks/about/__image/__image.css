@@ -1,0 +1,38 @@
+.about__image {
+  width: 464px;
+  height: 464px;
+  border-radius: 232px;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .about__image {
+    width: calc(232px + (100vw - 768px) *  (464 - 232)  /  (1440 - 768));
+    height: calc(232px + (100vw - 768px) *  (464 - 232)  /  (1440 - 768));
+    border-radius: calc(116px + (100vw - 768px) *  (232 - 116)  /  (1440 - 768));
+  }
+}
+
+@media (min-width: 536px) and (max-width: 767px) {
+  .about__image {
+    width: calc(224px + (100vw - 536px) *  (336 - 224)  /  (767 - 536));
+    height: calc(224px + (100vw - 536px) *  (336 - 224)  /  (767 - 536));
+    border-radius: calc(112px + (100vw - 536px) *  (168 - 112)  /  (767 - 536));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 535px) {
+  .about__image {
+    width: calc(272px + (100vw - 320px) *  (400 - 272)  /  (535 - 320));
+    height: calc(272px + (100vw - 320px) *  (400 - 272)  /  (535 - 320));
+    border-radius: calc(136px + (100vw - 320px) *  (200 - 136)  /  (535 - 320));
+  }
+}
+
+@media (max-width: 319px) {
+  .about__image {
+    width: 272px;
+    height: 272px;
+    border-radius: 136px;
+
+  }
+}

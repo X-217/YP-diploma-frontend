@@ -1,0 +1,10 @@
+.results__notfound {
+  width: 100vw;
+  height: 374px;
+}
+
+@media (max-width: 319px) {
+  .results__notfound {
+    width: 320px;
+  }
+}

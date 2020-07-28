@@ -1,0 +1,16 @@
+@import url(./__container/__container.css);
+@import url(./__title/__title.css);
+@import url(./__button/__button.css);
+@import url(./__output/__output.css);
+@import url(./__notfound/__notfound.css);
+@import url(./__notfound-image/__notfound-image.css);
+@import url(./__notfound-container/__notfound-container.css);
+@import url(./__notfound-title/__notfound-title.css);
+@import url(./__notfound-text/__notfound-text.css);
+@import url(./__preloader/__preloader.css);
+@import url(./__circle-preloader/__circle-preloader.css);
+@import url(./__preloader-text/__preloader-text.css);
+
+.results {
+background-color: #F5F6F7;
+}

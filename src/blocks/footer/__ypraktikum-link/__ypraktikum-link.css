@@ -1,0 +1,14 @@
+.footer__ypraktikum-link {
+  font-family: Roboto Roboto Regular, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  text-decoration: none;
+  color: #1A1B22;
+  white-space: nowrap;
+}
+
+.footer__ypraktikum-link:hover {
+  opacity: 0.7;
+}

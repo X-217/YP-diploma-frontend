@@ -1,0 +1,13 @@
+.footer__main-link{
+  font-family: Roboto Regular, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  color: #1A1B22;
+  text-decoration: none;
+  white-space: nowrap;
+  }
+.footer__main-link:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,28 @@
+.search__title {
+  color: white;
+  font-size: 60px;
+  font-weight: normal;
+  font-family: Roboto Slab, sans-serif;
+  line-height: 107%;
+  margin: 0;
+
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .search__title {
+    font-size: calc(36px + (100vw - 768px) *  (60 - 36)  /  (1440 - 768));
+    width: 60%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  .search__title {
+    font-size: 36px;
+    width: 80%;
+  }
+}
+@media (max-width: 320px) {
+  .search__title {
+    font-size: 34px;
+    width: 100%;
+  }
+}

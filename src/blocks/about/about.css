@@ -1,0 +1,10 @@
+@import url(./__container/__container.css);
+@import url(./__picture/__picture.css);
+@import url(./__image/__image.css);
+@import url(./__info/__info.css);
+@import url(./__text/__text.css);
+@import url(./__title/__title.css);
+
+.about {
+  background-color: #FFFFFF;
+}

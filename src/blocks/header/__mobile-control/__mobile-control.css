@@ -1,0 +1,27 @@
+.header__mobile-control {
+  grid-area: header__mobile-control;
+  display: flex;
+  width: 58px;
+  border-color: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: thin;
+}
+
+@media (min-width: 768px) {
+  .header__mobile-control{
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header__mobile-control {
+    height: calc(56px + (100vw - 320px) *  (66 - 56)  /  (767 - 320) );
+  }
+}
+
+@media (max-width: 319px) {
+  .header__mobile-control {
+    height: 56px;
+  }
+}

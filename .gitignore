@@ -1,0 +1,19 @@
+# Created by .ignore support plugin (hsz.mobi)
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.idea
+
+dist
+
+/src/personal+/
+src-sample/

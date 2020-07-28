@@ -1,0 +1,31 @@
+.statistics__title {
+  max-width: 712px;
+  height: 24px;
+  margin: 40px 0 0;
+  padding: 0;
+  font-family: Roboto Roboto Regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 133%;
+  color: rgba(26, 27, 34, 0.5);
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .statistics__title {
+    margin-top: calc(24px + (100vw - 768px) *  (40 - 24)  /  (1440 - 768));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .statistics__title {
+    margin-top: calc(8px + (100vw - 320px) *  (24 - 8)  /  (767 - 320));
+  }
+}
+
+@media (max-width: 319px) {
+  .statistics__title{
+    margin-top: 8px;
+    width: 288px;
+  }
+}

@@ -1,0 +1,54 @@
+@import url(./__title/__title.css);
+@import url(./__container/__container.css);
+@import url(./__figure/__figure.css);
+@import url(./__date/__date.css);
+@import url(./__text/__text.css);
+@import url(./__source/__source.css);
+@import url(./__image/__image.css);
+@import url(./__offer-text/__offer-text.css);
+@import url(./__offer-text_saved/__offer-text_saved.css);
+@import url(./__action/__action.css);
+@import url(./__action_save/__action_save.css);
+@import url(./__action_hover/__action_hover.css);
+@import url(./__action_saved/__action_saved.css);
+@import url(./__action_delete/__action_delete.css);
+@import url(./__action_delete-hover/__action_delete-hover.css);
+@import url(./__keyword/__keyword.css);
+@import url(./__figure_personal/__figure_personal.css);
+
+.card {
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 400px;
+  height: 576px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .card {
+    width: calc(((663px + (100vw - 780px ) * (1232 - 710) / (1440 - 768)) / 3) );
+    height: calc(420px + (100vw - 768px) *  (576 - 420)  /  (1440 - 768));
+  }
+}
+
+@media (min-width: 536px) and (max-width: 767px) {
+  .card {
+    width: calc(224px + (100vw - 536px) *  (330 - 218)  /  (767 - 536));
+    height: calc(420px + (100vw - 536px) *  (576 - 420)  /  (767 - 536));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 536px) {
+  .card {
+    width: calc(288px + (100vw - 320px) *  (400 - 288)  /  (536 - 320));
+    height: calc(446px + (100vw - 320px) *  (569 - 446)  /  (535 - 320));
+  }
+}
+
+@media (max-width: 319px) {
+  .card{
+    width: 288px;
+    height: 446px;
+  }
+}
