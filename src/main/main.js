@@ -1,27 +1,30 @@
 import './main.css';
 
-import Popup from "../JS/Popup";
+import Popup from "../JS/components/Popup";
 import FormValidator from "../JS/FormValidator";
+import Header from "../JS/components/Header";
 
 const menuItems= document.querySelectorAll('.header__menu-item');
-const header=document.querySelector('.header');
+/*const header=document.querySelector('.header');*/
 const menuIcon=document.querySelector('.header__menu-button');
 const formValidator = new FormValidator();
+const header = new Header();
+const popup = new Popup(formValidator,header);
 
-const popup = new Popup(formValidator);
 
 document.querySelector('.header__auth-button').addEventListener('click', popupShow);
 document.querySelector('.header__menu-button').addEventListener('click', menuToggle);
 document.querySelector('.header__auth-button').addEventListener('click', logout);
 
 
-function popupShow(event) {
-  popup.checkoutLogin();
+function popupShow(event) { /*сменить название*/
+  popup.open(); /*если пользователь не авторизован*/
+  /*если авторизован, то logout без открытия попапа*/
 }
 
 function menuToggle() {
     menuItems.forEach((item) => item.classList.toggle("header__mobile-menu"));
-    header.classList.toggle("header__blur");
+  document.querySelector('.header').classList.toggle("header__blur");
     menuIcon.classList.toggle("header__menu-button_close");
 }
 

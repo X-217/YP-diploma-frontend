@@ -1,6 +1,6 @@
 import './personal.css';
 
-import Popup from "../JS/Popup";
+import Popup from "../JS/components/Popup";
 import FormValidator from "../JS/FormValidator";
 
 const menuItems= document.querySelectorAll('.header__menu-item');
@@ -14,7 +14,7 @@ document.querySelector('.header__auth-button').addEventListener('click', logout)
 
 
 function popupShow(event) {
-  popup.checkoutLogin();
+  popup.showLoginPopup();
 }
 
 function menuToggle() {
