@@ -1,7 +1,14 @@
 'use strict';
+import MainApi from "../api/MainApi";
+
 
 export default class Popup {
     constructor(formValidator, header) {
+      this.mainApi = new MainApi({
+        baseUrl:  'http://localhost:3000', /*'https://api.x-217.ru/',*/
+/*        headers: {
+          'Content-Type': 'application/json',*/
+        });
       this.container = document.querySelector(".popup");
       this.title = document.querySelector(".popup__title");
       this.form = document.querySelector(".popup__form");
@@ -16,7 +23,7 @@ export default class Popup {
       this.offer = document.querySelector(".popup__offer");
       this.offerText = document.querySelector(".popup__offer-text");
       this.offerButton = document.querySelector(".popup__offer-button");
-      this.closeButton = document.querySelector(".popup__close_form");
+      this.closeButton = document.querySelector(".popup__close");
       this.formValidator = formValidator;
       this.header = header;
       this.login = this.login.bind(this);
@@ -117,6 +124,8 @@ export default class Popup {
     event.stopImmediatePropagation();
     console.log('login');
     /*        осуществляем авторизацию          */
+    console.log (this.mainApi.signin());
+    /*                                           */
     if ('success') {
       this.header.render(true, "Вася");
     }
@@ -127,7 +136,8 @@ export default class Popup {
   signup(event) {
     event.preventDefault();
     event.stopImmediatePropagation();
-
+    /*        осуществляем регистрацию нового пользователя          */
+    this.mainApi.signup();
     /*        осуществляем регистрацию нового пользователя          */
     if ('success') {
       this.header.render(false);

@@ -22,13 +22,12 @@
       <div class="header__item header__item_underline header__item_main header__menu-item">
         <a class=" header__main-link header__font-color_white " href="./index.html">Главная</a>
       </div>
-      <div class="header__item header__item_saved header__menu-item header__item_hidden">
-        <a class="header__saved-link header__saved-link_hidden" href="./personal/index.html">Cохраненные статьи</a>
+      <div class="header__item header__item_saved header__menu-item">
+        <a class="header__saved-link" href="./personal/index.html">Cохраненные статьи</a>
       </div>
       <div class="header__item header__item_auth header__menu-item">
         <button name="auth-button"
                 class="header__auth-button header__font-color_white">
-          Авторизоваться
         </button>
       </div>
       <div class="header__mobile-control header__menu-item">
@@ -197,11 +196,10 @@
 
 
   <div class="popup">
+    <div class="popup__container">
 
-    <div class="popup__content">
-
-      <img alt="Close" class="popup__close" src="<%=require('.././images/header/menu-close_white.svg').default%>">
-      <button name="popup-close" class="popup__close popup__close_form"></button>
+<!--      <img alt="Close" class="popup__close" src="<%=require('.././images/header/menu-close_white.svg').default%>">-->
+      <button class="popup__close"></button>
 
       <h3 class="popup__title">Регистрация</h3>
     <form class="popup__form" novalidate>

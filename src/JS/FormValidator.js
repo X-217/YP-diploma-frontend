@@ -6,7 +6,7 @@ export default class FormValidator {
     setEventListeners(obj) {
         obj.form.addEventListener('input', () => this.setSubmitButtonState.call(this, obj));
     };
-    checkInputValidity() {
+    _validateInputElement() {
       if (this.validity.valueMissing) {
             this.nextElementSibling.textContent = "Это обязательное поле";
             return false;
@@ -27,9 +27,9 @@ export default class FormValidator {
         return true;
     };
     setSubmitButtonState(obj) {
-        const firstVal = this.checkInputValidity.call(obj.emailInput, obj.errorMessages);
-        const secVal = this.checkInputValidity.call(obj.passwordInput, obj.errorMessages);
-        const thrVal = obj.name.classList.contains("popup__item-is-visible") ? this.checkInputValidity.call(obj.nameInput, obj.errorMessages) : true;
+        const firstVal = this._validateInputElement.call(obj.emailInput, obj.errorMessages);
+        const secVal = this._validateInputElement.call(obj.passwordInput, obj.errorMessages);
+        const thrVal = obj.name.classList.contains("popup__item-is-visible") ? this._validateInputElement.call(obj.nameInput, obj.errorMessages) : true;
         if (firstVal && secVal && thrVal) {
             obj.submitButton.removeAttribute("disabled");
             obj.submitButton.classList.add("popup__button_activate");
