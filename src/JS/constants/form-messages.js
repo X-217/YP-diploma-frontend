@@ -13,12 +13,12 @@ const formMessages = {
   loginSubmitButton: "Войти",
   loginOfferText: "или",
   loginOfferButtonText: "Зарегистрироваться",
-
   signUpTitle: "Регистрация",
   signUpSubmitButton: "Зарегистрироваться",
   signUpOfferText: "или",
   signUpOfferButtonText: "Войти",
-
+  successTitle : "Пользователь успешно зарегистрирован",
+  successOfferButtonText: "Выполнить вход",
 
 
 

@@ -1,5 +1,5 @@
-.form__message_user-exist {
-  display: none;
+.form__message_from-server {
+  display: block;
   margin: 0;
   text-align: center;
   position: relative;
@@ -7,7 +7,7 @@
   padding-bottom: 0;
 }
 @media (max-width: 536px) {
-  .form__message_user-exist {
+  .form__message_from-server {
   height: auto;
   }
 }

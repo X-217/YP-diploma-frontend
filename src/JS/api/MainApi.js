@@ -2,73 +2,70 @@ import mainApiParams from "../constants/main-api-params";
 
 export default class MainApi {
   constructor() {
-    this.url = mainApiParams.url;
-    this.headers = mainApiParams.headers;
+/*    this.url = mainApiParams.url;
+    this.headers = mainApiParams.headers;*/
     this.errorHandler = (res) => {
     }
   }
 
   signup(name, email, password) {
     const user= {name, email, password};
-    return fetch(`http://localhost:3000/signup/`, {
+    return fetch(`${mainApiParams.url}/signup`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Access-Control-Allow-Origin': 'http://localhost:8080',
-      'Access-Control-Allow-Creditials': 'true',
-      },
+      headers: mainApiParams.headers,
+      credentials: 'include',
+      withCredentials: true,
       body: JSON.stringify(user)
     })
-      .then((res) => {
-
-        if (res.ok) {
-
-          return res.json();
-        }
-        this.errorHandler(res);
-      })
-      .catch((err) => Promise.reject(err));
-
+      .then((res) => res.json())
+      .catch((err) => {      });
   };
 
   signin(email, password) {
-    return fetch(`${mainApiParams.url}/signin`, {
+    return fetch(`${mainApiParams.url}/signin/`, {
       method: 'POST',
       headers: mainApiParams.headers,
       credentials: 'include',
       withCredentials: true,
       body: JSON.stringify({email, password}),
     })
-
       .then((res) =>  res.json())
       .catch((err) => {
-        /* разобраться что делать */
-/*        alert("Ошибка связи с сервером");*/
-        console.log(err);
-
-
+        throw new Error('Отсутствует соединение с сервером');
       });
   }
 
 
   getUserData() {
-/*    console.log(this.headers);*/
-    return fetch(`http://localhost:3000/users/me`, {
+    return fetch(`${mainApiParams.url}/users/me`, {
       method: 'GET',
-      headers: this.headers,
+      headers: mainApiParams.headers,
       credentials: 'include',
       withCredentials: true,
     })
       .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        this.errorHandler(res);
+        if (res.ok) return res.json();
+        return false
       })
-      .catch((err) => console.log(err)/*Promise.reject()*/);
+      .catch((err) => {
+        throw new Error('Отсутствует соединение с сервером');
+      });
   }
 
-
+  logout() {
+    return fetch(`${mainApiParams.url}/users/logout`, {
+      method: 'GET',
+      headers: mainApiParams.headers,
+      credentials: 'include',
+      withCredentials: true,
+    })
+      .then((res) => {
+        if (res.ok) return true;
+      })
+      .catch((err) => {
+        throw new Error('Отсутствует соединение с сервером');
+      });
+  }
 
 
   /*

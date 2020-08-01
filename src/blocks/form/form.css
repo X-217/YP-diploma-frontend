@@ -1,7 +1,7 @@
 @import url(__button/__button.css);
 @import url(__button_activate/__button_activate.css);
 @import url(__button_save/__button_save.css);
-@import url(__button_success/__button_success.css);
+@import url(__button_hide/__button_hide.css);
 @import url(__input/__input.css);
 @import url(__item-name/__item-name.css);
 @import url(__item/__item.css);
@@ -12,15 +12,14 @@
 @import url(__message_email-not-valid/__message_email-not-valid.css);
 @import url(__message_name-not-valid/__message_name-not-valid.css);
 @import url(__message_password-not-valid/__message_password-not-valid.css);
-@import url(__message_user-exist/__message_user-exist.css);
+@import url(__message_from-server/__message_from-server.css);
 @import url(__offer-button/__offer-button.css);
-@import url(__offer-success/__offer-success.css);
 @import url(__offer-text/__offer-text.css);
 @import url(__offer-text_success/__offer-text_success.css);
 @import url(__offer/__offer.css);
 @import url(__title/__title.css);
 @import url(__title_success/__title_success.css);
-
+@import url(__offer-success/__offer-success.css);
 
 
 .form {

@@ -2,51 +2,76 @@ import './main.css';
 
 import Form from "../JS/components/Form";
 import Popup from "../JS/components/Popup";
+import FormValidator from "../JS/utils/FormValidator";
 
 import Header from "../JS/components/Header";
 import MainApi from "../JS/api/MainApi";
+
+/*import mainApiParams from "../constants/main-api-params";*/
 
 const menuItems = document.querySelectorAll('.header__menu-item');
 
 const menuIcon = document.querySelector('.header__menu-button');
 
 const header = new Header();
-const form = new Form(header);
-const popup = new Popup(form);
+const mainApi = new MainApi();
+
+const popup = new Popup();
+const formValidator= new FormValidator();
+const form = new Form(popup, header, formValidator);
 const authButton = document.querySelector('.header__auth-button');
 const menuButton = document.querySelector('.header__menu-button');
 
 
 let islogged = false;
 
-const mainApiParams = {
-  baseUrl:  'http://localhost:3000', /*'https://api.x-217.ru/',*/
-  headers: {
-    'Content-Type': 'application/json',
-  }
-};
-const mainApi = new MainApi(mainApiParams);
 
-/* https://learn.javascript.ru/promise-error-handling */
-window.addEventListener('unhandledrejection', function(event) {
-  // объект события имеет два специальных свойства:
-  alert(event.promise); // [object Promise] - промис, который сгенерировал ошибку
-  alert(event.reason); // Error: Ошибка! - объект ошибки, которая не была обработана
-});
-/**/
+
+
 authButton.addEventListener('click', authToggle);
 menuButton.addEventListener('click', menuToggle);
 
-header.render(false, undefined);
+
+
+mainApi.getUserData()
+  .then((res) => {
+    if (res) {             /* кука подтверждена */
+      header.render(true, res.name);
+      islogged = true;
+
+      console.log(res.name);
+
+    } else {
+      header.render(false, undefined);
+      console.log("Никого...");
+      islogged = false;
+
+    }
+  })
+  .catch((err) => {         /* кука не подтверждена */
+console.log(err);
+  });
 
 function authToggle(event) {
+
   if (!islogged) {
-    popup.open();
+    form.show();
     islogged = true;
-    header.render(islogged, "Username");
   } else {
-    header.render(islogged, undefined);
-    location.href = './index.html'
+    mainApi.logout()
+      .then((res) => {
+        if (res) {
+          islogged = false;
+          header.render(false, undefined);
+        }
+      })
+      .catch((err) => {
+
+
+
+      })
+
+/*    location.href = './index.html'*/
   }
 }
 
@@ -56,9 +81,9 @@ function menuToggle() {
   menuIcon.classList.toggle("header__menu-button_close");
 }
 
-function logout() {
+/*function logout() {
   if (document.querySelector('.header__auth-button_logged')) {
 
 
   }
-}
+}*/

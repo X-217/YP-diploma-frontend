@@ -1,10 +1,8 @@
 'use strict';
 
 export default class Popup {
-    constructor(form) {
-
+    constructor() {
       this.container = document.querySelector(".popup");
-     this.form = form;
       this.closeButton = document.querySelector(".popup__close");
       this.close=this.close.bind(this);
     };
@@ -130,11 +128,9 @@ export default class Popup {
 
 
   open() {
-    this.form.show();
+/*    this.form.show();*/
     this.container.classList.add('popup_is-visible');
     this.closeButton.addEventListener('click', this.close, {once: true});
-
-
 /*     this.showLoginPopup();*/
   }
 
