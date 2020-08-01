@@ -1,29 +1,5 @@
-@import url(./__button/popup__button.css);
-@import url(./__button_activate/popup__button_activate.css);
-@import url(./__button_save/popup__button_save.css);
-@import url(./__button_success/__button_success.css);
 @import url(./__close/popup__close.css);
-@import url(./__close_img/popup__close_img.css);
-@import url(./__content/popup__content.css);
-@import url(./__form/popup__form.css);
-@import url(./__input/popup__input.css);
-@import url(./__item-name/__item-name.css);
-@import url(./__item/__item.css);
-@import url(./__item_email/__item_email.css);
-@import url(./__item_password/__item_password.css);
-@import url(./__item_username/__item_username.css);
-@import url(./__message/__message.css);
-@import url(./__message_email-not-valid/__message_email-not-valid.css);
-@import url(./__message_name-not-valid/__message_name-not-valid.css);
-@import url(./__message_password-not-valid/__message_password-not-valid.css);
-@import url(./__message_user-exist/__message_user-exist.css);
-@import url(./__offer-button/__offer-button.css);
-@import url(./__offer-success/__offer-success.css);
-@import url(./__offer-text/__offer-text.css);
-@import url(./__offer-text_success/__offer-text_success.css);
-@import url(./__offer/__offer.css);
-@import url(./__title/__title.css);
-@import url(./__title_success/__title_success.css);
+@import url(__container/popup__container.css);
 
 .popup {
   display: none;
@@ -53,7 +29,7 @@
   }
 }
 
-.popup__item-is-visible {
+.popup_is-visible {
   display: flex;
   flex-direction: column;
 }

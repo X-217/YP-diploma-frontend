@@ -29,13 +29,13 @@ export default class FormValidator {
     setSubmitButtonState(obj) {
         const firstVal = this._validateInputElement.call(obj.emailInput, obj.errorMessages);
         const secVal = this._validateInputElement.call(obj.passwordInput, obj.errorMessages);
-        const thrVal = obj.name.classList.contains("popup__item-is-visible") ? this._validateInputElement.call(obj.nameInput, obj.errorMessages) : true;
+        const thrVal = obj.name.classList.contains("form__item-is-visible") ? this._validateInputElement.call(obj.nameInput, obj.errorMessages) : true;
         if (firstVal && secVal && thrVal) {
             obj.submitButton.removeAttribute("disabled");
-            obj.submitButton.classList.add("popup__button_activate");
+            obj.submitButton.classList.add("form__button_activate");
         } else {
             obj.submitButton.setAttribute("disabled", "");
-            obj.submitButton.classList.remove("popup__button_activate");
+            obj.submitButton.classList.remove("form__button_activate");
         }
     };
 }

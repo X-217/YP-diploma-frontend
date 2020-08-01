@@ -197,41 +197,41 @@
 
   <div class="popup">
     <div class="popup__container">
-
-<!--      <img alt="Close" class="popup__close" src="<%=require('.././images/header/menu-close_white.svg').default%>">-->
       <button class="popup__close"></button>
 
-      <h3 class="popup__title">Регистрация</h3>
-    <form class="popup__form" novalidate>
+      <form class="form" novalidate>
 
-      <div class="popup__item popup__item_email">
-        <div class="popup__item-name">Email</div>
-        <input placeholder="Введите почту" class="popup__input popup__input_email" type="email" required>
-        <div class="popup__message popup__message_email-not-valid">Неправильный формат email</div>
+        <h3 class="form__title">Привет</h3>
 
-      </div>
-      <div class="popup__item popup__item_password">
-        <div class="popup__item-name">Пароль</div>
-        <input placeholder="Введите пароль" class="popup__input popup__input_password" type="password" required minlength="8" maxlength="30">
-        <div class="popup__message popup__message_password-not-valid">Длина пароля должна быть не менее 8 символов</div>
+        <div class="form__item form__item_email">
+          <div class="form__item-name form__item-name_email"></div>
+          <input placeholder="" class="form__input form__input_email" type="email" required>
+          <div class="form__message form__message_email-not-valid"></div>
+        </div>
 
-      </div>
+        <div class="form__item form__item_password">
+          <div class="form__item-name form__item-name_password"></div>
+          <input placeholder="" class="form__input form__input_password" type="password" required minlength="8" maxlength="30">
+          <div class="form__message form__message_password-not-valid"></div>
+        </div>
 
-      <div class="popup__item popup__item_username">
-        <div class="popup__item-name">Имя</div>
-        <input placeholder="Введите свое имя" class="popup__input popup__input_username" type="text" required minlength="2" maxlength="30">
-        <div class="popup__message popup__message_name-not-valid">Это обязательное поле</div>
+        <div class="form__item form__item_username">
+          <div class="form__item-name form__item-name_username"></div>
+          <input placeholder="" class="form__input form__input_username" type="text" required minlength="2" maxlength="30">
+          <div class="form__message form__message_name-not-valid"></div>
+        </div>
 
-      </div>
-      <div class="popup__message popup__message_user-exist">Такой пользователь уже есть</div>
+        <div class="form__message form__message_user-exist"></div>
 
-      <button type="submit" name="submitButton" class="popup__button" disabled></button>
-      <div class="popup__offer">
-        <span class="popup__offer-text">или</span>
-        <button type="button" class="popup__offer-button"></button>
-      </div>
+        <button type="submit" name="submitButton" class="form__button" disabled></button>
 
-    </form>
+        <div class="form__offer">
+          <span class="form__offer-text"></span>
+          <button type="button" class="form__offer-button"></button>
+        </div>
+
+      </form>
+
   </div>
 </div>
 
