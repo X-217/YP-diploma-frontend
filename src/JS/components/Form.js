@@ -1,6 +1,25 @@
 'use strict';
 import MainApi from "../api/MainApi";
-import formMessages from "../constants/form-messages";
+import {
+  BAD_EMAIL_OR_PASSWORD,
+  EMAIL_PLACEHOLDER,
+  EMAIL_TITLE,
+  INVALID_REGISTRATION_DATA,
+  LOGIN_OFFER_BUTTON_TEXT,
+  LOGIN_OFFER_TEXT,
+  LOGIN_SUBMIT_BUTTON,
+  LOGIN_TITLE,
+  NAME_PLACEHOLDER,
+  NAME_TITLE,
+  PASSWORD_PLACEHOLDER,
+  PASSWORD_TITLE, SERVER_ERROR,
+  SIGNUP_OFFER_BUTTON_TEXT,
+  SIGNUP_OFFER_TEXT,
+  SIGNUP_SUBMIT_BUTTON,
+  SIGNUP_TITLE,
+  SUCCESS_TITLE,
+} from "../constants/text/form-messages";
+
 
 export default class Form {
   constructor(popup, header, formValidator) {
@@ -9,7 +28,7 @@ export default class Form {
     this.popup = popup;
     this.formValidator = formValidator;
 
-    this.form=document.querySelector(".form");
+    this.form = document.querySelector(".form");
     this.title = document.querySelector(".form__title");
 
     this.email = document.querySelector(".form__item_email");
@@ -43,14 +62,14 @@ export default class Form {
 
   _setInitialTextValues() {
     this.title.textContent = ""
-    this.emailTitle.textContent = formMessages.emailTitle;
-    this.emailInput.placeholder = formMessages.emailPlaceholder;
+    this.emailTitle.textContent = EMAIL_TITLE;
+    this.emailInput.placeholder = EMAIL_PLACEHOLDER;
     this.emailValidationMessage.textContent = "";
-    this.passwordTitle.textContent = formMessages.passwordTitle;
-    this.passwordInput.placeholder = formMessages.passwordPlaceholder;
+    this.passwordTitle.textContent = PASSWORD_TITLE;
+    this.passwordInput.placeholder = PASSWORD_PLACEHOLDER;
     this.passwordValidationMessage.textContent = "";
-    this.nameTitle.textContent = formMessages.nameTitle;
-    this.nameInput.placeholder = formMessages.namePlaceholder;
+    this.nameTitle.textContent = NAME_TITLE;
+    this.nameInput.placeholder = NAME_PLACEHOLDER;
     this.nameValidationMessage.textContent = "";
     this.messageFromServer.textContent = "";
     this.submitButton.textContent = "";
@@ -91,10 +110,10 @@ export default class Form {
     this._setInitialTextValues();
     this._removeSignUpEventListeners();
     this._setLoginEventListeners();
-    this.title.textContent = formMessages.loginTitle;
-    this.submitButton.textContent = formMessages.loginSubmitButton;
-    this.offerText.textContent = formMessages.loginOfferText;
-    this.offerButton.textContent = formMessages.loginOfferButtonText;
+    this.title.textContent = LOGIN_TITLE;
+    this.submitButton.textContent = LOGIN_SUBMIT_BUTTON;
+    this.offerText.textContent = LOGIN_OFFER_TEXT;
+    this.offerButton.textContent = LOGIN_OFFER_BUTTON_TEXT;
     this.title.classList.remove("form__title_success");
     this.offer.classList.remove("form__offer-success");
     this.offerText.classList.remove("form__offer-text_success");
@@ -112,10 +131,10 @@ export default class Form {
     this._clear();
     this._setInitialTextValues();
     this._removeLoginEventListeners();
-    this.title.textContent = formMessages.signUpTitle;
-    this.submitButton.textContent = formMessages.signUpSubmitButton;
-    this.offerText.textContent = formMessages.signUpOfferText;
-    this.offerButton.textContent = formMessages.signUpOfferButtonText;
+    this.title.textContent = SIGNUP_TITLE;
+    this.submitButton.textContent = SIGNUP_SUBMIT_BUTTON;
+    this.offerText.textContent = SIGNUP_OFFER_TEXT;
+    this.offerButton.textContent = SIGNUP_OFFER_BUTTON_TEXT;
     this.email.classList.add("form__item-is-visible");
     this.password.classList.add("form__item-is-visible");
     this.name.classList.add("form__item-is-visible");
@@ -128,13 +147,13 @@ export default class Form {
 
   _showSuccessForm() {
     this._clear();
-    this.title.textContent = formMessages.successTitle;
+    this.title.textContent = SUCCESS_TITLE;
     this.title.classList.add("form__title_success");
-    this.submitButton.textContent = formMessages.signUpSubmitButton;
+    this.submitButton.textContent = SIGNUP_SUBMIT_BUTTON;
     this.offer.classList.add("form__offer-success");
     this.offerText.classList.add("form__offer-text_success");
     this.offerText.textContent = "";
-    this.offerButton.textContent = formMessages.signUpOfferButtonText;
+    this.offerButton.textContent = SIGNUP_OFFER_BUTTON_TEXT;
     this.email.classList.remove("form__item-is-visible");
     this.password.classList.remove("form__item-is-visible");
     this.name.classList.remove("form__item-is-visible");
@@ -148,29 +167,26 @@ export default class Form {
     const password = this.passwordInput.value;
     this.mainApi.signin(email, password)
       .then((res) => {
-        if (res._id) {      /* если получили с сервера данные пользователя проверим наличие куки */
-/*          this.mainApi.getUserData()
+        if (res._id) {
+          this.mainApi.getUserData() /* если получили с сервера данные пользователя проверим наличие куки */
             .then((res) => {
-              if (res) {             /!* кука подтверждена *!/
-                this.header.render(true, res.name);
+              if (res) {             /* кука подтверждена */
+                this.header.render(res.name);
                 this._close();
               } else {
                 this._setServerError(false);
               }
             })
-            .catch((err) => {         /!* кука не подтверждена *!/
+            .catch((err) => {         /* кука не подтверждена */
               this._setServerError(false);
-            });*/
-          this.header.render(true, res.name);
-          this._close();
-
-
-
+            });
+          /*          this.header.render(true, res.name);
+                    this._close();*/
         } else { /* пользователь не найден */
           if (res.message) {
             this._setServerError(res.message);
           } else {
-            this._setServerError("Неверная почта или пароль");
+            this._setServerError(BAD_EMAIL_OR_PASSWORD);
           }
         }
       })
@@ -193,7 +209,7 @@ export default class Form {
           if (res.message) {
             this._setServerError(res.message);
           } else {
-            this._setServerError("Некорректные регистрационные данные");
+            this._setServerError(INVALID_REGISTRATION_DATA);
           }
         }
       })
@@ -207,7 +223,7 @@ export default class Form {
     if (message) {
       this.messageFromServer.textContent = message;
     } else {
-      this.messageFromServer.textContent = "Ошибка сервера, попробуйте ещё раз";
+      this.messageFromServer.textContent = SERVER_ERROR;
     }
 
   };

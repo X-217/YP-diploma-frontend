@@ -1,3 +1,5 @@
+import {HEADER_SAVED} from "../constants/text/header-items";
+
 export default class Header {
   constructor() {
     this.header = document.querySelector('.header');
@@ -7,9 +9,9 @@ export default class Header {
     this.itemSavedLink = document.querySelector('.header__saved-link');
   };
 
-  render(isLoggedIn,userName){
-    this._setSavedPagesLinkText ("Сохраненные статьи")
-    if (isLoggedIn) {
+  render(userName){
+    this._setSavedPagesLinkText (HEADER_SAVED)
+    if (userName) {
       this._displayHeaderLogged()
       this._displayAuthButtonLogged();
       this._showUserName(userName);

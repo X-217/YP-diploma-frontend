@@ -1,27 +1,32 @@
 'use strict';
-import validatorMessages from "../constants/validator-messages";
+import {
+  FIELD_REQUIRED,
+  PASSWORD_TOO_SHORT,
+  NAME_LENGTH_BAD,
+  EMAIL_NOT_VALID,
+} from "../constants/text/validator-messages";
+
 export default class FormValidator {
     constructor() {
     };
-
     setEventListeners(obj) {
         obj.form.addEventListener('input', () => this.setSubmitButtonState.call(this, obj));
     };
     _validateInputElement() {
       if (this.validity.valueMissing) {
-            this.nextElementSibling.textContent = validatorMessages.fieldRequired;
+        this.nextElementSibling.textContent = FIELD_REQUIRED;
             return false;
         }
         if ((this.validity.tooShort) && (this.classList.contains("form__input_password"))) {
-            this.nextElementSibling.textContent = validatorMessages.passwordTooShort ;
+          this.nextElementSibling.textContent = PASSWORD_TOO_SHORT;
             return false;
         }
       if ((this.validity.tooShort) && (this.classList.contains("form__input_username"))) {
-        this.nextElementSibling.textContent = validatorMessages.nameLengthBad;
+        this.nextElementSibling.textContent = NAME_LENGTH_BAD;
         return false;
       }
         if ((!this.validity.valid) && (this.classList.contains("form__input_email")) ){
-            this.nextElementSibling.textContent = validatorMessages.emailNotValid;
+          this.nextElementSibling.textContent = EMAIL_NOT_VALID;
             return false;
         }
         this.nextElementSibling.textContent = "";

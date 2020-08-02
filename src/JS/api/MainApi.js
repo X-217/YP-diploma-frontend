@@ -1,18 +1,16 @@
-import mainApiParams from "../constants/main-api-params";
+import {MAIN_API_HEADERS, MAIN_API_URL} from "../constants/params/main-api-params";
+import {NO_CONNECTION} from "../constants/text/main-api-messages";
 
 export default class MainApi {
   constructor() {
-/*    this.url = mainApiParams.url;
-    this.headers = mainApiParams.headers;*/
-    this.errorHandler = (res) => {
-    }
+
   }
 
   signup(name, email, password) {
     const user= {name, email, password};
-    return fetch(`${mainApiParams.url}/signup`, {
+    return fetch(`${MAIN_API_URL}/signup`, {
       method: 'POST',
-      headers: mainApiParams.headers,
+      headers: MAIN_API_HEADERS,
       credentials: 'include',
       withCredentials: true,
       body: JSON.stringify(user)
@@ -22,24 +20,23 @@ export default class MainApi {
   };
 
   signin(email, password) {
-    return fetch(`${mainApiParams.url}/signin/`, {
+    return fetch(`${MAIN_API_URL}/signin/`, {
       method: 'POST',
-      headers: mainApiParams.headers,
+      headers: MAIN_API_HEADERS,
       credentials: 'include',
       withCredentials: true,
       body: JSON.stringify({email, password}),
     })
       .then((res) =>  res.json())
       .catch((err) => {
-        throw new Error('Отсутствует соединение с сервером');
+        throw new Error(NO_CONNECTION);
       });
   }
 
-
   getUserData() {
-    return fetch(`${mainApiParams.url}/users/me`, {
+    return fetch(`${MAIN_API_URL}/users/me`, {
       method: 'GET',
-      headers: mainApiParams.headers,
+      headers: MAIN_API_HEADERS,
       credentials: 'include',
       withCredentials: true,
     })
@@ -48,14 +45,15 @@ export default class MainApi {
         return false
       })
       .catch((err) => {
-        throw new Error('Отсутствует соединение с сервером');
+        console.log(err);
+        throw new Error(NO_CONNECTION);
       });
   }
 
   logout() {
-    return fetch(`${mainApiParams.url}/users/logout`, {
+    return fetch(`${MAIN_API_URL}/users/logout`, {
       method: 'GET',
-      headers: mainApiParams.headers,
+      headers: MAIN_API_HEADERS,
       credentials: 'include',
       withCredentials: true,
     })
@@ -63,7 +61,7 @@ export default class MainApi {
         if (res.ok) return true;
       })
       .catch((err) => {
-        throw new Error('Отсутствует соединение с сервером');
+        throw new Error(NO_CONNECTION);
       });
   }
 

@@ -1,77 +1,45 @@
 import './main.css';
 
-import Form from "../JS/components/Form";
+import MainApi from "../JS/api/MainApi";
+import Header from "../JS/components/Header";
 import Popup from "../JS/components/Popup";
 import FormValidator from "../JS/utils/FormValidator";
+import Form from "../JS/components/Form";
 
-import Header from "../JS/components/Header";
-import MainApi from "../JS/api/MainApi";
-
-/*import mainApiParams from "../constants/main-api-params";*/
+const mainApi = new MainApi();
+const header = new Header();
+const popup = new Popup();
+const formValidator = new FormValidator();
+const form = new Form(popup, header, formValidator);
 
 const menuItems = document.querySelectorAll('.header__menu-item');
-
 const menuIcon = document.querySelector('.header__menu-button');
-
-const header = new Header();
-const mainApi = new MainApi();
-
-const popup = new Popup();
-const formValidator= new FormValidator();
-const form = new Form(popup, header, formValidator);
 const authButton = document.querySelector('.header__auth-button');
 const menuButton = document.querySelector('.header__menu-button');
 
 
-let islogged = false;
-
-
-
-
-authButton.addEventListener('click', authToggle);
-menuButton.addEventListener('click', menuToggle);
-
-
-
 mainApi.getUserData()
   .then((res) => {
-    if (res) {             /* кука подтверждена */
-      header.render(true, res.name);
-      islogged = true;
-
-      console.log(res.name);
-
-    } else {
-      header.render(false, undefined);
-      console.log("Никого...");
-      islogged = false;
-
-    }
+    header.render(res.name);
+    setEventListeners();
   })
-  .catch((err) => {         /* кука не подтверждена */
-console.log(err);
+  .catch((err) => {
+    header.render(false);
+    alert(err.message);
   });
 
+
+function setEventListeners() {
+  authButton.addEventListener('click', authToggle);
+  menuButton.addEventListener('click', menuToggle);
+};
+
+
 function authToggle(event) {
-
-  if (!islogged) {
-    form.show();
-    islogged = true;
+  if (authButton.classList.contains("header__auth-button_logged")) {
+    logout();
   } else {
-    mainApi.logout()
-      .then((res) => {
-        if (res) {
-          islogged = false;
-          header.render(false, undefined);
-        }
-      })
-      .catch((err) => {
-
-
-
-      })
-
-/*    location.href = './index.html'*/
+    form.show();
   }
 }
 
@@ -81,9 +49,59 @@ function menuToggle() {
   menuIcon.classList.toggle("header__menu-button_close");
 }
 
-/*function logout() {
-  if (document.querySelector('.header__auth-button_logged')) {
+
+function logout() {
+  mainApi.logout()
+    .then((res) => {
+      if (res) location.reload()
+    })
+    .catch((err) => {
+      alert(err.message)
+    })
+}
 
 
+
+/*
+
+
+initialRender(loggedUser);
+
+function initialRender(loggedUser) {
+  header.render(loggedUser);
+}
+
+
+function authToggle(event) {
+  console.log(loggedUser);
+
+  if (loggedUser) {
+
+  } else {
+    mainApi.logout()
+      .then((res) => {
+        if (res) location.reload()
+      })
+      .catch((err) => {
+        alert("Хрень какая-то....")
+      })
+
+/!*    location.href = './index.html'*!/
   }
-}*/
+}
+
+
+
+
+
+
+
+/!*
+
+function render(isLogged) {
+  if (isLogged) {
+      header.render(res);
+  }
+
+}*!/
+*/

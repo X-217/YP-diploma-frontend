@@ -27,7 +27,7 @@
 @import url(./__auth-button_personal/__auth-button_personal.css);
 @import url(./__auth-button_logged-personal/__auth-button_logged-personal.css);
 @import url(./__item_hidden/__item_hidden.css);
-/*@import url(./__saved-link_hidden/__saved-link_hidden.css);*/
+/*@import MAIN_API_URL(./__saved-link_hidden/__saved-link_hidden.css);*/
 @import url(./__logo_personal/__logo_personal.css);
 @import url(./__mobile-menu_personal/__mobile-menu_personal.css);
 @import url(./__mobile-control_personal/__mobile-control_personal.css);
