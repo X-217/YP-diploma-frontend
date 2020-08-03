@@ -1,5 +1,6 @@
 .results__output {
-  display: grid;
+  display: none;
+/*  display: grid;*/
   grid-template-columns: 1fr 1fr 1fr ;
   grid-gap: 16px;
   justify-items: center;

@@ -1,5 +1,5 @@
 'use strict';
-import MainApi from "../api/MainApi";
+/*import MainApi from "../api/MainApi";*/
 import {
   BAD_EMAIL_OR_PASSWORD,
   EMAIL_PLACEHOLDER,
@@ -22,8 +22,8 @@ import {
 
 
 export default class Form {
-  constructor(popup, header, formValidator) {
-    this.mainApi = new MainApi();
+  constructor(mainApi, popup, header, formValidator) {
+    this.mainApi = mainApi;
     this.header = header;
     this.popup = popup;
     this.formValidator = formValidator;
@@ -171,6 +171,8 @@ export default class Form {
           this.mainApi.getUserData() /* если получили с сервера данные пользователя проверим наличие куки */
             .then((res) => {
               if (res) {             /* кука подтверждена */
+                localStorage.setItem('logged', 'true');
+                localStorage.setItem('user', res._id);
                 this.header.render(res.name);
                 this._close();
               } else {

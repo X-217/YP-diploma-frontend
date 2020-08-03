@@ -58,25 +58,52 @@ export default class MainApi {
       withCredentials: true,
     })
       .then((res) => {
-        if (res.ok) return true;
+        if (res.ok) {
+          localStorage.setItem('logged', 'false');
+          return true;
+        }
       })
       .catch((err) => {
         throw new Error(NO_CONNECTION);
       });
   }
 
+  createArticle(keyword, title, text, date, source, link, image, owner) {
+    return fetch(`${MAIN_API_URL}/articles`, {
+      method: 'POST',
+      headers: MAIN_API_HEADERS,
+      credentials: 'include',
+      withCredentials: true,
+      body: JSON.stringify({keyword, title, text, date, source, link, image})
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res._id);
+        return res._id
+      })
+      .catch((err) => {
+        console.log(err.message);
+        throw new Error(NO_CONNECTION);
+      });
+  }
 
-  /*
-    getArticles() {
+  getArticles(id) {
 
-    };
+  };
 
-    createArticle() {
 
-    };
+  removeArticle(id) {
+    return fetch(`${MAIN_API_URL}/articles/${id}`, {
+      method: 'DELETE',
+      headers: MAIN_API_HEADERS,
+      credentials: 'include',
+      withCredentials: true,
+    })
+      .then((res) => res.json())
+      .catch((err) => {
+        console.log(err.message);
+        throw new Error(NO_CONNECTION);
+      });
 
-    removeArticle() {
-
-    };*/
-
+  };
 }

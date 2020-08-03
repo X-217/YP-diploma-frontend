@@ -10,6 +10,12 @@
 @import url(./__preloader/__preloader.css);
 @import url(./__circle-preloader/__circle-preloader.css);
 @import url(./__preloader-text/__preloader-text.css);
+@import url(./__preloader_is-visible/__preloader_is-visible.css);
+@import url(./__notfound_is-visible/__notfound_is-visible.css);
+@import url(./__title_is-visible/__title_is-visible.css);
+@import url(./__output_is-visible/__output_is-visible.css);
+@import url(./__button_is-visible/__button_is-visible.css);
+
 
 .results {
 background-color: #F5F6F7;

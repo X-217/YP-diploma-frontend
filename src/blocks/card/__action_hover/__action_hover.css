@@ -1,3 +1,4 @@
 .card__action_hover {
-  background-image: url(../../../images/card/save_hover.svg);
+
 }
+.card__action:hover ~ .card__offer-text  {display: flex}

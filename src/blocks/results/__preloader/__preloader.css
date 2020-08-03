@@ -1,4 +1,5 @@
 .results__preloader {
+  display: none;
   width: 100vw;
   height: 180px;
   background-color: #F5F6F7;
