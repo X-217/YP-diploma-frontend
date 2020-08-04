@@ -220,17 +220,14 @@ export default class Form {
   }
 
   _setServerError(message) {
-    /*добавляет форме ошибку, пришедшую с сервера*/
     if (message) {
       this.messageFromServer.textContent = message;
     } else {
       this.messageFromServer.textContent = SERVER_ERROR;
     }
-
   };
 
   _clear() {
-    /*вспомогательный метод, очищает поля формы*/
     this.emailInput.value = "";
     this.passwordInput.value = "";
     this.nameInput.value = "";

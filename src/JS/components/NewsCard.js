@@ -77,7 +77,6 @@ export default class NewsCard {
     const containerClass = "." + this.cardContainer.lastChild.classList[1];
     const container = document.querySelector(containerClass);
     const icon = container.querySelector(".card__action");
-
     container.addEventListener('click', this._openArticlePersonal.bind(container, this.url));
     icon.addEventListener('click', this._togglePersonal.bind(this, this.id, container));
   }

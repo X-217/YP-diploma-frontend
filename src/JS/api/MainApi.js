@@ -3,7 +3,6 @@ import {NO_CONNECTION} from "../constants/text/main-api-messages";
 
 export default class MainApi {
   constructor() {
-
   }
 
   signup(name, email, password) {
@@ -16,7 +15,7 @@ export default class MainApi {
       body: JSON.stringify(user)
     })
       .then((res) => res.json())
-      .catch((err) => {      });
+      .catch((err) => { alert(err)});
   };
 
   signin(email, password) {
@@ -45,7 +44,6 @@ export default class MainApi {
         return false
       })
       .catch((err) => {
-        console.log(err);
         throw new Error(NO_CONNECTION);
       });
   }
@@ -82,7 +80,6 @@ export default class MainApi {
         return res._id
       })
       .catch((err) => {
-        console.log(err.message);
         throw new Error(NO_CONNECTION);
       });
   }
@@ -96,7 +93,6 @@ export default class MainApi {
     })
       .then((res) => res.json())
       .catch((err) => {
-        console.log(err.message);
         throw new Error(NO_CONNECTION);
       });
   };
@@ -111,7 +107,6 @@ export default class MainApi {
     })
       .then((res) => res.json())
       .catch((err) => {
-        console.log(err.message);
         throw new Error(NO_CONNECTION);
       });
   };

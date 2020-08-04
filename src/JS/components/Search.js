@@ -53,7 +53,6 @@ export default class Search {
       });
   }
 
-
   _showArticles() {
   for (let i = this.lastArticle; i < this.lastArticle + 3; i++) {
     if (i < this.total) this.newsCardList.addCardSearch({
@@ -73,11 +72,5 @@ export default class Search {
   _setEventListeners() {
     this.resultsButton.addEventListener('click', this._showArticles)
   }
-
-  _removeEventListeners() {
-    this.resultsButton.removeEventListener('click', this._showArticles)
-  }
-
-
 }
 

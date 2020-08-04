@@ -26,6 +26,7 @@ export default class NewsApi {
         return res
       })
       .catch((err) => {
+        alert(err)
       });
   };
 }

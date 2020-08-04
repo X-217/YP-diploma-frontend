@@ -18,9 +18,4 @@ export default class NewsCardList {
       this.cardContainer.removeChild(this.cardContainer.firstChild);
     }
   }
-
-  /*
-    render(initialCards) {
-      initialCards.forEach(item => this.addCardSearch(item));
-    };*/
 };

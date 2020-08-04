@@ -79,27 +79,5 @@ function logout() {
  function startSearch(event) {
   event.preventDefault();
   event.stopImmediatePropagation();
-/*   const request = async () => {
-     const response = await search.startSearch();
-/!*     const json = await response.json();*!/
-     console.log(response);
-   }
-   request();*/
-
-
-/*   console.log(newsCardList);*/
-   search.startSearch(searchInput.value);
-
-
-
-
-/*  const res='';
-  await (() =>
-  {
-   const res = search.startSearch();
-    console.log (`итог поиска: ${res}`)
-  }
-  );
-
-  )*/
+  search.startSearch(searchInput.value);
 }
