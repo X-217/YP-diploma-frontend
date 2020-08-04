@@ -14,7 +14,7 @@ export default class NewsCard {
     this.cardTemplate = "";
   }
 
-  create(item, cardContainer) {
+  createSearchCard(item, cardContainer) {
     this.date = item.date;
     this.title = item.title;
     this.text = item.text;
@@ -46,11 +46,65 @@ export default class NewsCard {
     icon.addEventListener('click', this._toggleSaved.bind(this, icon, this.keyword, this.title, this.text, this.date, this.source, this.url, this.image));
   }
 
+
+  createPersonalCard(item, cardContainer) {
+    this.date = item.date.slice(0, 10);
+    this.title = item.title;
+    this.text = item.text;
+    this.source = item.source;
+    this.image = item.image;
+    this.url = item.url;
+    this.keyword = item.keyword;
+    this.id = item.id;
+    this.cardContainer = cardContainer;
+    this.cardTemplate = `
+              <div class="card added${this.id}">
+                <div class="card__figure" style="background-image: url(${this.image})">
+                <div class="card__keyword">${this.keyword}</div>
+                  <div class="card__offer-text">Убрать из сохраненных</div>
+                  <button class="card__action card__action_delete"></button>
+                </div>
+                <div class="card__container">
+                  <div class="card__date">${this.date}</div>
+                  <h3 class="card__title">${this.title}</h3>
+                  <div class="card__text">
+                      ${this.text}
+                  </div>
+                  <div class="card__source">${this.source}</div>
+                </div>
+              </div>`;
+    this.cardContainer.insertAdjacentHTML('beforeend', this.cardTemplate);
+    const containerClass = "." + this.cardContainer.lastChild.classList[1];
+    const container = document.querySelector(containerClass);
+    const icon = container.querySelector(".card__action");
+
+    container.addEventListener('click', this._openArticlePersonal.bind(container, this.url));
+    icon.addEventListener('click', this._togglePersonal.bind(this, this.id, container));
+  }
+
+  _openArticlePersonal(url) {
+    console.log(url);
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    window.open(url);
+  }
+
   _openArticle(url) {
     event.preventDefault();
     event.stopImmediatePropagation();
-    console.log(this)
     window.open(url);
+  }
+
+  _togglePersonal(id, container) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+      this.mainApi.removeArticle(id)
+        .then(() => {
+          container.remove();
+        })
+        .catch((err) => {
+          alert(err)
+        });
   }
 
   _toggleSaved(icon, keyword, title, text, date, source, link, image) {

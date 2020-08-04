@@ -56,7 +56,7 @@ export default class Search {
 
   _showArticles() {
   for (let i = this.lastArticle; i < this.lastArticle + 3; i++) {
-    if (i < this.total) this.newsCardList.addCard({
+    if (i < this.total) this.newsCardList.addCardSearch({
       keyword: this.articles[i].keyword.toString() || "*",
       date: this.articles[i].publishedAt.slice(0, 10) || Date.now(),
       title: this.articles[i].title.toString() || "*",

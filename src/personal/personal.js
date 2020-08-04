@@ -86,7 +86,7 @@ function render() {
       resultsOutput.classList.add("results__output_is-visible");
 
       for (let i = 0; i < total; i++) {
-         newsCardList.addCard({
+         newsCardList.addCardPersonal({
           keyword: articles[i].keyword,
           date: articles[i].date,
           title: articles[i].title,

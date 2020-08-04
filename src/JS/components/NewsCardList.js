@@ -6,8 +6,11 @@ export default class NewsCardList {
     this.newsCard = newsCard;
   };
 
-  addCard(item) {
-    return this.newsCard.create(item, this.cardContainer);
+  addCardSearch(item) {
+    return this.newsCard.createSearchCard(item, this.cardContainer);
+  };
+  addCardPersonal(item) {
+    return this.newsCard.createPersonalCard(item, this.cardContainer);
   };
 
   clear() {
@@ -18,6 +21,6 @@ export default class NewsCardList {
 
   /*
     render(initialCards) {
-      initialCards.forEach(item => this.addCard(item));
+      initialCards.forEach(item => this.addCardSearch(item));
     };*/
 };
