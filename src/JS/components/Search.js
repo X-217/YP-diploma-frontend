@@ -57,13 +57,14 @@ export default class Search {
   _showArticles() {
   for (let i = this.lastArticle; i < this.lastArticle + 3; i++) {
     if (i < this.total) this.newsCardList.addCard({
-      keyword: this.articles[i].keyword.toString(),
-      date: this.articles[i].publishedAt.slice(0, 10),
-      title: this.articles[i].title.toString(),
-      text: this.articles[i].description.slice(0, 128),
-      source: this.articles[i].source.name.toString(),
-      image: (this.articles[i].urlToImage || IMAGE_PLACEHOLDER_LINK).toString(),
-      url: this.articles[i].url.toString(),
+      keyword: this.articles[i].keyword.toString() || "*",
+      date: this.articles[i].publishedAt.slice(0, 10) || Date.now(),
+      title: this.articles[i].title.toString() || "*",
+      text: this.articles[i].description.slice(0, 128) || "*",
+      source: this.articles[i].source.name.toString() || "*",
+      image: this.articles[i].urlToImage || IMAGE_PLACEHOLDER_LINK,
+      url: this.articles[i].url.toString() || "https://ya.ru/",
+      id: i,
     });
   }
     this.lastArticle = this.lastArticle + 3;

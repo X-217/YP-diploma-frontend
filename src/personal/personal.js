@@ -84,7 +84,7 @@ function render() {
           statisticsWords.textContent = `${keywords[0]}, ${keywords[1]} и ${keywords.length - 2} другим`;
       }
       resultsOutput.classList.add("results__output_is-visible");
-/*      console.log(articles[0]);*/
+
       for (let i = 0; i < total; i++) {
          newsCardList.addCard({
           keyword: articles[i].keyword,
@@ -105,19 +105,6 @@ function render() {
     .catch((err) => { alert(err)});
 
 
-/*
-  for (let i = 0; i < count; i++) {
-
-      this.newsCardList.addCard({
-        date: this.articles[i].publishedAt,
-        title: this.articles[i].title,
-        text: this.articles[i].description,
-        source: this.articles[i].source.name,
-        image: this.articles[i].urlToImage,
-        url: this.articles[i].url,
-      });    }
-
-*/
 
 
 }
