@@ -87,8 +87,18 @@ export default class MainApi {
       });
   }
 
-  getArticles(id) {
-
+  getArticles() {
+    return fetch(`${MAIN_API_URL}/articles/`, {
+      method: 'GET',
+      headers: MAIN_API_HEADERS,
+      credentials: 'include',
+      withCredentials: true,
+    })
+      .then((res) => res.json())
+      .catch((err) => {
+        console.log(err.message);
+        throw new Error(NO_CONNECTION);
+      });
   };
 
 
@@ -104,6 +114,5 @@ export default class MainApi {
         console.log(err.message);
         throw new Error(NO_CONNECTION);
       });
-
   };
 }

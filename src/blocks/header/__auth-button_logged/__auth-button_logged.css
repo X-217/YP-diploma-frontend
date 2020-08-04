@@ -11,5 +11,4 @@
   .header__auth-button_logged{
     padding-right: calc(24px + 12px + (100vw - 768px) *  (16 - 12)  /  (1440 - 768));
   }
-
 }
