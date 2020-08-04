@@ -38,7 +38,7 @@ export default class Search {
         });
         this.articles.forEach((item) => {
           item.id = ''
-        }); /* а надо ?? */
+        });
         this.preloader.classList.remove("results__preloader_is-visible");
         if (!this.total) this.notFound.classList.add("results__notfound_is-visible");
         if (this.total) {
@@ -55,17 +55,16 @@ export default class Search {
 
 
   _showArticles() {
-    console.log(this.lastArticle);
   for (let i = this.lastArticle; i < this.lastArticle + 3; i++) {
     if (i < this.total) this.newsCardList.addCard({
-      keyword: this.articles[i].keyword,
-      date: this.articles[i].publishedAt,
-      title: this.articles[i].title,
+      keyword: this.articles[i].keyword.toString(),
+      date: this.articles[i].publishedAt.slice(0, 10),
+      title: this.articles[i].title.toString(),
       text: this.articles[i].description.slice(0, 128),
-      source: this.articles[i].source.name,
-      image: this.articles[i].urlToImage || IMAGE_PLACEHOLDER_LINK,
-      url: this.articles[i].url,
-      id: this.articles[i].id,
+      source: this.articles[i].source.name.toString(),
+      image: (this.articles[i].urlToImage || IMAGE_PLACEHOLDER_LINK).toString(),
+      url: this.articles[i].url.toString(),
+/*      id: this.articles[i].id,*/
     });
   }
     this.lastArticle = this.lastArticle + 3;

@@ -1,5 +1,5 @@
 'use strict';
-/*import MainApi from "../api/MainApi";*/
+
 import {
   BAD_EMAIL_OR_PASSWORD,
   EMAIL_PLACEHOLDER,
@@ -172,9 +172,10 @@ export default class Form {
             .then((res) => {
               if (res) {             /* кука подтверждена */
                 localStorage.setItem('logged', 'true');
-                localStorage.setItem('user', res._id);
+                localStorage.setItem('user', res.name);
                 this.header.render(res.name);
                 this._close();
+                window.location.reload();
               } else {
                 this._setServerError(false);
               }
@@ -182,8 +183,6 @@ export default class Form {
             .catch((err) => {         /* кука не подтверждена */
               this._setServerError(false);
             });
-          /*          this.header.render(true, res.name);
-                    this._close();*/
         } else { /* пользователь не найден */
           if (res.message) {
             this._setServerError(res.message);

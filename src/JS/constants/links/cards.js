@@ -1,4 +1,4 @@
-const IMAGE_PLACEHOLDER_LINK = "https://sun9-58.userapi.com/c847122/v847122325/20a169/wuahpjGbUNA.jpg";
+const IMAGE_PLACEHOLDER_LINK = "https://demiart.ru/forum/uploads5/post-19981-1262760428.png";
 
 export {
   IMAGE_PLACEHOLDER_LINK,

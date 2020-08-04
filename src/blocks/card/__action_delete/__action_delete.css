@@ -1,3 +1,8 @@
 .card__action_delete {
   background-image: url(../../../images/card/delete.svg);
 }
+
+.card__action_delete:hover {
+  background-image: url(../../../images/card/delete_hover.svg);
+}
+

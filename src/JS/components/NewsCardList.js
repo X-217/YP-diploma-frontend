@@ -1,13 +1,14 @@
 'use strict';
 
 export default class NewsCardList {
-  constructor(cardContainer, newsCard) {
+  constructor(cardContainer, newsCard, type) {
     this.cardContainer = cardContainer;
     this.newsCard = newsCard;
+    this.type = type;
   };
 
   addCard(item) {
-    this.newsCard.create(item, this.cardContainer);
+    this.newsCard.create(item, this.cardContainer, this.type);
   };
 
   clear() {
