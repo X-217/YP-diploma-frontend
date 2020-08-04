@@ -7,7 +7,7 @@ export default class NewsCard {
   }
 
   create(item, cardContainer, type) {
-    this.date = item.date;
+    this.date = item.date.slice(0, 10);
     this.title = item.title;
     this.text = item.text;
     this.source = item.source;
@@ -85,14 +85,13 @@ export default class NewsCard {
         console.log(this.id);
         this.mainApi.removeArticle(this.id)
           .then(() => {
+            console.log(this.id);
+            console.log(event.target.parentElement.parentElement.classList[1])
             event.target.classList.remove("card__action_saved");
             event.target.classList.add("card__action_save");
             if (this.type === 'personal') {
-              console.log(this.id);
-              const toRemove = `.a${this.id}`;
-              document.querySelector(toRemove).remove();
-
-
+              const toRem = "." + event.target.parentElement.parentElement.classList[1];
+              document.querySelector(toRem).remove();
             }
           })
           .catch((err) => {
@@ -109,26 +108,6 @@ export default class NewsCard {
       }
     }
   };
-
-  _removeFromList(item) {
-    item.remove();
-
-  }
-
-  /*
-    removeFromSaved(event) {
-      event.stopImmediatePropagation();
-
-      this.mainApi.removeArticle(this.id)
-        .then(() => {
-          event.target.classList.remove("card__action_saved");
-          event.target.classList.add("card__action_save");
-        })
-        .catch()
-
-      /!*    event.target.parentElement.parentElement.parentElement.removeChild(event.target.parentElement.parentElement);*!/
-    };
-  */
 
   openArticle(event) {
     window.open(this.url);

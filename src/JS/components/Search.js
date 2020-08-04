@@ -64,7 +64,6 @@ export default class Search {
       source: this.articles[i].source.name.toString(),
       image: (this.articles[i].urlToImage || IMAGE_PLACEHOLDER_LINK).toString(),
       url: this.articles[i].url.toString(),
-/*      id: this.articles[i].id,*/
     });
   }
     this.lastArticle = this.lastArticle + 3;
