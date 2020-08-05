@@ -1,5 +1,5 @@
-const BAD_REQUEST = "Некорректный запрос";
+const BAD_REQUEST = 'Некорректный запрос';
 
 export {
-  BAD_REQUEST
-}
+  BAD_REQUEST,
+};

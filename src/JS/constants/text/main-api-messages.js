@@ -2,4 +2,4 @@ const NO_CONNECTION = 'Отсутствует соединение с серве
 
 export {
   NO_CONNECTION,
-}
+};

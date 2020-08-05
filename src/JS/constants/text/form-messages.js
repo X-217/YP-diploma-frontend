@@ -1,27 +1,26 @@
-const EMAIL_TITLE = "Email";
-const EMAIL_PLACEHOLDER = "Введите почту";
-const EMAIL_VALIDATION_MESSAGE = "Неправильный формат email";
-const PASSWORD_TITLE = "Пароль";
-const PASSWORD_PLACEHOLDER = "Введите пароль";
-const PASSWORD_VALIDATION_MESSAGE = "Длина пароля должна быть не менее 8 символов";
-const NAME_TITLE = "Имя";
-const NAME_PLACEHOLDER = "Введите свое имя";
-const NAME_VALIDATION_MESSAGE = "Это обязательное поле";
-const MESSAGE_USER_EXIST = "Такой пользователь уже есть";
-const LOGIN_TITLE = "Вход";
-const LOGIN_SUBMIT_BUTTON = "Войти";
-const LOGIN_OFFER_TEXT = "или";
-const LOGIN_OFFER_BUTTON_TEXT = "Зарегистрироваться";
-const SIGNUP_TITLE = "Регистрация";
-const SIGNUP_SUBMIT_BUTTON = "Зарегистрироваться";
-const SIGNUP_OFFER_TEXT = "или";
-const SIGNUP_OFFER_BUTTON_TEXT = "Войти";
-const SUCCESS_TITLE = "Пользователь успешно зарегистрирован";
-const SUCCESS_OFFER_BUTTON_TEXT = "Выполнить вход";
-const BAD_EMAIL_OR_PASSWORD = "Неверная почта или пароль";
-const INVALID_REGISTRATION_DATA = "Некорректные регистрационные данные";
-const SERVER_ERROR = "Ошибка сервера, попробуйте ещё раз";
-
+const EMAIL_TITLE = 'Email';
+const EMAIL_PLACEHOLDER = 'Введите почту';
+const EMAIL_VALIDATION_MESSAGE = 'Неправильный формат email';
+const PASSWORD_TITLE = 'Пароль';
+const PASSWORD_PLACEHOLDER = 'Введите пароль';
+const PASSWORD_VALIDATION_MESSAGE = 'Длина пароля должна быть не менее 8 символов';
+const NAME_TITLE = 'Имя';
+const NAME_PLACEHOLDER = 'Введите свое имя';
+const NAME_VALIDATION_MESSAGE = 'Это обязательное поле';
+const MESSAGE_USER_EXIST = 'Такой пользователь уже есть';
+const LOGIN_TITLE = 'Вход';
+const LOGIN_SUBMIT_BUTTON = 'Войти';
+const LOGIN_OFFER_TEXT = 'или';
+const LOGIN_OFFER_BUTTON_TEXT = 'Зарегистрироваться';
+const SIGNUP_TITLE = 'Регистрация';
+const SIGNUP_SUBMIT_BUTTON = 'Зарегистрироваться';
+const SIGNUP_OFFER_TEXT = 'или';
+const SIGNUP_OFFER_BUTTON_TEXT = 'Войти';
+const SUCCESS_TITLE = 'Пользователь успешно зарегистрирован';
+const SUCCESS_OFFER_BUTTON_TEXT = 'Выполнить вход';
+const BAD_EMAIL_OR_PASSWORD = 'Неверная почта или пароль';
+const INVALID_REGISTRATION_DATA = 'Некорректные регистрационные данные';
+const SERVER_ERROR = 'Ошибка сервера, попробуйте ещё раз';
 
 export {
   EMAIL_TITLE,
@@ -48,5 +47,4 @@ export {
   INVALID_REGISTRATION_DATA,
   SERVER_ERROR,
 
-
-}
+};

@@ -1,5 +1,4 @@
 export default function formatDate(date) {
-
   let dd = date.getDate();
   if (dd < 10) dd = `0${dd}`;
 

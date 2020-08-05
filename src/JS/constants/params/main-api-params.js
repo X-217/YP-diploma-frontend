@@ -6,4 +6,4 @@ const MAIN_API_HEADERS = {
 export {
   MAIN_API_URL,
   MAIN_API_HEADERS,
-}
+};

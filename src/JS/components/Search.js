@@ -1,6 +1,6 @@
 'use strict';
-import {IMAGE_PLACEHOLDER_LINK} from "../constants/links/cards";
-import {CARDS_OUTPUT_SIMULTANEOUSLY} from "../constants/params/search-output-params";
+import {IMAGE_PLACEHOLDER_LINK} from "../../../../YP-diploma-frontend — копия (3)/src/JS/constants/links/cards";
+import {CARDS_OUTPUT_SIMULTANEOUSLY} from "../../../../YP-diploma-frontend — копия (3)/src/JS/constants/params/search-output-params";
 
 export default class Search {
   constructor(newsApi, newsCardList) {
@@ -17,7 +17,6 @@ export default class Search {
     this.articles= [];
     this.lastArticle=0;
     this.newsCardList = newsCardList;
-    this.form=document.querySelector(".search__form");
     this._showArticles=this._showArticles.bind(this)
   };
 
@@ -63,24 +62,28 @@ export default class Search {
   }
 
   _showArticles() {
-  for (let i = this.lastArticle; i < this.lastArticle + CARDS_OUTPUT_SIMULTANEOUSLY; i++) {
-    if (i < this.total) this.newsCardList.addCardSearch({
-      keyword: this.articles[i].keyword.toString() || "*",
-      date: this.articles[i].publishedAt.slice(0, 10) || Date.now(),
-      title: this.articles[i].title.toString() || "*",
-      text: this.articles[i].description.slice(0, 128) || "*",
-      source: this.articles[i].source.name.toString() || "*",
-      image: this.articles[i].urlToImage || IMAGE_PLACEHOLDER_LINK,
-      url: this.articles[i].url.toString() || "https://ya.ru/",
-      id: i,
-    });
-    if ((i + CARDS_OUTPUT_SIMULTANEOUSLY) >= this.total) this.resultsButton.classList.remove("results__button_is-visible");
+  for (let i = this.lastArticle; i < (this.lastArticle + CARDS_OUTPUT_SIMULTANEOUSLY); i++) {
+    if (i < this.total) {
+      this.newsCardList.addCardSearch({
+        keyword: this.articles[i].keyword.toString() || "*",
+        date: this.articles[i].publishedAt.slice(0, 10) || Date.now(),
+        title: this.articles[i].title.toString() || "*",
+        text: this.articles[i].description.slice(0, 128) || "*",
+        source: this.articles[i].source.name.toString() || "*",
+        image: this.articles[i].urlToImage || IMAGE_PLACEHOLDER_LINK,
+        url: this.articles[i].url.toString() || "https://ya.ru/",
+        id: i,
+      })
+    }
+    if (i === (this.total-1)) {
+      this.resultsButton.classList.remove("results__button_is-visible");
+    }
   }
     this.lastArticle = this.lastArticle + CARDS_OUTPUT_SIMULTANEOUSLY;
   }
 
   _setEventListeners() {
-    this.form.addEventListener('submit', this._showArticles)
+    this.resultsButton.addEventListener('click', this._showArticles)
   }
 }
 

@@ -1,22 +1,22 @@
-import {MAIN_API_HEADERS, MAIN_API_URL} from "../constants/params/main-api-params";
-import {NO_CONNECTION} from "../constants/text/main-api-messages";
+import { MAIN_API_HEADERS, MAIN_API_URL } from '../constants/params/main-api-params.js';
+import { NO_CONNECTION } from '../constants/text/main-api-messages.js';
 
 export default class MainApi {
   constructor() {
   }
 
   signup(name, email, password) {
-    const user= {name, email, password};
+    const user = { name, email, password };
     return fetch(`${MAIN_API_URL}/signup`, {
       method: 'POST',
       headers: MAIN_API_HEADERS,
       credentials: 'include',
       withCredentials: true,
-      body: JSON.stringify(user)
+      body: JSON.stringify(user),
     })
       .then((res) => res.json())
-      .catch((err) => { alert(err)});
-  };
+      .catch((err) => { alert(err); });
+  }
 
   signin(email, password) {
     return fetch(`${MAIN_API_URL}/signin/`, {
@@ -24,9 +24,9 @@ export default class MainApi {
       headers: MAIN_API_HEADERS,
       credentials: 'include',
       withCredentials: true,
-      body: JSON.stringify({email, password}),
+      body: JSON.stringify({ email, password }),
     })
-      .then((res) =>  res.json())
+      .then((res) => res.json())
       .catch((err) => {
         throw new Error(NO_CONNECTION);
       });
@@ -41,7 +41,7 @@ export default class MainApi {
     })
       .then((res) => {
         if (res.ok) return res.json();
-        return false
+        return false;
       })
       .catch((err) => {
         throw new Error(NO_CONNECTION);
@@ -73,12 +73,14 @@ export default class MainApi {
       headers: MAIN_API_HEADERS,
       credentials: 'include',
       withCredentials: true,
-      body: JSON.stringify({keyword, title, text, date, source, link, image})
+      body: JSON.stringify({
+        keyword, title, text, date, source, link, image,
+      }),
     })
       .then((res) => res.json())
       .then((res) => {
         console.log(res._id);
-        return res._id
+        return res._id;
       })
       .catch((err) => {
         throw new Error(NO_CONNECTION);
@@ -96,8 +98,7 @@ export default class MainApi {
       .catch((err) => {
         throw new Error(NO_CONNECTION);
       });
-  };
-
+  }
 
   removeArticle(id) {
     return fetch(`${MAIN_API_URL}/articles/${id}`, {
@@ -110,5 +111,5 @@ export default class MainApi {
       .catch((err) => {
         throw new Error(NO_CONNECTION);
       });
-  };
+  }
 }

@@ -1,17 +1,16 @@
 export default class NewsCard {
-
   constructor(mainApi) {
     this.mainApi = mainApi;
-    this.date = "";
-    this.title = "";
-    this.text = "";
-    this.source = "";
-    this.image = "";
-    this.url = "";
-    this.keyword = "";
-    this.id = "";
-    this.cardContainer = "";
-    this.cardTemplate = "";
+    this.date = '';
+    this.title = '';
+    this.text = '';
+    this.source = '';
+    this.image = '';
+    this.url = '';
+    this.keyword = '';
+    this.id = '';
+    this.cardContainer = '';
+    this.cardTemplate = '';
   }
 
   createSearchCard(item, cardContainer) {
@@ -38,14 +37,13 @@ export default class NewsCard {
           </div>
         </div>`;
     this.cardContainer.insertAdjacentHTML('beforeend', this.cardTemplate);
-    const containerClass = "." + this.cardContainer.lastChild.classList[1];
+    const containerClass = `.${this.cardContainer.lastChild.classList[1]}`;
     const container = document.querySelector(containerClass);
-    const icon = container.querySelector(".card__action");
+    const icon = container.querySelector('.card__action');
 
     container.addEventListener('click', this._openArticle.bind(container, this.url));
     icon.addEventListener('click', this._toggleSaved.bind(this, icon, this.keyword, this.title, this.text, this.date, this.source, this.url, this.image));
   }
-
 
   createPersonalCard(item, cardContainer) {
     this.date = item.date.slice(0, 10);
@@ -74,9 +72,9 @@ export default class NewsCard {
                 </div>
               </div>`;
     this.cardContainer.insertAdjacentHTML('beforeend', this.cardTemplate);
-    const containerClass = "." + this.cardContainer.lastChild.classList[1];
+    const containerClass = `.${this.cardContainer.lastChild.classList[1]}`;
     const container = document.querySelector(containerClass);
-    const icon = container.querySelector(".card__action");
+    const icon = container.querySelector('.card__action');
     container.addEventListener('click', this._openArticlePersonal.bind(container, this.url));
     icon.addEventListener('click', this._togglePersonal.bind(this, this.id, container));
   }
@@ -97,36 +95,36 @@ export default class NewsCard {
   _togglePersonal(id, container) {
     event.preventDefault();
     event.stopImmediatePropagation();
-      this.mainApi.removeArticle(id)
-        .then(() => {
-          container.remove();
-        })
-        .catch((err) => {
-          alert(err)
-        });
+    this.mainApi.removeArticle(id)
+      .then(() => {
+        container.remove();
+      })
+      .catch((err) => {
+        alert(err);
+      });
   }
 
   _toggleSaved(icon, keyword, title, text, date, source, link, image) {
     event.preventDefault();
     event.stopImmediatePropagation();
-    if (icon.classList.contains("card__action_save")) {
+    if (icon.classList.contains('card__action_save')) {
       this.mainApi.createArticle(keyword, title, text, date, source, link, image)
         .then((res) => {
-          this.id = res
-          icon.classList.remove("card__action_save");
-          icon.classList.add("card__action_saved");
+          this.id = res;
+          icon.classList.remove('card__action_save');
+          icon.classList.add('card__action_saved');
         })
         .catch((err) => {
-          alert(err)
+          alert(err);
         });
     } else {
       this.mainApi.removeArticle(this.id)
         .then(() => {
-          icon.classList.remove("card__action_saved");
-          icon.classList.add("card__action_save")
+          icon.classList.remove('card__action_saved');
+          icon.classList.add('card__action_save');
         })
         .catch((err) => {
-          alert(err)
+          alert(err);
         });
     }
   }
