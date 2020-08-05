@@ -10,7 +10,7 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 24px;
+  background-size: 36px;
   outline-style: none;
   border: none;
 }
@@ -19,6 +19,7 @@
   .popup__close {
     width: 24px;
     height: 24px;
+    background-size: 24px;
     background-color: #1A1B22;
     top: -41px;
     right: 18px;
@@ -31,10 +32,7 @@
 
 @media (max-width: 319px) {
   .popup__close  {
-
     top:-39px;
     left: 278px;
-
-
   }
 }

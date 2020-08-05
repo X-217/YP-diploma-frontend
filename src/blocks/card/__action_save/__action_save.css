@@ -1,3 +1,9 @@
 .card__action_save {
   background-image: url(../../../images/card/save.svg);
 }
+
+.card__action_save:hover {
+  background-image: url(../../../images/card/save_hover.svg);
+}
+
+

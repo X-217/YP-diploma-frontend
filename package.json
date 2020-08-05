@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/X-217/YP-diploma-frontend.git"
+    "MAIN_API_URL": "git+https://github.com/X-217/YP-diploma-frontend.git"
   },
   "author": "Sidorov Alexey",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/X-217/YP-diploma-frontend/issues"
+    "MAIN_API_URL": "https://github.com/X-217/YP-diploma-frontend/issues"
   },
   "homepage": "https://github.com/X-217/YP-diploma-frontend#readme",
   "devDependencies": {

@@ -1,4 +1,6 @@
 .header__saved-link_active {
+  display: inline-block;
   pointer-events: auto;
   color: white;
+
 }

@@ -7,7 +7,6 @@
   text-decoration: none;
   white-space: nowrap;
   pointer-events: none;
-  color: dimgray;
 }
 @media (min-width: 768px) and (max-width: 1440px) {
   .header__saved-link {
@@ -19,9 +18,17 @@
   .header__saved-link {
     font-size: 18px;
     padding-bottom: 16px;
+    color: dimgray;
   }
 }
 
 .header__saved-link:hover {
   opacity: 0.7;
+}
+/* */
+@media (min-width: 768px) {
+  .header__saved-link {
+    color: transparent;
+    display: none;
+  }
 }

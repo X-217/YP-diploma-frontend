@@ -45,3 +45,11 @@
   border-color: #367fff;
 }
 
+.search__submit:hover:disabled{
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.search__submit:disabled{
+  color: lightgrey;
+}
+

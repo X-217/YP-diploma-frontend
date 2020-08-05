@@ -1,6 +1,7 @@
 .results__notfound {
   width: 100vw;
   height: 374px;
+  display: none;
 }
 
 @media (max-width: 319px) {
