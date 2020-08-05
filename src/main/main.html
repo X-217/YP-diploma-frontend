@@ -44,14 +44,14 @@
           кабинете.</p>
       </div>
       <form class="search__form">
-        <input type="search" name="search" required class="search__input" placeholder="Введите тему новости">
+        <input type="search" class="search__input" placeholder="Введите тему новости" pattern=".*\S.*">
         <input type="submit" value="Искать" class="search__submit">
       </form>
     </div>
   </section>
 
   <section class="results">
-    <div class="results__container">
+    <div class="results__container results__container_is-empty">
 
       <div class="results__preloader">
         <i class="results__circle-preloader"></i>

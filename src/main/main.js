@@ -9,6 +9,7 @@ import Search from "../JS/components/Search";
 import NewsCard from "../JS/components/NewsCard";
 import NewsCardList from "../JS/components/NewsCardList";
 import NewsApi from "../JS/api/NewsApi";
+import {BAD_REQUEST} from "../JS/constants/text/search-form-messages";
 
 const cardContainer= document.querySelector(".results__output");
 
@@ -42,7 +43,7 @@ mainApi.getUserData()
     alert(err.message);
   });
 
-
+searchInput.setCustomValidity(BAD_REQUEST);
 
 function setEventListeners() {
   authButton.addEventListener('click', authToggle);
@@ -77,7 +78,13 @@ function logout() {
 }
 
  function startSearch(event) {
-  event.preventDefault();
-  event.stopImmediatePropagation();
-  search.startSearch(searchInput.value);
+
+   if ((!searchInput.validity.patternMismatch) && (searchInput.value)) {
+     event.preventDefault();
+     event.stopImmediatePropagation();
+     search.startSearch(searchInput.value);
+   } else {
+
+   };
+
 }

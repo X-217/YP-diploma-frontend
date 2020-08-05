@@ -1,5 +1,6 @@
 'use strict';
 import {IMAGE_PLACEHOLDER_LINK} from "../constants/links/cards";
+import {CARDS_OUTPUT_SIMULTANEOUSLY} from "../constants/params/search-output-params";
 
 export default class Search {
   constructor(newsApi, newsCardList) {
@@ -9,10 +10,14 @@ export default class Search {
     this.resultsTitle=document.querySelector(".results__title");
     this.resultsOutput = document.querySelector(".results__output");
     this.resultsButton = document.querySelector(".results__button");
+    this.resultsContainer = document.querySelector(".results__container");
+    this.searchInput=document.querySelector(".search__input");
+    this.searchSubmitButton=document.querySelector(".search__submit");
     this.total = 0;
     this.articles= [];
     this.lastArticle=0;
     this.newsCardList = newsCardList;
+    this.form=document.querySelector(".search__form");
     this._showArticles=this._showArticles.bind(this)
   };
 
@@ -26,7 +31,8 @@ export default class Search {
     this.resultsTitle.classList.remove("results__title_is-visible");
     this.resultsOutput.classList.remove("results__output_is-visible");
     this.resultsButton.classList.remove("results__button_is-visible");
-
+    this.searchInput.setAttribute("disabled", true);
+    this.searchSubmitButton.setAttribute("disabled", true);
     this.preloader.classList.add("results__preloader_is-visible");
 
     this.newsApi.getNews(request)
@@ -39,12 +45,15 @@ export default class Search {
         this.articles.forEach((item) => {
           item.id = ''
         });
+        this.searchInput.removeAttribute("disabled");
+        this.searchSubmitButton.removeAttribute("disabled");
         this.preloader.classList.remove("results__preloader_is-visible");
         if (!this.total) this.notFound.classList.add("results__notfound_is-visible");
         if (this.total) {
           this.resultsTitle.classList.add("results__title_is-visible");
           this.resultsOutput.classList.add("results__output_is-visible");
           this.resultsButton.classList.add("results__button_is-visible");
+          this.resultsContainer.classList.remove("results__container_is-empty");
           this._showArticles()
         }
       })
@@ -54,7 +63,7 @@ export default class Search {
   }
 
   _showArticles() {
-  for (let i = this.lastArticle; i < this.lastArticle + 3; i++) {
+  for (let i = this.lastArticle; i < this.lastArticle + CARDS_OUTPUT_SIMULTANEOUSLY; i++) {
     if (i < this.total) this.newsCardList.addCardSearch({
       keyword: this.articles[i].keyword.toString() || "*",
       date: this.articles[i].publishedAt.slice(0, 10) || Date.now(),
@@ -65,12 +74,13 @@ export default class Search {
       url: this.articles[i].url.toString() || "https://ya.ru/",
       id: i,
     });
+    if ((i + CARDS_OUTPUT_SIMULTANEOUSLY) >= this.total) this.resultsButton.classList.remove("results__button_is-visible");
   }
-    this.lastArticle = this.lastArticle + 3;
+    this.lastArticle = this.lastArticle + CARDS_OUTPUT_SIMULTANEOUSLY;
   }
 
   _setEventListeners() {
-    this.resultsButton.addEventListener('click', this._showArticles)
+    this.form.addEventListener('submit', this._showArticles)
   }
 }
 

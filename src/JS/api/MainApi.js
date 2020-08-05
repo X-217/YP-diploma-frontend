@@ -57,6 +57,7 @@ export default class MainApi {
     })
       .then((res) => {
         if (res.ok) {
+          localStorage.setItem('user', 'false');
           localStorage.setItem('logged', 'false');
           return true;
         }

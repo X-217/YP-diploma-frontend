@@ -36,3 +36,7 @@
     padding-right: 24px;
   }
 }
+
+.search__input:disabled{
+background-color: lightgrey;
+}
