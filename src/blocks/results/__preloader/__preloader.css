@@ -3,10 +3,25 @@
   width: 100vw;
   height: 180px;
   background-color: #F5F6F7;
+  padding-top: 80px;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .results__preloader {
+    width: calc(688px + (100% - 768px) * (1232 - 688) / (1440 - 768));
+    padding-top: calc(40px + (100vw - 768px) * (80 - 40) / (1440 - 768));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .results__preloader {
+    padding-top: calc(32px + (100vw - 320px) *  (40 - 32)  /  (767 - 320));
+  }
 }
 
 @media (max-width: 319px) {
   .results__preloader {
+    padding-top: 32px;
     width: 320px;
   }
 }

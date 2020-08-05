@@ -28,9 +28,12 @@ function menuToggle() {
   menuItems.forEach((item) => item.classList.toggle("header__mobile-menu_personal"));
   menuIcon.classList.toggle("header__menu-button_close-personal");
 }
-header.render(localStorage.getItem('user'));
 
-render();
+if (checkUserLogged()) {
+  render();
+} else {
+  location.href = "../../"
+};
 
 function logout() {
   mainApi.logout()
@@ -43,6 +46,7 @@ function logout() {
 }
 
 function render() {
+  header.render(localStorage.getItem('user'));
   mainApi.getArticles()
     .then((res) => {
       const articles = res;    /* массив статей */
@@ -83,4 +87,8 @@ function render() {
       }
     })
     .catch((err) => { alert(err)});
+}
+
+function checkUserLogged(){
+  return ((localStorage.getItem('logged')) === 'true')
 }
